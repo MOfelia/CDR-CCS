@@ -1,0 +1,1 @@
+GDP.nominal_gdp[1]
