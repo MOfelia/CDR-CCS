@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -374,7 +374,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="3" isee:page_rows="3" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -520,7 +520,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>share_of_biofuel_emissions_stored*CO2_emissions_from_biofuels</eqn>
+				<eqn>(share_of_biofuel_emissions_stored*CO2_emissions_from_biofuels)*Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<flow name="CO2 Emissions from Leakage" access="output" isee:autocreated="true">
@@ -1629,6 +1629,15 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<eqn>Emission_from_Energy-Emissions_captured_from_Energy</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
+			<aux name="Maximum possible share of bioliquids that doesnt go to vehicles">
+				<eqn>Bioliquid_to_electricity*&quot;Bioliquid_to_fuel/vehicles&quot;</eqn>
+			</aux>
+			<aux name="Bioliquid to electricity">
+				<eqn>0.375</eqn>
+			</aux>
+			<aux name="Bioliquid to fuel/vehicles">
+				<eqn>1-0.375</eqn>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1678,7 +1687,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2779.17" isee:scroll_y="100" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="3245.83" isee:scroll_y="100" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2800,7 +2809,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					</from>
 					<to>Emissions_captured_from_Energy</to>
 				</connector>
-				<aux x="4015.83" y="541.667" name="Realized CO2 from Energy"/>
+				<aux background="#F9F06B" x="4015.83" y="541.667" name="Realized CO2 from Energy"/>
 				<connector uid="486" angle="334.826">
 					<from>Emission_from_Energy</from>
 					<to>Realized_CO2_from_Energy</to>
@@ -2808,6 +2817,21 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<connector uid="487" angle="207.011">
 					<from>Emissions_captured_from_Energy</from>
 					<to>Realized_CO2_from_Energy</to>
+				</connector>
+				<aux x="377" y="2174.21" name="Maximum possible share of bioliquids that doesnt go to vehicles"/>
+				<aux x="290.833" y="2102.21" name="Bioliquid to electricity"/>
+				<aux x="290.833" y="2262.38" name="Bioliquid to fuel/vehicles"/>
+				<connector uid="488" angle="358.624">
+					<from>Bioliquid_to_electricity</from>
+					<to>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</to>
+				</connector>
+				<connector uid="489" angle="13.1625">
+					<from>&quot;Bioliquid_to_fuel/vehicles&quot;</from>
+					<to>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</to>
+				</connector>
+				<connector uid="490" angle="0">
+					<from>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</from>
+					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
 				<alias font_style="italic" uid="88" x="2009.93" y="1224.54" width="45" height="35">
 					<of>stored_CO2</of>
