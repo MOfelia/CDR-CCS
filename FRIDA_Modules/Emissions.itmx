@@ -280,7 +280,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Realized_CO2_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use +
+				<eqn>Realized_CO2_emissions_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use +
 (IF SWITCH_For_new_CCS_structure = 1 THEN
 Leakage
 ELSE
@@ -1302,7 +1302,7 @@ Captured_CO2_to_store+BECCS_CO2_Captured</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Realized_CO2_from_Energy/GtC_to_MtCO2</eqn>
+				<eqn>Realized_CO2_emissions_from_Energy/GtC_to_MtCO2</eqn>
 				<units>GtC/Year</units>
 			</aux>
 			<aux name="CO2 emissions from\ndegraded land 1" access="input">
@@ -1400,7 +1400,7 @@ Captured_CO2_to_store+BECCS_CO2_Captured</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="244.5" isee:scroll_y="227" zoom="200" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="330" isee:scroll_y="300" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2260,15 +2260,19 @@ Captured_CO2_to_store+BECCS_CO2_Captured</eqn>
 					<to>Captured_CO2_emissions_from_Energy</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="490.987" y="312.04" name="Realized CO2 from Energy"/>
-				<connector uid="237" angle="265.255">
-					<from>Realized_CO2_from_Energy</from>
-					<to>Realized_CO2_Emissions_from_Energy_GtC</to>
-				</connector>
-				<connector uid="238" angle="154.273">
-					<from>Realized_CO2_from_Energy</from>
+				<aux font_style="italic" font_weight="bold" x="608.5" y="464.881" name="UNIT GtC per PCal crop"/>
+				<connector uid="239" angle="180.244">
+					<from>
+						<alias uid="192"/>
+					</from>
 					<to>Total_CO2_Emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="608.5" y="464.881" name="UNIT GtC per PCal crop"/>
+				<connector uid="240" angle="291.564">
+					<from>
+						<alias uid="192"/>
+					</from>
+					<to>Realized_CO2_Emissions_from_Energy_GtC</to>
+				</connector>
 				<alias font_style="italic" uid="31" x="428.917" y="155.625" width="18" height="18">
 					<of>CO2_Emissions_from_Food_and_Land_Use</of>
 				</alias>

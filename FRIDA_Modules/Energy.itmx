@@ -5,7 +5,7 @@
 		<name>Energy</name>
 		<uuid>15598a0f-019e-4c2d-b566-aa9093c421c2</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -445,6 +445,8 @@
 				<connect2 to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
 				<connect to='energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
 				<connect2 to='energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
+				<connect to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 			</module>
 			<module name="energy supply" isee:label="">
 				<format scale_by="auto"/>
@@ -2634,7 +2636,7 @@ share_of_GDP_invested_in_bio_power</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>All_Gross_energy_investments_with_CCS_costs-CCS_costs_from_priv_inv</eqn>
+				<eqn>All_Gross_energy_investments_with_CCS_costs</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Gross Investments in Renewables" access="output" isee:autocreated="true">
@@ -3914,10 +3916,10 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(IF SWITCH_For_new_CCS_structure =1 THEN 
-1-share_of_ccs_costs_covered_by_gov*Total_investment_in_CCS
+				<eqn>IF SWITCH_For_new_CCS_structure =1 THEN 
+(1-share_of_ccs_costs_covered_by_gov)*(Total_investment_in_CCS/&quot;UNIT_Million_c$_to_billion_c$&quot;)
 ELSE
-0)</eqn>
+0</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Total investment in CCS" access="input">
@@ -3925,11 +3927,15 @@ ELSE
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/Year</units>
+				<units>Mc$/Year</units>
 			</aux>
 			<aux name="SWITCH For new CCS structure" access="input">
 				<eqn>1</eqn>
 				<units>dmnl</units>
+			</aux>
+			<aux name="UNIT Million c$ to billion c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
 			</aux>
 		</variables>
 		<views>
@@ -3980,7 +3986,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="725.625" isee:scroll_y="1200.63" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="727.5" isee:scroll_y="1079.38" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5150,24 +5156,25 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<from>effect_of_margins_on_investment</from>
 					<to>All_Gross_energy_investments_with_CCS_costs</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="986.5" y="1378.31" name="share of ccs costs\ncovered by gov"/>
+				<aux font_style="italic" font_weight="bold" x="944.313" y="1372.44" name="share of ccs costs\ncovered by gov"/>
 				<aux x="986.5" y="1313.48" name="CCS costs from priv inv"/>
-				<connector uid="675" angle="90">
+				<connector uid="675" angle="54.4152">
 					<from>share_of_ccs_costs_covered_by_gov</from>
 					<to>CCS_costs_from_priv_inv</to>
 				</connector>
-				<connector uid="677" angle="145.265">
-					<from>CCS_costs_from_priv_inv</from>
-					<to>All_Gross_Energy_without_Investments</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="1089.75" y="1275" name="Total investment in CCS"/>
-				<connector uid="678" angle="220.44">
+				<aux font_style="italic" font_weight="bold" x="1106.13" y="1287.22" name="Total investment in CCS"/>
+				<connector uid="678" angle="212.381">
 					<from>Total_investment_in_CCS</from>
 					<to>CCS_costs_from_priv_inv</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1088.13" y="1360.63" name="SWITCH For new CCS structure"/>
 				<connector uid="679" angle="156.038">
 					<from>SWITCH_For_new_CCS_structure</from>
+					<to>CCS_costs_from_priv_inv</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="1025.63" y="1264.47" name="UNIT Million c$ to billion c$"/>
+				<connector uid="681" angle="227.673">
+					<from>&quot;UNIT_Million_c$_to_billion_c$&quot;</from>
 					<to>CCS_costs_from_priv_inv</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="666" x="1181" y="1408.14" width="18" height="18">
@@ -15300,7 +15307,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="302.143" isee:scroll_y="150" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="324.286" isee:scroll_y="208.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>

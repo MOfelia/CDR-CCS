@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -324,6 +324,8 @@
 				<connect2 to="CCS.share_of_gas_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 			</module>
 		</variables>
 		<views>
@@ -374,7 +376,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="626" isee:scroll_y="370.5" zoom="200" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -542,7 +544,7 @@
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(Captured_CO2_to_store * cost_of_storing_CO2_per_unit)*UNIT_to_per_year</eqn>
-				<units>c$/Year</units>
+				<units>Mc$/Year</units>
 			</aux>
 			<aux name="UNIT GtC to tC">
 				<doc>${Unit}
@@ -578,7 +580,7 @@
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<eqn>1</eqn>
-				<range min="10000000000" max="1000000000000"/>
+				<range min="0" max="2"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Effect of scarcity on cost">
@@ -596,14 +598,14 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1120004233275.19</eqn>
+				<eqn>1093369743558.44</eqn>
 				<range min="70000000000" max="7000000000000"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Exponent of cost curve">
 				<doc>${Assumption}
 </doc>
-				<eqn>4</eqn>
+				<eqn>0.0361003245527045</eqn>
 				<range min="0" max="10"/>
 				<units>dmnl</units>
 			</aux>
@@ -613,7 +615,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.05</eqn>
+				<eqn>57.6094026328413</eqn>
 				<range min="50" max="150"/>
 				<units>MtCO2</units>
 			</aux>
@@ -624,7 +626,7 @@ Slope_of_cost_curve*
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Floor_Costs+Reducible_Installation_Cost_component_in_InjectionStorage</eqn>
-				<units>c$/MtCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Learning Rate">
 				<doc>${Assumption,Internal Calibration Parameter}
@@ -632,7 +634,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.187056047987987</eqn>
+				<eqn>0.0863248010621125</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -642,9 +644,9 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2690.35149710682</eqn>
+				<eqn>2738.42170426906</eqn>
 				<range min="500" max="3000"/>
-				<units>c$/MtCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="learning rate parameter">
 				<dimensions>
@@ -659,7 +661,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.170413693291279</eqn>
+				<eqn>0.285784842000188</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -670,7 +672,7 @@ Slope_of_cost_curve*
 				</dimensions>
 				<eqn>Initial_Installation_Costs * Effect_of_Learning_On_Cost
 * Stepping_on_Toes_Punishment_in_InjectionStorage</eqn>
-				<units>c$/MtCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Perceived cumulative Storing\ncapacity construction">
 				<dimensions>
@@ -703,9 +705,9 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1610.17712052244</eqn>
+				<eqn>1511.49685757055</eqn>
 				<range min="1000" max="3000"/>
-				<units>c$/MtCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Average cost of CCS per unit" access="output" isee:autocreated="true">
 				<dimensions>
@@ -715,7 +717,7 @@ Slope_of_cost_curve*
 (IF Captured_CO2_to_store = 0 THEN
 cost_of_storing_CO2_per_unit_1
 ELSE
-cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit)
+(cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit)/&quot;UNIT_Million_c$_to_c$&quot;)
 ELSE
 cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(MtCO2/year)</units>
@@ -729,7 +731,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>cost_of_storing_CO2_per_unit*GtC_to_MtCO2/UNIT_GtC_to_tC</eqn>
-				<units>c$/(tC/year)</units>
+				<units>Mc$/(tC/year)</units>
 			</aux>
 			<aux name="direct air carbon capture Installation\nCosts">
 				<doc>${Calibrated Output}
@@ -738,7 +740,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>direct_air_carbon_capture_Floor_Costs+Reducible_Installation_Cost_component_in_direct_air_carbon_capture</eqn>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Learning Rate direct air carbon capture">
 				<doc>${Assumption,Internal Calibration Parameter}
@@ -746,7 +748,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.187056047987987</eqn>
+				<eqn>0.4</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -756,9 +758,9 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>5e9</eqn>
+				<eqn>2897.00690477404</eqn>
 				<range min="500" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="learning rate parameter direct air carbon capture">
 				<dimensions>
@@ -773,7 +775,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.170413693291279</eqn>
+				<eqn>0.297306315254263</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -784,7 +786,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				</dimensions>
 				<eqn>direct_air_carbon_capture_Initial_Installation_Costs * Effect_of_Learning_On_Cost_direct_air_carbon_capture
 * Stepping_on_Toes_Punishment_direct_air_carbon_capture</eqn>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Stepping on Toes Punishment direct air carbon capture">
 				<dimensions>
@@ -800,7 +802,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				</dimensions>
 				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_direct_air_carbon_capture, initial_direct_air_carbon_capture_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_direct_air_carbon_capture)</eqn>
 				<isee:delay_aux/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<aux name="time to perceive\nchanges in construction\nof direct air carbon capture">
 				<doc>${Assumption}
@@ -825,16 +827,16 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3e9</eqn>
+				<eqn>1468.57912149252</eqn>
 				<range min="1000" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="cost of capturing\nCO2 per unit with direct air carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(direct_air_carbon_capture_Installation_Costs)/UNIT_to_per_year</eqn>
-				<units>c$/(tCO2/year)</units>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<aux name="depreciation rate of\ndirect air carbon capture capital">
 				<doc>${Assumption}
@@ -843,7 +845,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.033</eqn>
+				<eqn>0</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -857,7 +859,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<inflow>Installation_of_direct_air_carbon_capture_Capacity</inflow>
 				<outflow>Depreciation_of_direct_air_carbon_capture_Capacity</outflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="Initial direct air\ncarbon capture Capacity">
 				<doc>${Internal Calibration Parameter}
@@ -867,7 +869,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>0.05</eqn>
 				<range min="50" max="150"/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="Installation of\ndirect air carbon capture Capacity">
 				<dimensions>
@@ -879,7 +881,7 @@ Investment_in_direct_air_carbon_capture = 0 THEN
 ELSE
 Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="DAC CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
@@ -887,7 +889,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>direct_air_carbon_capture_Capacity*UNIT_to_per_year*Efficiency_for_direct_air_carbon_capture*UNIT_to_t_to_MtCO2</eqn>
+				<eqn>direct_air_carbon_capture_Capacity*UNIT_to_per_year*Efficiency_for_direct_air_carbon_capture</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<stock name="Cumulative\nCapacity Construction for direct air carbon capture">
@@ -897,23 +899,23 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<eqn>1</eqn>
 				<inflow>accumulating_direct_air_carbon_capture_Construction</inflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="Carbon to capture per year">
 				<eqn>TIME</eqn>
 				<gf>
 					<xscale min="2025" max="2150"/>
-					<yscale min="0" max="4000"/>
+					<yscale min="0" max="50"/>
 					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Additional Investment in direct\nair carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Carbon_to_capture_per_year*cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</eqn>
-				<units>c$</units>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Installation\nCosts End of Pipe\nCarbon Capture">
 				<doc>${Calibrated Output}
@@ -922,7 +924,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Floor_Costs_end_of_pipe_carbon_capture[Run]+Reducible_Installation_Cost_component_in_end_of_pipe_capture</eqn>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Floor Costs end of\npipe carbon capture">
 				<doc>${Internal Calibration Parameter}
@@ -930,16 +932,16 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3e9</eqn>
+				<eqn>2991.73869191178</eqn>
 				<range min="1000" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="cost of capturing\nCO2 per unit with end of pipe carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(Installation_Costs_End_of_Pipe_Carbon_Capture[Run])/UNIT_to_per_year</eqn>
-				<units>c$/(tCO2/year)</units>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<aux name="depreciation rate of\nEnd of Pipe\nCarbon Capture capital">
 				<doc>${Assumption}
@@ -948,7 +950,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.033</eqn>
+				<eqn>0.0240747462584202</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -958,7 +960,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>End_of_Pipe_Carbon_Capture_Capacity[Run]*depreciation_rate_of_End_of_Pipe_Carbon_Capture_capital[Run]</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<stock name="End of Pipe\nCarbon Capture Capacity" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
@@ -970,7 +972,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<inflow>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</inflow>
 				<outflow>Depreciation_of_End_of_Pipe_Carbon_Capture_Capacity</outflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="Initial End of Pipe\nCarbon Capture Capacity">
 				<doc>${Internal Calibration Parameter}
@@ -980,7 +982,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>0.05</eqn>
 				<range min="50" max="150"/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="Installation of\nEnd of Pipe\nCarbon Capture Capacity">
 				<dimensions>
@@ -988,7 +990,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>(Investment_in_End_of_Pipe_Carbon_Capture)/cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="End of Pipe CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
@@ -996,15 +998,15 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>End_of_Pipe_Carbon_Capture_Capacity*Efficiency_for_end_of_pipe_carbon_capture*UNIT_to_t_to_MtCO2*UNIT_to_per_year</eqn>
+				<eqn>End_of_Pipe_Carbon_Capture_Capacity*Efficiency_for_end_of_pipe_carbon_capture*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Additional Investment in End of Pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(storing_carbon_from_coal_emissions+storing_carbon_from_oil_emissions+storing_carbon_from_gas_emissions)*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture/UNIT_to_t_to_MtCO2</eqn>
-				<units>c$</units>
+				<eqn>(storing_carbon_from_coal_emissions+storing_carbon_from_oil_emissions+storing_carbon_from_gas_emissions)*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Energy intensity in\ndirect air carbon capture">
 				<dimensions>
@@ -1053,21 +1055,21 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>direct_air_carbon_capture_Capacity+End_of_Pipe_Carbon_Capture_Capacity</eqn>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<aux name="Total investment in CCS" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>total_cost_of_storing_CO2+(Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture)*UNIT_to_per_year</eqn>
-				<units>c$/Year</units>
+				<eqn>(total_cost_of_storing_CO2+(Investment_in_direct_air_carbon_capture+Investment_in_End_of_Pipe_Carbon_Capture+Investment_in_BECCS)*UNIT_to_per_year)</eqn>
+				<units>Mc$/Year</units>
 			</aux>
 			<aux name="cost of storing CO2 per unit">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(InjectionStorage_Installation_Costs*Effect_of_scarcity_on_cost)/UNIT_to_per_year</eqn>
-				<units>c$/(MtCO2/year)</units>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<aux name="Average cost of capturing CO2 per unit">
 				<dimensions>
@@ -1079,12 +1081,12 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 ELSE
 ((((cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture*DAC_CO2_Captured)
 +
-(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture)*End_of_Pipe_CO2_Captured))/UNIT_to_t_to_MtCO2)
+(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture)*End_of_Pipe_CO2_Captured))
 /
-Captured_CO2_to_store)
+Captured_CO2_to_store))
 ELSE
 0</eqn>
-				<units>c$/(MtCO2/year)</units>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<stock name="stored CO2 1">
 				<dimensions>
@@ -1161,7 +1163,7 @@ middle of power generation storing cost</doc>
 				</dimensions>
 				<eqn>direct_air_carbon_capture_Capacity*depreciation_rate_of_direct_air_carbon_capture_capital</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="Government\nfunded R&amp;D in direct\nair carbon capture2">
 				<dimensions>
@@ -1228,36 +1230,31 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1e9</eqn>
-				<units>c$</units>
+				<eqn>347.211961230366</eqn>
+				<range min="5" max="3000"/>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Government\nfunded R&amp;D in direct\nair carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3e9</eqn>
-				<units>c$</units>
+				<eqn>1679.66010617622</eqn>
+				<range min="5" max="3000"/>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Investment in End of Pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Additional_Investment_in_End_of_Pipe_Carbon_Capture+&quot;Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;</eqn>
-				<units>c$</units>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Investment in direct\nair carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>Additional_Investment_in_direct_air_carbon_capture+&quot;Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;</eqn>
-				<units>c$</units>
-			</aux>
-			<aux name="UNIT to t to MtCO2">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>0.0000001</eqn>
-				<units>MtCO2/tCO2</units>
+				<units>Mc$</units>
 			</aux>
 			<aux name="initial stored CO2 for the\nconsideration of cost effects">
 				<eqn>10</eqn>
@@ -1265,7 +1262,7 @@ middle of power generation storing cost</doc>
 			</aux>
 			<aux name="initial direct air carbon capture for the\nconsideration of cost effects">
 				<eqn>1</eqn>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="accumulating direct air carbon capture Construction">
 				<dimensions>
@@ -1273,7 +1270,7 @@ middle of power generation storing cost</doc>
 				</dimensions>
 				<eqn>Installation_of_direct_air_carbon_capture_Capacity</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="Learning Rate end of pipe capture">
 				<doc>${Assumption,Internal Calibration Parameter}
@@ -1281,7 +1278,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.187056047987987</eqn>
+				<eqn>0.01</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1291,9 +1288,9 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>5e9</eqn>
+				<eqn>2802.78727341129</eqn>
 				<range min="500" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="learning rate parameter end of pipe capture">
 				<dimensions>
@@ -1308,7 +1305,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.170413693291279</eqn>
+				<eqn>0.395245841511053</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1319,7 +1316,7 @@ middle of power generation storing cost</doc>
 				</dimensions>
 				<eqn>end_of_pipe_capture_Initial_Installation_Costs * Effect_of_Learning_On_Cost_end_of_pipe_capture
 * Stepping_on_Toes_Punishment_end_of_pipe_capture</eqn>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Stepping on Toes Punishment end of pipe capture">
 				<dimensions>
@@ -1335,7 +1332,7 @@ middle of power generation storing cost</doc>
 				</dimensions>
 				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_end_of_pipe_capture, initial_end_of_pipe_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_end_of_pipe_capture)</eqn>
 				<isee:delay_aux/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<aux name="time to perceive\nchanges in construction\nof end of pipe capture">
 				<doc>${Assumption}
@@ -1361,11 +1358,11 @@ middle of power generation storing cost</doc>
 				<eqn>1</eqn>
 				<inflow>accumulating_end_of_pipe_capture_Construction</inflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="initial end of pipe for the\nconsideration of cost effects">
 				<eqn>1</eqn>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="accumulating end of pipe capture Construction">
 				<dimensions>
@@ -1373,7 +1370,7 @@ middle of power generation storing cost</doc>
 				</dimensions>
 				<eqn>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="Installation\nCosts BECCS">
 				<doc>${Calibrated Output}
@@ -1381,8 +1378,8 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Floor_Costs_BECCS[Run]+Reducible_Installation_Cost_component_in_BECCS</eqn>
-				<units>c$/tCO2</units>
+				<eqn>(Floor_Costs_BECCS[Run]+Reducible_Installation_Cost_component_in_BECCS)</eqn>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Floor Costs BECCS">
 				<doc>${Internal Calibration Parameter}
@@ -1390,16 +1387,16 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3e9</eqn>
+				<eqn>2961.72256697308</eqn>
 				<range min="1000" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="cost of capturing\nCO2 per unit with BECCS">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(Installation_Costs_BECCS[Run])/UNIT_to_per_year</eqn>
-				<units>c$/(tCO2/year)</units>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<aux name="depreciation rate of\nBECCS capital">
 				<doc>${Assumption}
@@ -1408,7 +1405,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.033</eqn>
+				<eqn>0.00040047816860426</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1418,7 +1415,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>BECCS[Run]*depreciation_rate_of_BECCS_capital[Run]</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<stock name="BECCS" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
@@ -1430,7 +1427,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<inflow>Installation_of_BECCS_Capacity</inflow>
 				<outflow>Depreciation_of_BECCS</outflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="Initial BECCS">
 				<doc>${Internal Calibration Parameter}
@@ -1440,7 +1437,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>0.0</eqn>
 				<range min="50" max="150"/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="Installation of\nBECCS Capacity">
 				<dimensions>
@@ -1448,7 +1445,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>(Investment_in_BECCS)/cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="BECCS CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
@@ -1456,15 +1453,15 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECCS*Efficiency_for_BECCS*UNIT_to_t_to_MtCO2*UNIT_to_per_year</eqn>
+				<eqn>BECCS*Efficiency_for_BECCS*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Additional Investment in BECCS">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECCS/UNIT_to_t_to_MtCO2</eqn>
-				<units>c$</units>
+				<eqn>(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Energy intensity in BECCS">
 				<dimensions>
@@ -1491,15 +1488,16 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1e9</eqn>
-				<units>c$</units>
+				<eqn>90.3591308018897</eqn>
+				<range min="5" max="3000"/>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Investment in BECCS">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Additional_Investment_in_BECCS+&quot;Government_funded_R&amp;D_for_BECCS&quot;</eqn>
-				<units>c$</units>
+				<eqn>(Additional_Investment_in_BECCS+&quot;Government_funded_R&amp;D_for_BECCS&quot;)</eqn>
+				<units>Mc$</units>
 			</aux>
 			<aux name="Learning Rate BECCS">
 				<doc>${Assumption,Internal Calibration Parameter}
@@ -1507,7 +1505,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.187056047987987</eqn>
+				<eqn>0.0919649057532483</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1517,9 +1515,9 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>5e9</eqn>
+				<eqn>2967.40936051533</eqn>
 				<range min="500" max="3000"/>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="learning rate parameter\nBECCS">
 				<dimensions>
@@ -1534,7 +1532,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.170413693291279</eqn>
+				<eqn>0.246245468408487</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1545,7 +1543,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>BECCS_Initial_Installation_Costs * Effect_of_Learning_On_Cost_BECCS
 * Stepping_on_Toes_Punishment_BECCS</eqn>
-				<units>c$/tCO2</units>
+				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="Stepping on Toes Punishment\nBECCS">
 				<dimensions>
@@ -1561,7 +1559,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_BECCS, initial_BECCS_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_BECCS)</eqn>
 				<isee:delay_aux/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<aux name="time to perceive\nchanges in construction\nof BECCS">
 				<doc>${Assumption}
@@ -1587,11 +1585,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<eqn>1</eqn>
 				<inflow>accumulating_BECCS_capture_Construction</inflow>
 				<non_negative/>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</stock>
 			<aux name="initial BECCS for the\nconsideration of cost effects">
 				<eqn>1</eqn>
-				<units>tCO2</units>
+				<units>MtCO2</units>
 			</aux>
 			<flow name="accumulating BECCS\ncapture Construction">
 				<dimensions>
@@ -1599,7 +1597,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</dimensions>
 				<eqn>Installation_of_BECCS_Capacity</eqn>
 				<non_negative/>
-				<units>tCO2/Year</units>
+				<units>MtCO2/Year</units>
 			</flow>
 			<aux name="Emissions from fossil fuels">
 				<dimensions>
@@ -1630,13 +1628,29 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Maximum possible share of bioliquids that doesnt go to vehicles">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
 				<eqn>Bioliquid_to_electricity*&quot;Bioliquid_to_fuel/vehicles&quot;</eqn>
+				<units>dmnl</units>
 			</aux>
 			<aux name="Bioliquid to electricity">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
 				<eqn>0.375</eqn>
+				<units>dmnl</units>
 			</aux>
 			<aux name="Bioliquid to fuel/vehicles">
-				<eqn>1-0.375</eqn>
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>0.625</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
 			</aux>
 		</variables>
 		<views>
@@ -1687,7 +1701,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="3245.83" isee:scroll_y="100" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="3317.5" isee:scroll_y="150" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1827,7 +1841,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</connector>
 				<text_box uid="26" x="2467.62" y="1030.94" width="171.772" height="21.5714">Available storage scarcity</text_box>
 				<aux background="white" x="2107.87" y="1003.4" name="InjectionStorage Installation\nCosts"/>
-				<aux color="blue" x="1961.11" y="1136.89" name="Learning Rate"/>
+				<aux color="blue" background="#55AA7F" x="1961.11" y="1136.89" name="Learning Rate"/>
 				<aux background="#00AA00" x="1981.72" y="1061.51" name="Initial\nInstallation Costs"/>
 				<aux label_side="top" x="2035.22" y="1136.89" name="learning rate parameter"/>
 				<connector uid="28" angle="0">
@@ -2134,21 +2148,9 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<to>Effect_of_Learning_On_Cost_direct_air_carbon_capture</to>
 				</connector>
 				<aux background="#FFAAFF" x="3451.14" y="492.306" name="Total investment in CCS"/>
-				<connector uid="261" angle="312.1">
+				<connector uid="261" angle="306.601">
 					<from>
 						<alias uid="255"/>
-					</from>
-					<to>Total_investment_in_CCS</to>
-				</connector>
-				<connector uid="262" angle="253.905">
-					<from>
-						<alias uid="258"/>
-					</from>
-					<to>Total_investment_in_CCS</to>
-				</connector>
-				<connector uid="263" angle="245.398">
-					<from>
-						<alias uid="259"/>
 					</from>
 					<to>Total_investment_in_CCS</to>
 				</connector>
@@ -2436,34 +2438,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<from>&quot;Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;</from>
 					<to>Investment_in_direct_air_carbon_capture</to>
 				</connector>
-				<aux label_side="top" x="1314.29" y="338.93" name="UNIT to t to MtCO2"/>
-				<connector uid="395" angle="295.106">
-					<from>UNIT_to_t_to_MtCO2</from>
-					<to>DAC_CO2_Captured</to>
-				</connector>
-				<connector uid="396" angle="205.796">
-					<from>
-						<alias uid="397"/>
-					</from>
-					<to>End_of_Pipe_CO2_Captured</to>
-				</connector>
 				<connector uid="398" angle="26.3701">
 					<from>
 						<alias uid="368"/>
 					</from>
 					<to>End_of_Pipe_CO2_Captured</to>
-				</connector>
-				<connector uid="401" angle="38.1572">
-					<from>
-						<alias uid="402"/>
-					</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
-				</connector>
-				<connector uid="403" angle="328.233">
-					<from>
-						<alias uid="400"/>
-					</from>
-					<to>Average_cost_of_capturing_CO2_per_unit</to>
 				</connector>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="404" x="3272.5" y="1394.17" width="580" height="58">OLD STRUCTURE</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="405" x="1986.99" y="445.704" width="580" height="58">Injection/Storage of CO2</text_box>
@@ -2665,23 +2644,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<from>&quot;Government_funded_R&amp;D_for_BECCS&quot;</from>
 					<to>Investment_in_BECCS</to>
 				</connector>
-				<connector uid="452" angle="205.796">
-					<from>
-						<alias uid="453"/>
-					</from>
-					<to>BECCS_CO2_Captured</to>
-				</connector>
 				<connector uid="454" angle="26.3701">
 					<from>
 						<alias uid="448"/>
 					</from>
 					<to>BECCS_CO2_Captured</to>
-				</connector>
-				<connector uid="455" angle="10.0835">
-					<from>
-						<alias uid="456"/>
-					</from>
-					<to>Additional_Investment_in_BECCS</to>
 				</connector>
 				<aux color="blue" background="#00AA00" x="842.212" y="2667.09" name="Learning Rate BECCS"/>
 				<aux background="#00AA00" x="839.475" y="2591.71" name="BECCS Initial\nInstallation Costs"/>
@@ -2833,6 +2800,29 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<from>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
+				<connector uid="501" angle="264.806">
+					<from>
+						<alias uid="498"/>
+					</from>
+					<to>Total_investment_in_CCS</to>
+				</connector>
+				<connector uid="502" angle="233.569">
+					<from>
+						<alias uid="499"/>
+					</from>
+					<to>Total_investment_in_CCS</to>
+				</connector>
+				<connector uid="503" angle="172.875">
+					<from>
+						<alias uid="500"/>
+					</from>
+					<to>Total_investment_in_CCS</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="3147.5" y="1013.75" name="UNIT Million c$ to c$"/>
+				<connector uid="504" angle="31.7236">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>Average_cost_of_CCS_per_unit</to>
+				</connector>
 				<alias font_style="italic" uid="88" x="2009.93" y="1224.54" width="45" height="35">
 					<of>stored_CO2</of>
 				</alias>
@@ -2845,17 +2835,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<alias background="#FFAAFF" font_style="italic" uid="247" x="3126.63" y="386.473" width="45" height="35">
 					<of>End_of_Pipe_Carbon_Capture_Capacity</of>
 				</alias>
-				<alias font_style="italic" uid="255" x="3365.7" y="383.75" width="18" height="18">
+				<alias font_style="italic" uid="255" x="3368.2" y="383.75" width="18" height="18">
 					<of>total_cost_of_storing_CO2</of>
 				</alias>
 				<alias background="#AA00FF" font_style="italic" uid="256" x="1184.86" y="720.243" width="18" height="18">
 					<of>Initial_direct_air_carbon_capture_Capacity</of>
-				</alias>
-				<alias font_style="italic" uid="258" x="3485.03" y="326.084" width="18" height="18">
-					<of>Additional_Investment_in_direct_air_carbon_capture</of>
-				</alias>
-				<alias font_style="italic" uid="259" x="3512.69" y="365.75" width="18" height="18">
-					<of>Additional_Investment_in_End_of_Pipe_Carbon_Capture</of>
 				</alias>
 				<alias background="red" font_style="italic" uid="266" x="3442.14" y="527.195" width="18" height="18">
 					<of>UNIT_to_per_year</of>
@@ -2881,9 +2865,6 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</alias>
 				<alias font_style="italic" uid="290" x="3103.68" y="789.56" width="18" height="18">
 					<of>Captured_CO2_to_store</of>
-				</alias>
-				<alias background="red" font_style="italic" uid="292" x="3297.95" y="612.419" width="18" height="18">
-					<of>UNIT_to_per_year</of>
 				</alias>
 				<alias font_style="italic" uid="338" x="3244.33" y="1641.66" width="18" height="18">
 					<of>storing_carbon_from_biofuel_emissions</of>
@@ -2912,26 +2893,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<alias background="#FFAAFF" font_style="italic" uid="378" x="1993.79" y="1999.49" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</of>
 				</alias>
-				<alias font_style="italic" uid="397" x="1309.71" y="1300.28" width="18" height="18">
-					<of>UNIT_to_t_to_MtCO2</of>
-				</alias>
-				<alias font_style="italic" uid="400" x="3200.36" y="726.515" width="18" height="18">
-					<of>UNIT_to_t_to_MtCO2</of>
-				</alias>
-				<alias font_style="italic" uid="402" x="797.071" y="1168.14" width="18" height="18">
-					<of>UNIT_to_t_to_MtCO2</of>
-				</alias>
 				<alias background="#AA55FF" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
 					<of>Initial_BECCS</of>
 				</alias>
 				<alias background="red" font_style="italic" uid="448" x="1167.61" y="2436.39" width="18" height="18">
 					<of>UNIT_to_per_year</of>
-				</alias>
-				<alias font_style="italic" uid="453" x="1342.21" y="2245.78" width="18" height="18">
-					<of>UNIT_to_t_to_MtCO2</of>
-				</alias>
-				<alias font_style="italic" label_side="top" uid="456" x="874.822" y="2106.14" width="18" height="18">
-					<of>UNIT_to_t_to_MtCO2</of>
 				</alias>
 				<alias color="blue" background="white" font_style="italic" uid="478" x="3774.33" y="360.973" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -2945,6 +2911,15 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="485" x="4224.33" y="365.75" width="18" height="18">
 					<of>BECCS_CO2_Captured</of>
+				</alias>
+				<alias font_style="italic" uid="498" x="3473.5" y="384.75" width="18" height="18">
+					<of>Investment_in_direct_air_carbon_capture</of>
+				</alias>
+				<alias font_style="italic" uid="499" x="3547.25" y="424.125" width="18" height="18">
+					<of>Investment_in_End_of_Pipe_Carbon_Capture</of>
+				</alias>
+				<alias font_style="italic" uid="500" x="3634.13" y="470.375" width="18" height="18">
+					<of>Investment_in_BECCS</of>
 				</alias>
 			</view>
 		</views>
