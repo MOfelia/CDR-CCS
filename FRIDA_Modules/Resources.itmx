@@ -598,14 +598,14 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1093369743558.44</eqn>
+				<eqn>1099697462610.75</eqn>
 				<range min="70000000000" max="7000000000000"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Exponent of cost curve">
 				<doc>${Assumption}
 </doc>
-				<eqn>0.0361003245527045</eqn>
+				<eqn>2.7697356713198</eqn>
 				<range min="0" max="10"/>
 				<units>dmnl</units>
 			</aux>
@@ -615,7 +615,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>57.6094026328413</eqn>
+				<eqn>101.75155339721</eqn>
 				<range min="50" max="150"/>
 				<units>MtCO2</units>
 			</aux>
@@ -634,7 +634,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0863248010621125</eqn>
+				<eqn>0.204902360135533</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -644,7 +644,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2738.42170426906</eqn>
+				<eqn>2448.55407172636</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -661,7 +661,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.285784842000188</eqn>
+				<eqn>0.299323261824844</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -705,7 +705,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1511.49685757055</eqn>
+				<eqn>1420.11523382693</eqn>
 				<range min="1000" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -748,7 +748,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.4</eqn>
+				<eqn>0.01</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -758,7 +758,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2897.00690477404</eqn>
+				<eqn>3000</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -775,7 +775,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.297306315254263</eqn>
+				<eqn>0.5</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -827,7 +827,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1468.57912149252</eqn>
+				<eqn>2925.59077236695</eqn>
 				<range min="1000" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -845,7 +845,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0</eqn>
+				<eqn>0.1</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -932,7 +932,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2991.73869191178</eqn>
+				<eqn>1000</eqn>
 				<range min="1000" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -950,7 +950,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0240747462584202</eqn>
+				<eqn>0</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1054,14 +1054,14 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>direct_air_carbon_capture_Capacity+End_of_Pipe_Carbon_Capture_Capacity</eqn>
+				<eqn>direct_air_carbon_capture_Capacity+End_of_Pipe_Carbon_Capture_Capacity+BECC_Capacity</eqn>
 				<units>MtCO2</units>
 			</aux>
 			<aux name="Total investment in CCS" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(total_cost_of_storing_CO2+(Investment_in_direct_air_carbon_capture+Investment_in_End_of_Pipe_Carbon_Capture+Investment_in_BECCS)*UNIT_to_per_year)</eqn>
+				<eqn>(total_cost_of_storing_CO2+(Total_investment_in_carbon_capture)*UNIT_to_per_year)</eqn>
 				<units>Mc$/Year</units>
 			</aux>
 			<aux name="cost of storing CO2 per unit">
@@ -1230,7 +1230,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>347.211961230366</eqn>
+				<eqn>741.053743176954</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1238,7 +1238,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1679.66010617622</eqn>
+				<eqn>1089.01886193403</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1278,7 +1278,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.01</eqn>
+				<eqn>0.4</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1288,7 +1288,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2802.78727341129</eqn>
+				<eqn>2132.78181331342</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1305,7 +1305,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.395245841511053</eqn>
+				<eqn>0.5</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1387,7 +1387,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2961.72256697308</eqn>
+				<eqn>3000</eqn>
 				<range min="1000" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1405,7 +1405,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.00040047816860426</eqn>
+				<eqn>0</eqn>
 				<range min="0" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1413,11 +1413,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECCS[Run]*depreciation_rate_of_BECCS_capital[Run]</eqn>
+				<eqn>BECC_Capacity[Run]*depreciation_rate_of_BECCS_capital[Run]</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<stock name="BECCS" access="output" isee:autocreated="true">
+			<stock name="BECC Capacity" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -1443,7 +1443,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Investment_in_BECCS)/cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
+				<eqn>(Investment_in_BECC)/cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
@@ -1453,7 +1453,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECCS*Efficiency_for_BECCS*UNIT_to_per_year</eqn>
+				<eqn>BECC_Capacity*Efficiency_for_BECCS*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Additional Investment in BECCS">
@@ -1488,11 +1488,11 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>90.3591308018897</eqn>
+				<eqn>2175.29822195357</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
-			<aux name="Investment in BECCS">
+			<aux name="Investment in BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1505,7 +1505,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0919649057532483</eqn>
+				<eqn>0.0200004561101044</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1515,7 +1515,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2967.40936051533</eqn>
+				<eqn>2941.72152073033</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1532,7 +1532,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.246245468408487</eqn>
+				<eqn>0.325681638544755</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1652,6 +1652,13 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<eqn>0.0000001</eqn>
 				<units>Mc$/c$</units>
 			</aux>
+			<aux name="Total investment\nin carbon capture">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Investment_in_End_of_Pipe_Carbon_Capture+Investment_in_direct_air_carbon_capture+Investment_in_BECC</eqn>
+				<units>Mc$</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1701,7 +1708,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="3317.5" isee:scroll_y="150" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2670" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2583,9 +2590,9 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<from>depreciation_rate_of_BECCS_capital</from>
 					<to>Depreciation_of_BECCS</to>
 				</connector>
-				<stock background="#FFAAFF" x="1065.8" y="2351.07" name="BECCS"/>
+				<stock background="#FFAAFF" x="1065.8" y="2351.07" name="BECC Capacity"/>
 				<connector uid="439" angle="24.9974">
-					<from>BECCS</from>
+					<from>BECC_Capacity</from>
 					<to>Depreciation_of_BECCS</to>
 				</connector>
 				<aux background="#AA55FF" x="1071.8" y="2400.75" name="Initial BECCS"/>
@@ -2597,7 +2604,7 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				</flow>
 				<aux background="#FFAAFF" x="1351.21" y="2358.83" name="BECCS CO2 Captured"/>
 				<connector uid="440" angle="328.952">
-					<from>BECCS</from>
+					<from>BECC_Capacity</from>
 					<to>BECCS_CO2_Captured</to>
 				</connector>
 				<connector uid="441" angle="88.2452">
@@ -2631,18 +2638,18 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<to>cost_of_capturing_CO2_per_unit_with_BECCS</to>
 				</connector>
 				<aux x="1071.8" y="2166.75" name="Government\nfunded R&amp;D for BECCS"/>
-				<aux x="992.05" y="2262.38" name="Investment in BECCS"/>
+				<aux x="992.05" y="2262.38" name="Investment in BECC"/>
 				<connector uid="449" angle="270">
-					<from>Investment_in_BECCS</from>
+					<from>Investment_in_BECC</from>
 					<to>Installation_of_BECCS_Capacity</to>
 				</connector>
 				<connector uid="450" angle="308.253">
 					<from>Additional_Investment_in_BECCS</from>
-					<to>Investment_in_BECCS</to>
+					<to>Investment_in_BECC</to>
 				</connector>
 				<connector uid="451" angle="230.47">
 					<from>&quot;Government_funded_R&amp;D_for_BECCS&quot;</from>
-					<to>Investment_in_BECCS</to>
+					<to>Investment_in_BECC</to>
 				</connector>
 				<connector uid="454" angle="26.3701">
 					<from>
@@ -2800,28 +2807,39 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 					<from>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
-				<connector uid="501" angle="264.806">
-					<from>
-						<alias uid="498"/>
-					</from>
-					<to>Total_investment_in_CCS</to>
-				</connector>
-				<connector uid="502" angle="233.569">
-					<from>
-						<alias uid="499"/>
-					</from>
-					<to>Total_investment_in_CCS</to>
-				</connector>
-				<connector uid="503" angle="172.875">
-					<from>
-						<alias uid="500"/>
-					</from>
-					<to>Total_investment_in_CCS</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" x="3147.5" y="1013.75" name="UNIT Million c$ to c$"/>
 				<connector uid="504" angle="31.7236">
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>Average_cost_of_CCS_per_unit</to>
+				</connector>
+				<connector uid="505" angle="237.932">
+					<from>
+						<alias uid="506"/>
+					</from>
+					<to>Total_Capture_Capacity</to>
+				</connector>
+				<aux x="3519.41" y="436.973" name="Total investment\nin carbon capture"/>
+				<connector uid="507" angle="267.929">
+					<from>Total_investment_in_carbon_capture</from>
+					<to>Total_investment_in_CCS</to>
+				</connector>
+				<connector uid="508" angle="273.013">
+					<from>
+						<alias uid="498"/>
+					</from>
+					<to>Total_investment_in_carbon_capture</to>
+				</connector>
+				<connector uid="509" angle="227.083">
+					<from>
+						<alias uid="499"/>
+					</from>
+					<to>Total_investment_in_carbon_capture</to>
+				</connector>
+				<connector uid="510" angle="171.029">
+					<from>
+						<alias uid="500"/>
+					</from>
+					<to>Total_investment_in_carbon_capture</to>
 				</connector>
 				<alias font_style="italic" uid="88" x="2009.93" y="1224.54" width="45" height="35">
 					<of>stored_CO2</of>
@@ -2912,14 +2930,17 @@ World Bank  2020 Minerals for climate action: The mineral intensity of the clean
 				<alias background="#FFAAFF" font_style="italic" uid="485" x="4224.33" y="365.75" width="18" height="18">
 					<of>BECCS_CO2_Captured</of>
 				</alias>
-				<alias font_style="italic" uid="498" x="3473.5" y="384.75" width="18" height="18">
+				<alias font_style="italic" uid="498" x="3504.13" y="338.5" width="18" height="18">
 					<of>Investment_in_direct_air_carbon_capture</of>
 				</alias>
-				<alias font_style="italic" uid="499" x="3547.25" y="424.125" width="18" height="18">
+				<alias font_style="italic" uid="499" x="3577.88" y="377.875" width="18" height="18">
 					<of>Investment_in_End_of_Pipe_Carbon_Capture</of>
 				</alias>
-				<alias font_style="italic" uid="500" x="3634.13" y="470.375" width="18" height="18">
-					<of>Investment_in_BECCS</of>
+				<alias font_style="italic" uid="500" x="3664.76" y="424.125" width="18" height="18">
+					<of>Investment_in_BECC</of>
+				</alias>
+				<alias background="#FFAAFF" font_style="italic" uid="506" x="3234.38" y="399.375" width="45" height="35">
+					<of>BECC_Capacity</of>
 				</alias>
 			</view>
 		</views>
