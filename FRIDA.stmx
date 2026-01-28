@@ -669,7 +669,7 @@
 			<isee:parameter name="CCS.Learning_Rate[1]" scaling="10"/>
 			<isee:parameter name="CCS.Initial_Installation_Costs[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.Floor_Costs[1]" scaling="0.1"/>
-			<isee:parameter name="CCS.Slope_of_cost_curve[1]" scaling="1e-9"/>
+			<isee:parameter name="CCS.Slope_of_cost_curve[1]" scaling="0.000001"/>
 			<isee:parameter name="CCS.Exponent_of_cost_curve"/>
 			<isee:parameter name="CCS.Floor_Costs_end_of_pipe_carbon_capture[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.stepping_on_toes_parameter_direct_air_carbon_capture[1]" scaling="10"/>
@@ -4354,6 +4354,9 @@ Lorem ipsum dolor sit amet</text_box>
 			<isee:stories/>
 		</views>
 	</model>
+	<isee:controls>
+		<isee:control priority="interactive" name="CCS.Slope_of_cost_curve[1]" value="70000000000"/>
+	</isee:controls>
 	<isee:user_controlled>
 		<ent name="Simulation End" preserve="true" lock="false"/>
 		<ent name="Government Regulations.tax on CO2e emissions" preserve="true" lock="false"/>
