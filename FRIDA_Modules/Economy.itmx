@@ -309,6 +309,8 @@
 				<format scale_by="auto"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
+				<connect to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
+				<connect2 to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -421,6 +423,8 @@
 				<connect2 to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Government.GDP" from="GDP.Nominal_GDP"/>
+				<connect to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
+				<connect2 to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect to='Government."inflation_adjustment_b$_per_bc$"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
@@ -665,8 +669,8 @@
 				<connect2 to="Circular_Flow.total_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect2 to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
-				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_without_Investments"/>
-				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_without_Investments"/>
+				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
+				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
 				<connect to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect2 to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect to="Finance.Firms_Innovation_Orientation_2" from="Innovation.Firms_Innovation_Orientation"/>
@@ -12339,7 +12343,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF SWITCH_For_new_CCS_structure=1 THEN 
-(Total_investment_in_CCS*share_of_ccs_costs_covered_by_the_goverment)/&quot;UNIT_Million_c$_to_c$&quot;
+(Total_investment_in_CCS*(1-share_of_ccs_costs_covered_by_the_goverment))/&quot;UNIT_Million_c$_to_c$&quot;
 ELSE 
 0</eqn>
 				<units>c$/Year</units>
@@ -12369,6 +12373,13 @@ ELSE
 </doc>
 				<eqn>0.0000001</eqn>
 				<units>Mc$/c$</units>
+			</aux>
+			<aux name="Government backed\ninvestments in CC" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$</units>
 			</aux>
 		</variables>
 		<views>
@@ -12419,7 +12430,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="2211.25" isee:scroll_y="187.5" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1997.86" isee:scroll_y="94.2857" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12651,9 +12662,9 @@ ELSE
 				<aux font_style="italic" font_weight="bold" x="2739" y="1039.67" name="Oil\nInvestments in\nFossil Energy Capital"/>
 				<aux font_style="italic" font_weight="bold" x="2739" y="1153.3" name="Gas\nInvestments in Fossil\nFuel Extraction Capital"/>
 				<aux font_style="italic" font_weight="bold" x="2739" y="1276.75" name="Gas\nInvestments in\nFossil Energy Capital"/>
-				<aux font_style="italic" font_weight="bold" x="2752.5" y="1875.75" name="Investments in\nHydropower\nEnergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2752.5" y="1994.08" name="Investments in\nBiofuel Capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2752.5" y="2214.42" name="Investments in\nNuclear Capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2748.93" y="1712.89" name="Investments in\nHydropower\nEnergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2748.93" y="1831.22" name="Investments in\nBiofuel Capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2748.93" y="1963.71" name="Investments in\nNuclear Capacity"/>
 				<aux font_style="italic" font_weight="bold" x="2353" y="721.75" name="fuel extraction tax rate"/>
 				<aux font_style="italic" font_weight="bold" x="2353" y="823.75" name="energy conversion tax rate"/>
 				<aux x="2520.28" y="721.75" name="tax revenue on investments in\ncoal extraction"/>
@@ -12714,12 +12725,12 @@ ELSE
 					<from>Gas_Investments_in_Fossil_Energy_Capital</from>
 					<to>tax_revenue_on_investments_in_gas_energy_conversion</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2365.5" y="1875.75" name="tax rate 1"/>
-				<aux font_style="italic" font_weight="bold" x="2365.5" y="1994.08" name="tax rate 2"/>
-				<aux font_style="italic" font_weight="bold" x="2365.5" y="2214.42" name="tax rate 4"/>
-				<aux x="2532.78" y="1875.75" name="tax revenue on investments in\nhydropower energy capacity"/>
-				<aux x="2532.78" y="1994.08" name="tax revenue on investments in\nbio fuel energy capacity"/>
-				<aux x="2532.78" y="2214.42" name="tax revenue on investments in\nnuclear energy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2361.93" y="1712.89" name="tax rate 1"/>
+				<aux font_style="italic" font_weight="bold" x="2361.93" y="1831.22" name="tax rate 2"/>
+				<aux font_style="italic" font_weight="bold" x="2361.93" y="1963.71" name="tax rate 4"/>
+				<aux x="2529.21" y="1712.89" name="tax revenue on investments in\nhydropower energy capacity"/>
+				<aux x="2529.21" y="1831.22" name="tax revenue on investments in\nbio fuel energy capacity"/>
+				<aux x="2529.21" y="1963.71" name="tax revenue on investments in\nnuclear energy capacity"/>
 				<connector uid="96" angle="354.806">
 					<from>tax_rate_1</from>
 					<to>tax_revenue_on_investments_in_hydropower_energy_capacity</to>
@@ -12750,9 +12761,9 @@ ELSE
 				<aux x="2568.28" y="988.67" name="expenditure on subsidies for investments in\noil energy conversion"/>
 				<aux x="2568.28" y="1102.3" name="expenditure on subsidies for investments in\ngas extraction"/>
 				<aux x="2568.28" y="1225.75" name="expenditure on subsidies for investments in\ngas energy conversion"/>
-				<aux x="2580.78" y="1824.75" name="expenditure on subsidies for investments in\nhydropower energy capacity"/>
-				<aux x="2580.78" y="1945.92" name="expenditure on subsidies for investments in\nbio fuel energy capacity"/>
-				<aux x="2580.78" y="2163.42" name="expenditure on subsidies for investments in\nnuclear energy capacity"/>
+				<aux x="2577.21" y="1661.89" name="expenditure on subsidies for investments in\nhydropower energy capacity"/>
+				<aux x="2577.21" y="1783.06" name="expenditure on subsidies for investments in\nbio fuel energy capacity"/>
+				<aux x="2577.21" y="1912.71" name="expenditure on subsidies for investments in\nnuclear energy capacity"/>
 				<connector uid="104" angle="10.6197">
 					<from>fuel_extraction_tax_rate</from>
 					<to>expenditure_on_subsidies_for_investments_in_coal_extraction</to>
@@ -12854,11 +12865,11 @@ ELSE
 					<to>public_expenditure_before_subsidies_and_interest_payments</to>
 				</connector>
 				<aux x="2520.28" y="588.923" name="sum of energy taxes in real terms"/>
-				<connector uid="169" angle="90.4406">
+				<connector uid="169" angle="90.3721">
 					<from>tax_revenue_on_investments_in_nuclear_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="171" angle="90.5097">
+				<connector uid="171" angle="90.4118">
 					<from>tax_revenue_on_investments_in_bio_fuel_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -12886,7 +12897,7 @@ ELSE
 					<from>tax_revenue_on_investments_in_gas_energy_conversion</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="179" angle="90.5565">
+				<connector uid="179" angle="90.4551">
 					<from>tax_revenue_on_investments_in_hydropower_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -12899,15 +12910,15 @@ ELSE
 					<to>sum_of_energy_taxes_in_nominal_terms</to>
 				</connector>
 				<aux x="2568.28" y="545.739" name="sum of energy subsidies\nin real terms"/>
-				<connector uid="183" angle="90.4427">
+				<connector uid="183" angle="90.3742">
 					<from>expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="185" angle="90.5115">
+				<connector uid="185" angle="90.4134">
 					<from>expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="186" angle="90.5599">
+				<connector uid="186" angle="90.4583">
 					<from>expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
@@ -13406,18 +13417,18 @@ ELSE
 					<from>time_for_government_spending_to_change</from>
 					<to>proportion_of_taxes_to_public_spending</to>
 				</connector>
-				<aux x="2577.53" y="1504.58" name="expenditure on subsidies for investments in\nsolar\nenergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2749.25" y="1555.58" name="Investments in\nsolar\nEnergy Capacity"/>
+				<aux x="2576.1" y="1377.44" name="expenditure on subsidies for investments in\nsolar\nenergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2747.82" y="1428.44" name="Investments in\nsolar\nEnergy Capacity"/>
 				<connector uid="377" angle="159.332">
 					<from>Investments_in_solar_Energy_Capacity</from>
 					<to>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux x="2529.53" y="1555.58" name="tax revenue on investments in\nsolar energy capacity"/>
+				<aux x="2528.1" y="1428.44" name="tax revenue on investments in\nsolar energy capacity"/>
 				<connector uid="374" angle="180">
 					<from>Investments_in_solar_Energy_Capacity</from>
 					<to>tax_revenue_on_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2362.25" y="1555.58" name="tax rate 5"/>
+				<aux font_style="italic" font_weight="bold" x="2360.82" y="1428.44" name="tax rate 5"/>
 				<connector uid="376" angle="17.71">
 					<from>tax_rate_5</from>
 					<to>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</to>
@@ -13426,18 +13437,18 @@ ELSE
 					<from>tax_rate_5</from>
 					<to>tax_revenue_on_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux x="2577.53" y="1649.58" name="expenditure on subsidies for investments in\nwind\nenergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2749.25" y="1700.58" name="Investments in\nwind\nEnergy Capacity"/>
+				<aux x="2576.1" y="1522.44" name="expenditure on subsidies for investments in\nwind\nenergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2747.82" y="1573.44" name="Investments in\nwind\nEnergy Capacity"/>
 				<connector uid="378" angle="159.332">
 					<from>Investments_in_wind_Energy_Capacity</from>
 					<to>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</to>
 				</connector>
-				<aux x="2529.53" y="1700.58" name="tax revenue on investments in\nwind energy capacity"/>
+				<aux x="2528.1" y="1573.44" name="tax revenue on investments in\nwind energy capacity"/>
 				<connector uid="379" angle="180">
 					<from>Investments_in_wind_Energy_Capacity</from>
 					<to>tax_revenue_on_investments_in_wind_energy_capacity</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2362.25" y="1700.58" name="tax rate 6"/>
+				<aux font_style="italic" font_weight="bold" x="2360.82" y="1573.44" name="tax rate 6"/>
 				<connector uid="380" angle="17.71">
 					<from>tax_rate_6</from>
 					<to>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</to>
@@ -13446,19 +13457,19 @@ ELSE
 					<from>tax_rate_6</from>
 					<to>tax_revenue_on_investments_in_wind_energy_capacity</to>
 				</connector>
-				<connector uid="382" angle="93.1666">
+				<connector uid="382" angle="90.5388">
 					<from>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="383" angle="86.8646">
+				<connector uid="383" angle="90.4588">
 					<from>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="384" angle="97.5266">
+				<connector uid="384" angle="90.4552">
 					<from>tax_revenue_on_investments_in_wind_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="385" angle="87.4564">
+				<connector uid="385" angle="90.5338">
 					<from>tax_revenue_on_investments_in_solar_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -13537,29 +13548,30 @@ ELSE
 					<from>maximum_percentage_of_government_budget_to_transfer_payments</from>
 					<to>government_transfers</to>
 				</connector>
-				<aux x="2556.89" y="329.121" name="CCS cost covered by gov"/>
-				<aux font_style="italic" font_weight="bold" x="2464.29" y="268.571" name="share of ccs costs\ncovered by the goverment"/>
-				<connector uid="409" angle="326.822">
+				<aux x="2550.28" y="315.55" name="CCS cost covered by gov"/>
+				<aux font_style="italic" font_weight="bold" x="2444.62" y="245.143" name="share of ccs costs\ncovered by the goverment"/>
+				<connector uid="409" angle="326.321">
 					<from>share_of_ccs_costs_covered_by_the_goverment</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
-				<connector uid="416" angle="306.402">
+				<connector uid="416" angle="307.863">
 					<from>CCS_cost_covered_by_gov</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2649.29" y="227.143" name="Total investment in CCS"/>
-				<connector uid="417" angle="221.348">
-					<from>Total_investment_in_CCS</from>
-					<to>CCS_cost_covered_by_gov</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="2670.71" y="338.571" name="SWITCH For new CCS structure"/>
-				<connector uid="418" angle="204.261">
+				<aux font_style="italic" font_weight="bold" x="2652.15" y="187.143" name="Total investment in CCS"/>
+				<aux font_style="italic" font_weight="bold" x="2677.14" y="359.746" name="SWITCH For new CCS structure"/>
+				<connector uid="418" angle="189.799">
 					<from>SWITCH_For_new_CCS_structure</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
-				<aux x="2418.91" y="377.746" name="UNIT Million c$ to c$"/>
-				<connector uid="420" angle="2.34515">
+				<aux x="2444.62" y="384.889" name="UNIT Million c$ to c$"/>
+				<connector uid="420" angle="16.2083">
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>CCS_cost_covered_by_gov</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="2757" y="263.143" name="Government backed\ninvestments in CC"/>
+				<connector uid="423" angle="216.466">
+					<from>Total_investment_in_CCS</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">

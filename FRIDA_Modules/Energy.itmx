@@ -301,8 +301,8 @@
 			</module>
 			<module name="energy investments" isee:label="">
 				<format scale_by="auto"/>
-				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_without_Investments"/>
-				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_without_Investments"/>
+				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
+				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
 				<connect to="energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect2 to="energy_demand.average_marginal_net_cost_of_energy_with_historical_cost_adjustment" from="energy_investments.average_marginal_net_cost_of_energy_with_historical_cost_adjustment"/>
 				<connect to="fossil_energy_coal.Investments_in_Fossil_Energy_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Energy_Capital"/>
@@ -896,7 +896,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="12" isee:page_rows="7" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="12" isee:page_rows="7" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2571,21 +2571,21 @@ share_of_GDP_invested_in_bio_power</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Investments_in_Nuclear_Capacity/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Investments_in_Nuclear_Capacity/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in hydropower">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_Hydropower_Energy_capacity/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_Hydropower_Energy_capacity/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure invested in fuel extraction">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="share of GDP invested\nin nuclear power">
@@ -2599,7 +2599,7 @@ share_of_GDP_invested_in_bio_power</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="share of GDP invested\nin hydropower">
@@ -2632,11 +2632,11 @@ share_of_GDP_invested_in_bio_power</eqn>
 				<eqn>Gross_Investments_in_Fossil_Fuel_Extraction_Capital/World_GDP</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="All Gross Energy without Investments" access="output">
+			<aux name="All Gross Energy\nInvestments without CCS costs" access="output">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>All_Gross_energy_investments_with_CCS_costs</eqn>
+				<eqn>All_Gross_energy_investments_with_CCS_costs-CCS_costs_from_private_investments</eqn>
 				<units>c$/Year</units>
 			</aux>
 			<aux name="Gross Investments in Renewables" access="output" isee:autocreated="true">
@@ -2698,42 +2698,42 @@ DERIVN(Relative_Energy_Supply_Mismatch_with_Buffer, 1)</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Gross Energy Expenditure\ninvested in fossil energy, coal">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Coal_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Coal_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in fuel extraction, oil">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in fossil energy, oil">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Oil_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Oil_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in fuel extraction, gas">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of Energy Gross Expenditure\ninvested in fossil energy, gas">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gas_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gas_Gross_Investments_in_Fossil_Energy_Capital/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Gross Investments in Fossil\nFuel Extraction Capital" access="output" isee:autocreated="true">
@@ -2788,7 +2788,7 @@ adaptive_energy_investments_differntiating_factor * Differentiating_Relative_Ene
 					<dim name="Run"/>
 					<dim name="EnergySource"/>
 				</dimensions>
-				<eqn>ALLOCATE(All_Gross_Energy_without_Investments[Run], EnergySource, desired_investment_by_source[Run,*],  priority_by_source[Run,*], priority_spread[Run], shape)</eqn>
+				<eqn>ALLOCATE(All_Gross_Energy_Investments_without_CCS_costs[Run], EnergySource, desired_investment_by_source[Run,*],  priority_by_source[Run,*], priority_spread[Run], shape)</eqn>
 				<units>c$/year</units>
 			</aux>
 			<aux name="cost to build\nper unit">
@@ -2833,7 +2833,7 @@ ELSE NAN</eqn>
 					<dim name="Run"/>
 					<dim name="EnergySource"/>
 				</dimensions>
-				<eqn>All_Gross_Energy_without_Investments[Run]
+				<eqn>All_Gross_Energy_Investments_without_CCS_costs[Run]
 -
 (IF (EnergySource = EnergySource.Coal_fuel_extraction 
 OR EnergySource = EnergySource.Oil_fuel_extraction
@@ -2841,7 +2841,7 @@ OR EnergySource = EnergySource.Gas_fuel_extraction
 OR EnergySource = EnergySource.Coal_energy_conversion
 OR EnergySource = EnergySource.Oil_energy_conversion 
 OR EnergySource = EnergySource.Gas_energy_conversion ) AND TIME &gt; Moratorium_on_fossil_energy_year THEN
-All_Gross_Energy_without_Investments[Run]
+All_Gross_Energy_Investments_without_CCS_costs[Run]
 ELSE 
 0)</eqn>
 				<units>c$/year</units>
@@ -3392,7 +3392,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_Biofuel_Capacity/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_Biofuel_Capacity/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="share of GDP invested\nin bio power">
@@ -3728,7 +3728,7 @@ adjusted_cost[Run,Coal_fuel_extraction] * Coal_Gross_Investments_in_Fossil_Fuel_
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_Solar_Energy_Capacity/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_Solar_Energy_Capacity/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="expenditure on subsidies for investments in\nSolar\nenergy capacity" access="input">
@@ -3765,7 +3765,7 @@ adjusted_cost[Run,Coal_fuel_extraction] * Coal_Gross_Investments_in_Fossil_Fuel_
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Gross_Investments_in_wind_Energy_Capacity/All_Gross_Energy_without_Investments</eqn>
+				<eqn>Gross_Investments_in_wind_Energy_Capacity/All_Gross_Energy_Investments_without_CCS_costs</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="expenditure on subsidies for investments in\nwind\nenergy capacity" access="input">
@@ -3912,7 +3912,7 @@ ELSE
 				</gf>
 				<units>dmnl</units>
 			</aux>
-			<aux name="CCS costs from priv inv" access="output" isee:autocreated="true">
+			<aux name="CCS costs from private investments" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -3986,7 +3986,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="727.5" isee:scroll_y="1079.38" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="606.875" isee:scroll_y="1079.38" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4094,7 +4094,7 @@ ELSE
 					<from>share_of_GDP_invested_in_fuel_extraction</from>
 					<to>share_of_GDP_invested_in_Fossil_Energy_and_Fuel</to>
 				</connector>
-				<aux x="847.674" y="1231.59" name="All Gross Energy without Investments"/>
+				<aux x="847.674" y="1231.59" name="All Gross Energy\nInvestments without CCS costs"/>
 				<aux background="#FFAAFF" x="1178.06" y="445.715" name="Gross Investments in Renewables"/>
 				<aux x="354.842" y="341.785" name="Investments in Fossil Energy"/>
 				<connector uid="215" angle="166.115">
@@ -4299,11 +4299,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				</connector>
 				<aux x="672.263" y="1233.81" name="baseline energy investments"/>
 				<connector uid="425" angle="359.133">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>investment_by_source</to>
 				</connector>
 				<connector uid="426" angle="343.838">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>desired_investment_by_source</to>
 				</connector>
 				<connector uid="427" angle="162.045">
@@ -4335,11 +4335,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Gross_Investments_in_Hydropower_Energy_capacity</to>
 				</connector>
 				<connector uid="436" angle="164.638">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Gross_Energy_Expenditure_invested_in_fuel_extraction,_coal&quot;</to>
 				</connector>
 				<connector uid="437" angle="154.742">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Gross_Energy_Expenditure_invested_in_fossil_energy,_coal&quot;</to>
 				</connector>
 				<connector uid="448" angle="12.0592">
@@ -4377,7 +4377,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<stacked_container uid="454" x="4532.68" y="140.04">
 					<graph width="350" height="250" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="All_Gross_Energy_without_Investments[1]"/>
+							<entity name="All_Gross_Energy_Investments_without_CCS_costs[1]"/>
 						</plot>
 					</graph>
 				</stacked_container>
@@ -4852,7 +4852,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fuel_extraction,_oil&quot;</to>
 				</connector>
 				<connector uid="583" angle="121.006">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fuel_extraction,_oil&quot;</to>
 				</connector>
 				<connector uid="584" angle="278.021">
@@ -4860,11 +4860,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy,_oil&quot;</to>
 				</connector>
 				<connector uid="585" angle="50.2111">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy,_oil&quot;</to>
 				</connector>
 				<connector uid="586" angle="25.1269">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fuel_extraction,_gas&quot;</to>
 				</connector>
 				<connector uid="587" angle="270">
@@ -4872,7 +4872,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fuel_extraction,_gas&quot;</to>
 				</connector>
 				<connector uid="588" angle="15.9436">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy,_gas&quot;</to>
 				</connector>
 				<connector uid="589" angle="270">
@@ -4880,7 +4880,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>&quot;Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy,_gas&quot;</to>
 				</connector>
 				<connector uid="593" angle="8.88745">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_hydropower</to>
 				</connector>
 				<connector uid="594" angle="275.132">
@@ -4888,7 +4888,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_hydropower</to>
 				</connector>
 				<connector uid="595" angle="7.9106">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_bio_energy</to>
 				</connector>
 				<connector uid="596" angle="276.633">
@@ -4900,11 +4900,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_nuclear_energy</to>
 				</connector>
 				<connector uid="600" angle="7.19816">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_nuclear_energy</to>
 				</connector>
 				<connector uid="601" angle="125.325">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_fuel_extraction</to>
 				</connector>
 				<connector uid="602" angle="208.477">
@@ -4916,7 +4916,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy</to>
 				</connector>
 				<connector uid="604" angle="113.388">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_fossil_energy</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1540.83" y="225" name="Real GDP in 2021c$"/>
@@ -5025,11 +5025,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_wind</to>
 				</connector>
 				<connector uid="638" angle="36.8926">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_Solar</to>
 				</connector>
 				<connector uid="639" angle="35.3301">
-					<from>All_Gross_Energy_without_Investments</from>
+					<from>All_Gross_Energy_Investments_without_CCS_costs</from>
 					<to>Share_of_Energy_Gross_Expenditure_invested_in_wind</to>
 				</connector>
 				<connector uid="640" angle="50.2812">
@@ -5146,7 +5146,7 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				</connector>
 				<connector uid="671" angle="90">
 					<from>All_Gross_energy_investments_with_CCS_costs</from>
-					<to>All_Gross_Energy_without_Investments</to>
+					<to>All_Gross_Energy_Investments_without_CCS_costs</to>
 				</connector>
 				<connector uid="672" angle="0.572903">
 					<from>baseline_energy_investments</from>
@@ -5157,25 +5157,29 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<to>All_Gross_energy_investments_with_CCS_costs</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="944.313" y="1372.44" name="share of ccs costs\ncovered by gov"/>
-				<aux x="986.5" y="1313.48" name="CCS costs from priv inv"/>
+				<aux x="986.5" y="1313.48" name="CCS costs from private investments"/>
 				<connector uid="675" angle="54.4152">
 					<from>share_of_ccs_costs_covered_by_gov</from>
-					<to>CCS_costs_from_priv_inv</to>
+					<to>CCS_costs_from_private_investments</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1106.13" y="1287.22" name="Total investment in CCS"/>
 				<connector uid="678" angle="212.381">
 					<from>Total_investment_in_CCS</from>
-					<to>CCS_costs_from_priv_inv</to>
+					<to>CCS_costs_from_private_investments</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1088.13" y="1360.63" name="SWITCH For new CCS structure"/>
 				<connector uid="679" angle="156.038">
 					<from>SWITCH_For_new_CCS_structure</from>
-					<to>CCS_costs_from_priv_inv</to>
+					<to>CCS_costs_from_private_investments</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" label_side="right" x="1025.63" y="1264.47" name="UNIT Million c$ to billion c$"/>
-				<connector uid="681" angle="227.673">
+				<connector uid="681" angle="231.396">
 					<from>&quot;UNIT_Million_c$_to_billion_c$&quot;</from>
-					<to>CCS_costs_from_priv_inv</to>
+					<to>CCS_costs_from_private_investments</to>
+				</connector>
+				<connector uid="682" angle="158.935">
+					<from>CCS_costs_from_private_investments</from>
+					<to>All_Gross_Energy_Investments_without_CCS_costs</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="666" x="1181" y="1408.14" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -8558,7 +8562,7 @@ We apply this independent of fuel for now.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_y="450" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>

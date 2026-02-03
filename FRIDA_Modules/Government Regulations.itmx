@@ -526,7 +526,7 @@ https://www.nature.com/articles/s41586-024-08106-4
 Repeated variable that is already in CCS</doc>
 				<eqn>TIME</eqn>
 				<gf>
-					<xscale min="2020" max="2100"/>
+					<xscale min="2025" max="2100"/>
 					<yscale min="0" max="1"/>
 					<ypts>0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
@@ -537,7 +537,7 @@ Repeated variable that is already in CCS</doc>
 Repeated variable that is already in CCS</doc>
 				<eqn>TIME</eqn>
 				<gf>
-					<xscale min="2020" max="2100"/>
+					<xscale min="2025" max="2100"/>
 					<yscale min="0" max="1"/>
 					<ypts>0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
@@ -548,7 +548,7 @@ Repeated variable that is already in CCS</doc>
 Repeated variable that is already in CCS</doc>
 				<eqn>TIME</eqn>
 				<gf>
-					<xscale min="2020" max="2100"/>
+					<xscale min="2025" max="2100"/>
 					<yscale min="0" max="1"/>
 					<ypts>0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
@@ -559,7 +559,7 @@ Repeated variable that is already in CCS</doc>
 Repeated variable that is already in CCS</doc>
 				<eqn>TIME</eqn>
 				<gf>
-					<xscale min="2020" max="2100"/>
+					<xscale min="2025" max="2100"/>
 					<yscale min="0" max="1"/>
 					<ypts>0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
@@ -903,7 +903,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<gf>
 					<xscale min="2026" max="2150"/>
 					<yscale min="0" max="1"/>
-					<ypts>0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319,0.319608695652174,0.320217391304348,0.320826086956522,0.321434782608696,0.32204347826087,0.322652173913044,0.323260869565217,0.323869565217392,0.652,0.652,0.652,0.652,0.662,0.662,0.667,0.667,0.671,0.672,0.673,0.674,0.675,0.676,0.677666666666666,0.679333333333333,0.681,0.682666666666667,0.684333333333333,0.686,0.6865,0.687,0.6875,0.688,0.6885,0.689,0.6895,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.69,0.6896,0.6892,0.6888,0.6884,0.688,0.6876,0.6872,0.6868,0.6864,0.686,0.685545454545455,0.685090909090909,0.684636363636364,0.684181818181818,0.683727272727273,0.683272727272727,0.682818181818182,0.682363636363636,0.681909090909091,0.681454545454545,0.681,0.6796,0.6782,0.676800000000001,0.6754,0.674000000000001,0.6726,0.671200000000001,0.6698,0.6684,0.667,0.664333333333334,0.661666666666667,0.659000000000001,0.656333333333333,0.653666666666667,0.651000000000001,0.648333333333334,0.645666666666668,0.643,0.640625000000001,0.63825,0.635875000000001,0.6335,0.631125000000001,0.62875,0.626375000000001,0.624,0.617,0.61,0.595,0.568083333333333,0.568875,0.569666666666667,0.570458333333334,0.57125,0.572041666666667,0.572833333333333,0.573625,0.574416666666667,0.575208333333333,0.576,0.577727272727272,0.579454545454546,0.581181818181818,0.582909090909091,0.584636363636363,0.586363636363637,0.588090909090909,0.589818181818182,0.591545454545455,0.593272727272728,0.595</ypts>
+					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
 				<units>dmnl</units>
 			</aux>
@@ -956,7 +956,7 @@ RAMP((government_debt_to_GDP_ratio_target-calibration_period_government_debt_to_
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="192" isee:popup_graphs_are_comparative="false" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="2" isee:page_rows="3" isee:scroll_x="598" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
