@@ -409,8 +409,6 @@
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="energy_investments.Relative_Energy_Supply_Missmatch" from="energy_supply_vs_demand.Relative_Energy_Supply_Missmatch"/>
 				<connect2 to="energy_investments.Relative_Energy_Supply_Missmatch" from="energy_supply_vs_demand.Relative_Energy_Supply_Missmatch"/>
-				<connect to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
 				<connect to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
@@ -441,8 +439,8 @@
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
-				<connect to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
+				<connect to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
+				<connect2 to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
 				<connect to='energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
 				<connect2 to='energy_investments."UNIT_Bc$_to_c$"' from='Energy_Units."UNIT_Bc$_to_c$"'/>
 				<connect to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
@@ -896,7 +894,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="12" isee:page_rows="7" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="12" isee:page_rows="7" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="9pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -3903,31 +3901,15 @@ ELSE
 				<eqn>MAX(baseline_energy_investments[Run]*adaptive_change_in_investments*effect_of_margins_on_investment, 1)</eqn>
 				<units>c$/Year</units>
 			</aux>
-			<aux name="share of ccs costs\ncovered by gov" access="input">
-				<eqn>0.5</eqn>
-				<gf>
-					<xscale min="0" max="2"/>
-					<yscale min="0" max="2"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
 			<aux name="CCS costs from private investments" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF SWITCH_For_new_CCS_structure =1 THEN 
-(1-share_of_ccs_costs_covered_by_gov)*(Total_investment_in_CCS/&quot;UNIT_Million_c$_to_billion_c$&quot;)
+Total_investment_in_CCS_from_the_private_sector/&quot;UNIT_Million_c$_to_billion_c$&quot;
 ELSE
 0</eqn>
 				<units>c$/Year</units>
-			</aux>
-			<aux name="Total investment in CCS" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>Mc$/Year</units>
 			</aux>
 			<aux name="SWITCH For new CCS structure" access="input">
 				<eqn>1</eqn>
@@ -3936,6 +3918,13 @@ ELSE
 			<aux name="UNIT Million c$ to billion c$" access="input">
 				<eqn>0.0000001</eqn>
 				<units>Mc$/c$</units>
+			</aux>
+			<aux name="Total investment in\nCCS from the private sector" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/Year</units>
 			</aux>
 		</variables>
 		<views>
@@ -3986,7 +3975,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="606.875" isee:scroll_y="1079.38" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="380.625" isee:scroll_y="932.5" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5156,19 +5145,9 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 					<from>effect_of_margins_on_investment</from>
 					<to>All_Gross_energy_investments_with_CCS_costs</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="944.313" y="1372.44" name="share of ccs costs\ncovered by gov"/>
 				<aux x="986.5" y="1313.48" name="CCS costs from private investments"/>
-				<connector uid="675" angle="54.4152">
-					<from>share_of_ccs_costs_covered_by_gov</from>
-					<to>CCS_costs_from_private_investments</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="1106.13" y="1287.22" name="Total investment in CCS"/>
-				<connector uid="678" angle="212.381">
-					<from>Total_investment_in_CCS</from>
-					<to>CCS_costs_from_private_investments</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="1088.13" y="1360.63" name="SWITCH For new CCS structure"/>
-				<connector uid="679" angle="156.038">
+				<aux font_style="italic" font_weight="bold" x="968.5" y="1370.98" name="SWITCH For new CCS structure"/>
+				<connector uid="679" angle="72.6176">
 					<from>SWITCH_For_new_CCS_structure</from>
 					<to>CCS_costs_from_private_investments</to>
 				</connector>
@@ -5180,6 +5159,11 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connector uid="682" angle="158.935">
 					<from>CCS_costs_from_private_investments</from>
 					<to>All_Gross_Energy_Investments_without_CCS_costs</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1089.75" y="1295.48" name="Total investment in\nCCS from the private sector"/>
+				<connector uid="683" angle="211.092">
+					<from>Total_investment_in_CCS_from_the_private_sector</from>
+					<to>CCS_costs_from_private_investments</to>
 				</connector>
 				<alias color="blue" background="white" font_style="italic" uid="666" x="1181" y="1408.14" width="18" height="18">
 					<shape type="circle" radius="18"/>

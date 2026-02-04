@@ -671,9 +671,9 @@
 			<isee:parameter name="CCS.Learning_Rate_direct_air_carbon_capture[1]" scaling="10"/>
 			<isee:parameter name="CCS.direct_air_carbon_capture_Initial_Installation_Costs[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.direct_air_carbon_capture_Floor_Costs[1]" scaling="0.1"/>
-			<isee:parameter name='CCS."Goverment_funded_R&amp;D_in_direct_air_carbon_capture"[1]' scaling="0.1"/>
-			<isee:parameter name='CCS."Government_funded_R&amp;D_for_BECCS"[1]' scaling="0.1"/>
-			<isee:parameter name='CCS."Government_funded_R&amp;D_for_end_of_pipe_carbon_capture"[1]' scaling="0.1"/>
+			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture"[1]' scaling="0.1"/>
+			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_for_BECCS"[1]' scaling="0.1"/>
+			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture"[1]' scaling="0.1"/>
 			<isee:parameter name="CCS.end_of_pipe_capture_Initial_Installation_Costs[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.stepping_on_toes_parameter_end_of_pipe_capture[1]" scaling="10"/>
 			<isee:parameter name="CCS.Learning_Rate_end_of_pipe_capture[1]" scaling="10"/>
@@ -1359,9 +1359,6 @@
 			<isee:payoff_element name="CCS.Total_Capture_Capacity[1]" weight="0.00263976329475589">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
-			<isee:payoff_element name="CCS.Total_investment_in_carbon_capture[1]" weight="3.87090911945555e-8">
-				<isee:time_range type="terminal_value"/>
-			</isee:payoff_element>
 			<isee:payoff_element name="CCS.total_cost_of_storing_CO2[1]" weight="6.19246575842971e-34">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
@@ -1636,8 +1633,6 @@
 				<connect2 to="energy_investments.Moratorium_on_fossil_energy_year" from="Government_Regulations.Moratorium_on_fossil_energy_year"/>
 				<connect to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
-				<connect to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
@@ -1662,8 +1657,8 @@
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
 				<connect2 to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
-				<connect to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
+				<connect to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
+				<connect2 to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
 				<connect to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect2 to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="Inflation.Total_Energy_Output" from="energy_supply.Total_Energy_Output"/>
@@ -2877,20 +2872,16 @@
 				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
 				<connect to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
 				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
-				<connect to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
-				<connect2 to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
 				<connect to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="energy_investments.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
-				<connect2 to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
+				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
+				<connect2 to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
+				<connect to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
+				<connect2 to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
 				<connect to="CCS.CO2_emissions_from_biofuels" from="Emissions.CO2_emissions_from_biofuels"/>
 				<connect2 to="CCS.CO2_emissions_from_biofuels" from="Emissions.CO2_emissions_from_biofuels"/>
 				<connect to="CCS.CO2_emissions_from_coal" from="Emissions.CO2_emissions_from_coal"/>
@@ -3014,8 +3005,6 @@
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="GDP.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="GDP.start_year" from="Government_Regulations.start_year"/>
-				<connect to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
-				<connect2 to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -3090,8 +3079,6 @@
 				<connect2 to="Government.Gas_Investments_in_Fossil_Energy_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital"/>
 				<connect to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect2 to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
-				<connect to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
-				<connect2 to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
 				<connect to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
 				<connect2 to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
 				<connect to="Government.Investments_in_Biofuel_Capacity" from="energy_investments.Gross_Investments_in_Biofuel_Capacity"/>
@@ -3114,8 +3101,6 @@
 				<connect2 to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect to="Government.Population" from="Demographics.Population"/>
 				<connect2 to="Government.Population" from="Demographics.Population"/>
-				<connect to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
@@ -3138,8 +3123,8 @@
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today_1" from="Climate.climate_impact_stoptime"/>
-				<connect to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
+				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
+				<connect2 to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
 				<connect to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect2 to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect to="Inflation.animal_products_demand" from="Food_Demand.animal_products_demand"/>
@@ -3297,10 +3282,6 @@ This is what determines when the model stops calculating</doc>
 				<connect2 to="Emissions.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
 				<connect to="CCS.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect2 to="CCS.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="energy_investments.share_of_ccs_costs_covered_by_gov" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="CCS.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
 				<connect2 to="CCS.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
 				<connect to="Emissions.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
@@ -3463,7 +3444,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="27.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="27.5" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>

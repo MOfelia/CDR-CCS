@@ -309,8 +309,6 @@
 				<format scale_by="auto"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
-				<connect to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
-				<connect2 to="CCS.CCS_cost_covered_by_gov" from="Government.CCS_cost_covered_by_gov"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
 				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
@@ -423,8 +421,6 @@
 				<connect2 to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Government.GDP" from="GDP.Nominal_GDP"/>
-				<connect to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
-				<connect2 to="Government.Government_backed_investments_in_CC" from="CCS.Government_backed_investments_in_CC"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect2 to="Government.inflation" from="Inflation.Inflation_Rate"/>
 				<connect to='Government."inflation_adjustment_b$_per_bc$"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
@@ -463,8 +459,6 @@
 				<connect2 to="Government.required_last_resort_lending" from="Finance.required_government_solvency_support_lending"/>
 				<connect to="Government.risky_interest" from="Finance.risky_interest"/>
 				<connect2 to="Government.risky_interest" from="Finance.risky_interest"/>
-				<connect to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
-				<connect2 to="Government.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="Government.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
@@ -487,8 +481,8 @@
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today_1" from="Climate.climate_impact_stoptime"/>
-				<connect to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
-				<connect2 to="Government.Total_investment_in_CCS" from="CCS.Total_investment_in_CCS"/>
+				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
+				<connect2 to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
 				<connect to="Government.Total_nominal_SLR_protection_cost" from="Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost"/>
 				<connect2 to="Government.Total_nominal_SLR_protection_cost" from="Sea_level_rise_costs_and_impacts.Total_nominal_SLR_protection_cost"/>
 				<connect to="Government.Unemployed" from="Employment.Unemployed"/>
@@ -914,7 +908,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="C:/Users/Utilizador/Documents/Github/WorldTransFRIDA - CDR-CCS/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -10600,7 +10594,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="210.833" isee:scroll_y="165.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="3" isee:page_rows="3" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12343,26 +12337,10 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF SWITCH_For_new_CCS_structure=1 THEN 
-(Total_investment_in_CCS*(1-share_of_ccs_costs_covered_by_the_goverment))/&quot;UNIT_Million_c$_to_c$&quot;
+(Total_investment_in_CCS_from_the_government)/&quot;UNIT_Million_c$_to_c$&quot;
 ELSE 
 0</eqn>
 				<units>c$/Year</units>
-			</aux>
-			<aux name="share of ccs costs\ncovered by the goverment" access="input">
-				<eqn>TIME</eqn>
-				<gf>
-					<xscale min="1980" max="2150"/>
-					<yscale min="0" max="100"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
-			<aux name="Total investment in CCS" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>Mc$/Year</units>
 			</aux>
 			<aux name="SWITCH For new CCS structure" access="input">
 				<eqn>1</eqn>
@@ -12374,12 +12352,12 @@ ELSE
 				<eqn>0.0000001</eqn>
 				<units>Mc$/c$</units>
 			</aux>
-			<aux name="Government backed\ninvestments in CC" access="input">
+			<aux name="Total investment in\nCCS from the government" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>Mc$</units>
+				<units>Mc$/Year</units>
 			</aux>
 		</variables>
 		<views>
@@ -12430,7 +12408,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1997.86" isee:scroll_y="94.2857" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="2015" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13549,16 +13527,10 @@ ELSE
 					<to>government_transfers</to>
 				</connector>
 				<aux x="2550.28" y="315.55" name="CCS cost covered by gov"/>
-				<aux font_style="italic" font_weight="bold" x="2444.62" y="245.143" name="share of ccs costs\ncovered by the goverment"/>
-				<connector uid="409" angle="326.321">
-					<from>share_of_ccs_costs_covered_by_the_goverment</from>
-					<to>CCS_cost_covered_by_gov</to>
-				</connector>
 				<connector uid="416" angle="307.863">
 					<from>CCS_cost_covered_by_gov</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2652.15" y="187.143" name="Total investment in CCS"/>
 				<aux font_style="italic" font_weight="bold" x="2677.14" y="359.746" name="SWITCH For new CCS structure"/>
 				<connector uid="418" angle="189.799">
 					<from>SWITCH_For_new_CCS_structure</from>
@@ -13569,9 +13541,9 @@ ELSE
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2757" y="263.143" name="Government backed\ninvestments in CC"/>
-				<connector uid="423" angle="216.466">
-					<from>Total_investment_in_CCS</from>
+				<aux font_style="italic" font_weight="bold" x="2642.14" y="251.429" name="Total investment in\nCCS from the government"/>
+				<connector uid="424" angle="174.56">
+					<from>Total_investment_in_CCS_from_the_government</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
 				<alias font_style="italic" label_side="right" label_angle="315" uid="73" x="1345.42" y="1937.17" width="18" height="18">
