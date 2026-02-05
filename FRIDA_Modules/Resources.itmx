@@ -276,14 +276,14 @@
 			</module>
 			<module name="CCS" isee:label="">
 				<format scale_by="auto"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from="CCS.Average_cost_of_CCS_per_unit"/>
+				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
 				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
@@ -588,26 +588,23 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>5</eqn>
+				<eqn>148.859349211883</eqn>
 				<range min="1" max="1000"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Exponent of cost curve">
 				<doc>${Assumption}
 </doc>
-				<eqn>2.7697356713198</eqn>
+				<eqn>4.86511455800864</eqn>
 				<range min="0" max="10"/>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Average cost of CCS per unit" access="output" isee:autocreated="true">
+			<aux name="Average cost of CCS per unit in c$" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
-(IF Captured_CO2_to_store = 0 THEN
-cost_of_storing_CO2_per_unit_1
-ELSE
-(cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit)/&quot;UNIT_Million_c$_to_c$&quot;)
+&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;/&quot;UNIT_Million_c$_to_c$&quot;
 ELSE
 cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(MtCO2/year)</units>
@@ -644,7 +641,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3000</eqn>
+				<eqn>2991.72697263617</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -661,7 +658,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.5</eqn>
+				<eqn>0.191973711278709</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -713,7 +710,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2925.59077236695</eqn>
+				<eqn>198.100615875257</eqn>
 				<range min="50" max="200"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -815,11 +812,11 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1000</eqn>
+				<eqn>30</eqn>
 				<range min="30" max="200"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="cost of capturing\nCO2 per unit with end of pipe carbon capture">
+			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -830,7 +827,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0</eqn>
+				<eqn>0.005</eqn>
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1049,7 +1046,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>741.053743176954</eqn>
+				<eqn>165.657322309763</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1057,7 +1054,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1089.01886193403</eqn>
+				<eqn>130.332527205991</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1093,7 +1090,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.4</eqn>
+				<eqn>0.182686308840225</eqn>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1103,7 +1100,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2132.78181331342</eqn>
+				<eqn>500</eqn>
 				<range min="100" max="500"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1202,7 +1199,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>3000</eqn>
+				<eqn>300</eqn>
 				<range min="30" max="300"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1217,7 +1214,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0</eqn>
+				<eqn>0.1</eqn>
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1300,7 +1297,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2175.29822195357</eqn>
+				<eqn>1719.74379455914</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1317,7 +1314,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0200004561101044</eqn>
+				<eqn>0.01</eqn>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1327,7 +1324,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2941.72152073033</eqn>
+				<eqn>500</eqn>
 				<range min="100" max="500"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1344,7 +1341,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.325681638544755</eqn>
+				<eqn>0.5</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1535,7 +1532,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.204902360135533</eqn>
+				<eqn>0.293136321693563</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1545,7 +1542,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2448.55407172636</eqn>
+				<eqn>389.535175387289</eqn>
 				<range min="50" max="400"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1555,7 +1552,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>1420.11523382693</eqn>
+				<eqn>10.9159798899215</eqn>
 				<range min="2" max="30"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1565,7 +1562,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.299323261824844</eqn>
+				<eqn>0.1270185413069</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1665,7 +1662,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECCS</eqn>
+				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECCS)</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Share of Government R&amp;D funding\ninto carbon capture">
@@ -1679,15 +1676,25 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Total_invesment_into_carbon_capture/Total_investment_in_CCS</eqn>
+				<eqn>(Total_invesment_into_carbon_capture*UNIT_to_per_year)/Total_investment_in_CCS</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Share of investment\ninto carbon storage">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>total_cost_of_storing_CO2/Total_investment_in_CCS</eqn>
+				<eqn>(total_cost_of_storing_CO2*UNIT_to_per_year)/Total_investment_in_CCS</eqn>
 				<units>dmnl</units>
+			</aux>
+			<aux name="Average cost of CCS\nper unit in Mc$" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF Captured_CO2_to_store = 0 THEN
+cost_of_storing_CO2_per_unit_1*&quot;UNIT_Million_c$_to_c$&quot;
+ELSE
+cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
+				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 		</variables>
 		<views>
@@ -1738,7 +1745,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="3136.67" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="5" isee:page_rows="4" isee:scroll_x="2968.75" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1868,7 +1875,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					<to>Effect_of_scarcity_on_cost</to>
 				</connector>
 				<text_box uid="26" x="2649.62" y="1559.27" width="171.772" height="21.5714">Available storage scarcity</text_box>
-				<aux background="#FFAAFF" label_side="top" x="3745.69" y="1269.78" name="Average cost of CCS per unit"/>
+				<aux background="#FFAAFF" label_side="top" x="3672.12" y="1238.83" name="Average cost of CCS per unit in c$"/>
 				<aux x="2443.51" y="1365.08" name="cost of storing carbon per unit"/>
 				<connector uid="61" angle="270">
 					<from>GtC_to_MtCO2</from>
@@ -1986,7 +1993,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					<from>Floor_Costs_end_of_pipe_carbon_capture</from>
 					<to>Installation_Costs_End_of_Pipe_Carbon_Capture</to>
 				</connector>
-				<aux background="#FFAAFF" x="956.8" y="1495.14" name="cost of capturing\nCO2 per unit with end of pipe carbon capture"/>
+				<aux background="#FFAAFF" x="956.8" y="1495.14" name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture"/>
 				<connector uid="184" angle="90">
 					<from>Installation_Costs_End_of_Pipe_Carbon_Capture</from>
 					<to>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</to>
@@ -2103,22 +2110,12 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					<from>cost_of_storing_CO2_per_unit</from>
 					<to>cost_of_storing_carbon_per_unit</to>
 				</connector>
-				<aux background="#FFAAFF" x="3891.99" y="1167.9" name="Average cost of capturing CO2 per unit"/>
-				<connector uid="294" angle="334.29">
-					<from>
-						<alias uid="275"/>
-					</from>
-					<to>Average_cost_of_CCS_per_unit</to>
-				</connector>
+				<aux background="#FFAAFF" x="3956.99" y="976.233" name="Average cost of capturing CO2 per unit"/>
 				<connector uid="295" angle="352.945">
 					<from>
 						<alias uid="290"/>
 					</from>
 					<to>Average_cost_of_capturing_CO2_per_unit</to>
-				</connector>
-				<connector uid="296" angle="214.851">
-					<from>Average_cost_of_capturing_CO2_per_unit</from>
-					<to>Average_cost_of_CCS_per_unit</to>
 				</connector>
 				<connector uid="299" angle="217.451">
 					<from>
@@ -2210,16 +2207,16 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>cost_of_storing_CO2_per_unit_1</to>
 				</connector>
-				<aux background="red" x="3990.55" y="1370.92" width="53" height="53" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
-				<connector uid="345" angle="154.809">
+				<aux background="red" x="4055.55" y="1179.25" width="53" height="53" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
+				<connector uid="345" angle="184.613">
 					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
-					<to>Average_cost_of_CCS_per_unit</to>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
 				</connector>
-				<connector uid="346" angle="170.947">
+				<connector uid="346" angle="207.977">
 					<from>
 						<alias uid="347"/>
 					</from>
-					<to>Average_cost_of_CCS_per_unit</to>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
 				</connector>
 				<aux x="5110.17" y="2566.08" name="stored CO2 leakage rate 1"/>
 				<connector uid="348" angle="278.827">
@@ -2243,12 +2240,6 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<connector uid="349" angle="118.586">
 					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
 					<to>Average_cost_of_capturing_CO2_per_unit</to>
-				</connector>
-				<connector uid="352" angle="301.239">
-					<from>
-						<alias uid="290"/>
-					</from>
-					<to>Average_cost_of_CCS_per_unit</to>
 				</connector>
 				<text_box uid="353" x="5101.54" y="2828.83" width="260" height="71">Trying to find a way to combine incoming investment to allow progression and the possibility to change the capture of emissions</text_box>
 				<connector uid="354" angle="12.8922">
@@ -2289,7 +2280,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				</connector>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="404" x="4662.5" y="2454.17" width="580" height="58">OLD STRUCTURE</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="405" x="2069.62" y="1004.04" width="580" height="58">Injection/Storage of CO2</text_box>
-				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="406" x="3430.42" y="99.087" width="617.5" height="58">CCS Overview (Capture + Injection/Storage)</text_box>
+				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="406" x="3708.3" y="170.754" width="617.5" height="58">CCS Overview (Capture + Injection/Storage)</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="407" x="714.478" y="1083.07" width="580" height="58">End of Pipe CO2 Capture</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="408" x="706.145" y="142.237" width="580" height="58">Direct Air CO2 Capture</text_box>
 				<aux x="1336.98" y="726.743" name="initial direct air carbon capture for the\nconsideration of cost effects"/>
@@ -2622,10 +2613,10 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					<from>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="3701.83" y="1355.25" name="UNIT Million c$ to c$"/>
-				<connector uid="504" angle="31.7236">
+				<aux font_style="italic" font_weight="bold" x="3644.54" y="1137.26" name="UNIT Million c$ to c$"/>
+				<connector uid="504" angle="254.078">
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
-					<to>Average_cost_of_CCS_per_unit</to>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
 				</connector>
 				<connector uid="505" angle="237.932">
 					<from>
@@ -2633,7 +2624,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>Total_Capture_Capacity</to>
 				</connector>
-				<stacked_container uid="511" x="4732.5" y="1103.9">
+				<stacked_container uid="511" x="4717.5" y="923.9">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured from energy emissions" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Realized_CO2_from_Energy[*]"/>
@@ -2643,7 +2634,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="512" x="4732.5" y="1364.36">
+				<stacked_container uid="512" x="4717.5" y="1184.36">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 emissions by category" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Emissions.CO2_emissions_from_biofuels[*]"/>
@@ -2653,7 +2644,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="513" x="5091.25" y="1364.36">
+				<stacked_container uid="513" x="5076.25" y="1184.36">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured by category" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" right_axis="true" show_y_axis="true">
 							<entity name="DAC_CO2_Captured[*]"/>
@@ -2666,7 +2657,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="514" x="5091.25" y="1103.9">
+				<stacked_container uid="514" x="5076.25" y="923.9">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Stored CO2" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="stored_CO2[MAX]"/>
@@ -2874,8 +2865,8 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>Total_investment_in_CCS</to>
 				</connector>
-				<aux x="4440.75" y="574.542" name="Total investment in\nCCS from the government"/>
-				<connector uid="613" angle="342.163">
+				<aux x="4440.75" y="585.375" name="Total investment in\nCCS from the government"/>
+				<connector uid="613" angle="340.281">
 					<from>&quot;R&amp;D_Government_funding_from_the_government_into_carbon_storage&quot;</from>
 					<to>Total_investment_in_CCS_from_the_government</to>
 				</connector>
@@ -2894,7 +2885,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>Total_investment_in_CCS</to>
 				</connector>
-				<aux background="red" label_side="bottom" x="2109.88" y="1473.25" name="UNIT to per year"/>
+				<aux background="red" label_side="bottom" x="2174.88" y="1374.68" name="UNIT to per year"/>
 				<connector uid="454" angle="26.3701">
 					<from>
 						<alias uid="448"/>
@@ -2919,7 +2910,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</to>
 				</connector>
-				<connector uid="265" angle="212.06">
+				<connector uid="265" angle="207.168">
 					<from>
 						<alias uid="266"/>
 					</from>
@@ -2943,7 +2934,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
-				<connector uid="271" angle="2.67505">
+				<connector uid="271" angle="304.227">
 					<from>UNIT_to_per_year</from>
 					<to>cost_of_storing_CO2_per_unit</to>
 				</connector>
@@ -2956,7 +2947,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					<from>&quot;Additional_Government_R&amp;D_funding_into_carbon_capture&quot;</from>
 					<to>&quot;Total_Government_R&amp;D_funding_into_carbon_capture&quot;</to>
 				</connector>
-				<aux x="4055.08" y="528.042" name="Total invesment\ninto carbon capture"/>
+				<aux background="#FFAAFF" x="4055.08" y="528.042" name="Total invesment\ninto carbon capture"/>
 				<connector uid="676" angle="351.89">
 					<from>
 						<alias uid="552"/>
@@ -3012,11 +3003,11 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>&quot;R&amp;D_Government_funding_from_the_government_into_carbon_storage&quot;</to>
 				</connector>
-				<connector uid="686" angle="28.4805">
+				<connector uid="686" angle="27.4606">
 					<from>&quot;Total_Government_R&amp;D_funding_into_carbon_capture&quot;</from>
 					<to>Total_investment_in_CCS_from_the_government</to>
 				</connector>
-				<connector uid="687" angle="360">
+				<connector uid="687" angle="0">
 					<from>
 						<alias uid="266"/>
 					</from>
@@ -3042,6 +3033,68 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 					</from>
 					<to>Share_of_investment_into_carbon_storage</to>
 				</connector>
+				<stacked_container uid="692" x="4542.5" y="1322.47" width="350" height="255">
+					<graph width="350" height="255" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name="cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture[1]"/>
+						</plot>
+						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name="cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture[1]"/>
+						</plot>
+						<plot color="fuchsia" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name="cost_of_capturing_CO2_per_unit_with_BECCS[1]"/>
+						</plot>
+						<plot color="#008F44" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="Average_cost_of_capturing_CO2_per_unit[1]"/>
+						</plot>
+						<plot color="#FF7F00" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name='"Average_cost_of_CCS_per_unit_in_Mc$"[1]'/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<connector uid="695" angle="179.829">
+					<from>
+						<alias uid="266"/>
+					</from>
+					<to>Share_of_investment_into_carbon_capture</to>
+				</connector>
+				<connector uid="696" angle="178.953">
+					<from>
+						<alias uid="266"/>
+					</from>
+					<to>Share_of_investment_into_carbon_storage</to>
+				</connector>
+				<aux background="#FFAAFF" label_side="top" x="3756.98" y="1137.26" name="Average cost of CCS\nper unit in Mc$"/>
+				<connector uid="698" angle="302.531">
+					<from>
+						<alias uid="290"/>
+					</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
+				</connector>
+				<connector uid="699" angle="155.938">
+					<from>
+						<alias uid="347"/>
+					</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
+				</connector>
+				<connector uid="700" angle="337.74">
+					<from>
+						<alias uid="275"/>
+					</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
+				</connector>
+				<connector uid="701" angle="243.837">
+					<from>Average_cost_of_capturing_CO2_per_unit</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
+				</connector>
+				<connector uid="702" angle="242.721">
+					<from>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
+				</connector>
+				<connector uid="703" angle="27.7561">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
+				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="2948.63" y="422.973" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
 				</alias>
@@ -3054,23 +3107,23 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<alias background="#AA55FF" font_style="italic" uid="268" x="1222.16" y="1742.3" width="18" height="18">
 					<of>Initial_End_of_Pipe_Carbon_Capture_Capacity</of>
 				</alias>
-				<alias color="blue" background="white" font_style="italic" uid="275" x="3541.46" y="1166.78" width="18" height="18">
+				<alias color="blue" background="white" font_style="italic" uid="275" x="3606.46" y="975.113" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>cost_of_storing_CO2_per_unit</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="276" x="4043.55" y="1050.01" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="276" x="4108.55" y="858.343" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="277" x="3694.46" y="991.7" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="277" x="3759.46" y="800.033" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="279" x="4158.63" y="1009.7" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="279" x="4223.63" y="818.033" width="18" height="18">
 					<of>End_of_Pipe_CO2_Captured</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="280" x="3783.2" y="1037.78" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="280" x="3848.2" y="846.113" width="18" height="18">
 					<of>DAC_CO2_Captured</of>
 				</alias>
-				<alias font_style="italic" uid="290" x="3658.01" y="1131.06" width="18" height="18">
+				<alias font_style="italic" uid="290" x="3723.01" y="939.393" width="18" height="18">
 					<of>Captured_CO2_to_store</of>
 				</alias>
 				<alias font_style="italic" uid="338" x="4634.33" y="2701.66" width="18" height="18">
@@ -3088,7 +3141,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<alias font_style="italic" font_weight="bold" uid="340" x="4988.17" y="2837.33" width="18" height="18">
 					<of>GtC_to_MtCO2</of>
 				</alias>
-				<alias font_style="italic" uid="347" x="3890.99" y="1285.36" width="18" height="18">
+				<alias font_style="italic" uid="347" x="3900.99" y="1155.69" width="18" height="18">
 					<of>cost_of_storing_CO2_per_unit_1</of>
 				</alias>
 				<alias background="#AA55FF" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
@@ -3110,10 +3163,10 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<alias background="#FFAAFF" font_style="italic" uid="506" x="3184.38" y="395.375" width="45" height="35">
 					<of>BECC_Capacity</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="549" x="3908.99" y="1038.5" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="549" x="3973.99" y="846.833" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_BECCS</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="551" x="3992.33" y="992.5" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="551" x="4057.33" y="800.833" width="18" height="18">
 					<of>BECCS_CO2_Captured</of>
 				</alias>
 				<alias font_style="italic" label_side="bottom" uid="556" x="3484.76" y="360.25" width="18" height="18">
@@ -3143,7 +3196,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<alias background="red" font_style="italic" uid="368" x="1135.11" y="1490.89" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
-				<alias background="red" font_style="italic" uid="266" x="4322.91" y="565.542" width="18" height="18">
+				<alias background="red" font_style="italic" uid="266" x="4325.8" y="576.375" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
 				<alias background="red" font_style="italic" uid="202" x="1107.36" y="484.42" width="18" height="18">
