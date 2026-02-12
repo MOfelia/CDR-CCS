@@ -561,7 +561,7 @@ Repeated variable that is already in CCS</doc>
 				<gf>
 					<xscale min="2025" max="2100"/>
 					<yscale min="0" max="1"/>
-					<ypts>0,0,0,0,0,0,0,0,0</ypts>
+					<ypts>0.185,0.193,0.197,0.197,0.201,0.201,0.212,0.228,0.247</ypts>
 				</gf>
 				<units>dmnl</units>
 			</aux>

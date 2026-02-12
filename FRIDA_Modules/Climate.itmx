@@ -5,7 +5,7 @@
 		<name>Climate</name>
 		<uuid>6b3172a7-ef66-4feb-8f28-f439698b1c18</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -250,7 +250,7 @@
 	</model_units>
 	<model name="Climate">
 		<variables>
-			<module name="Sea Level" isee:label="" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Sea Level.itmx">
+			<module name="Sea Level" isee:label="" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Sea Level.itmx">
 				<format scale_by="auto"/>
 				<connect to="Freshwater.Land_water_storage_from_water_impoundment" from="Sea_Level.Land_water_storage_from_water_impoundment"/>
 				<connect2 to="Freshwater.Land_water_storage_from_water_impoundment" from="Sea_Level.Land_water_storage_from_water_impoundment"/>
@@ -288,7 +288,7 @@
 				<connect2 to="Sea_Level.total_groundwater_anomaly" from="Freshwater.total_groundwater_anomaly"/>
 			</module>
 			<module name="Ocean" isee:label="Ocean
-Carbon" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Ocean.itmx">
+Carbon" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Ocean.itmx">
 				<format scale_by="auto"/>
 				<connect to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
 				<connect2 to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
@@ -611,7 +611,7 @@ Carbon" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Ocean.itmx">
 				<connect to="Energy_Balance_Model.Total_Effective_Radiative_Forcing" from="Forcing.Total_Effective_Radiative_Forcing"/>
 				<connect2 to="Energy_Balance_Model.Total_Effective_Radiative_Forcing" from="Forcing.Total_Effective_Radiative_Forcing"/>
 			</module>
-			<module name="Emissions" isee:label="" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Emissions.itmx">
+			<module name="Emissions" isee:label="" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Emissions.itmx">
 				<format scale_by="auto"/>
 				<connect to="Ozone_Forcing.Baseline_CO_emissions" from="Emissions.Baseline_CO_Emissions"/>
 				<connect2 to="Ozone_Forcing.Baseline_CO_emissions" from="Emissions.Baseline_CO_Emissions"/>
@@ -681,6 +681,14 @@ Carbon" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Ocean.itmx">
 				<connect2 to="N2O_Forcing.N2O_Baseline_emissions" from="Emissions.N2O_Baseline_Emissions"/>
 				<connect to="Employment.Population_1" from="Emissions.Population"/>
 				<connect2 to="Employment.Population_1" from="Emissions.Population"/>
+				<connect to="CCS.Realized_CO2_emissions_from_biofuel" from="Emissions.Realized_CO2_emissions_from_biofuel"/>
+				<connect2 to="CCS.Realized_CO2_emissions_from_biofuel" from="Emissions.Realized_CO2_emissions_from_biofuel"/>
+				<connect to="CCS.Realized_CO2_emissions_from_gas" from="Emissions.Realized_CO2_emissions_from_gas"/>
+				<connect2 to="CCS.Realized_CO2_emissions_from_gas" from="Emissions.Realized_CO2_emissions_from_gas"/>
+				<connect to="CCS.Realized_CO2_emissions_from_oil" from="Emissions.Realized_CO2_emissions_from_oil"/>
+				<connect2 to="CCS.Realized_CO2_emissions_from_oil" from="Emissions.Realized_CO2_emissions_from_oil"/>
+				<connect to="CCS.Realized_CO2_emissions_from_coal" from="Emissions.Realized_CO2_emissions_from_coal"/>
+				<connect2 to="CCS.Realized_CO2_emissions_from_coal" from="Emissions.Realized_CO2_emissions_from_coal"/>
 				<connect to="Aerosol_Forcing.SO2_Baseline_Emissions" from="Emissions.SO2_Baseline_Emissions"/>
 				<connect2 to="Aerosol_Forcing.SO2_Baseline_Emissions" from="Emissions.SO2_Baseline_Emissions"/>
 				<connect to="BC_on_Snow_Forcing.SO2_Baseline_Emissions_1" from="Emissions.SO2_Baseline_Emissions"/>
@@ -707,12 +715,12 @@ Carbon" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Ocean.itmx">
 				<connect2 to="Ozone_Forcing.VOC_emissions" from="Emissions.VOC_Emissions"/>
 				<connect to="Emissions.Annual_realized_CO2_emissions_from_land_use_transitions" from="Terrestrial_Carbon_Balance.Annual_realized_CO2_emissions_from_land_use_transitions"/>
 				<connect2 to="Emissions.Annual_realized_CO2_emissions_from_land_use_transitions" from="Terrestrial_Carbon_Balance.Annual_realized_CO2_emissions_from_land_use_transitions"/>
-				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
-				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
+				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
+				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.bio_fuel_primary_energy" from="bio_fuel_energy.bio_fuel_primary_energy"/>
 				<connect2 to="Emissions.bio_fuel_primary_energy" from="bio_fuel_energy.bio_fuel_primary_energy"/>
-				<connect to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
-				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
+				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
+				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect to="Emissions.Carbon_Intensity_1" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect2 to="Emissions.Carbon_Intensity_1" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect to="Emissions.CDD" from="energy_demand.CDD"/>
@@ -767,7 +775,7 @@ Carbon" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Ocean.itmx">
 				<connect2 to="Emissions.UNIT_ktN2O_to_MtN2O_1" from="Climate_Units.UNIT_ktN2O_to_MtN2O"/>
 			</module>
 			<module name="Forcing" isee:label="Radiative
-Forcing" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Forcing.itmx">
+Forcing" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Forcing.itmx">
 				<format scale_by="auto"/>
 				<connect to="Biosphere_Indicators.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
 				<connect2 to="Biosphere_Indicators.Anthropogenic_Effective_Radiative_Forcing" from="Forcing.Anthropogenic_Effective_Radiative_Forcing"/>
@@ -827,8 +835,8 @@ Forcing" url="/home/maria/Documentos/CDR-CCS/FRIDA_Modules/Forcing.itmx">
 				<connect2 to="Ocean.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
 				<connect to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
 				<connect2 to="CO2_Forcing.Air_sea_co2_flux_1" from="Ocean.Air_sea_co2_flux"/>
-				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
+				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="CO2_Forcing.Mass_of_the_Atmosphere" from="Climate_Units.Mass_of_the_Atmosphere"/>
 				<connect2 to="CO2_Forcing.Mass_of_the_Atmosphere" from="Climate_Units.Mass_of_the_Atmosphere"/>
 				<connect to="CO2_Forcing.Molecular_Weight_of_Air" from="Climate_Units.Molecular_Weight_of_Air"/>
