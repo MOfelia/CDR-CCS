@@ -5,7 +5,7 @@
 		<name>FRIDA</name>
 		<uuid>fe807591-4e3d-4e2c-b464-70ec4fb12094</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -672,22 +672,22 @@
 			<isee:parameter name="CCS.direct_air_carbon_capture_Initial_Installation_Costs[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.direct_air_carbon_capture_Floor_Costs[1]" scaling="0.1"/>
 			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture"[1]' scaling="0.1"/>
-			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_for_BECCS"[1]' scaling="0.1"/>
+			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_for_BECC"[1]' scaling="0.1"/>
 			<isee:parameter name='CCS."Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture"[1]' scaling="0.1"/>
 			<isee:parameter name="CCS.end_of_pipe_capture_Initial_Installation_Costs[1]" scaling="0.1"/>
 			<isee:parameter name="CCS.stepping_on_toes_parameter_end_of_pipe_capture[1]" scaling="10"/>
 			<isee:parameter name="CCS.Learning_Rate_end_of_pipe_capture[1]" scaling="10"/>
-			<isee:parameter name="CCS.stepping_on_toes_parameter_BECCS[1]" scaling="10"/>
-			<isee:parameter name="CCS.Floor_Costs_BECCS[1]" scaling="0.1"/>
-			<isee:parameter name="CCS.BECCS_Initial_Installation_Costs[1]" scaling="0.1"/>
-			<isee:parameter name="CCS.Learning_Rate_BECCS[1]"/>
-			<isee:parameter name="CCS.depreciation_rate_of_End_of_Pipe_Carbon_Capture_capital[1]" scaling="10"/>
+			<isee:parameter name="CCS.stepping_on_toes_parameter_BECC[1]" scaling="10"/>
+			<isee:parameter name="CCS.Floor_Costs_BECC[1]" scaling="0.1"/>
+			<isee:parameter name="CCS.BECC_Initial_Installation_Costs[1]" scaling="0.1"/>
+			<isee:parameter name="CCS.Learning_Rate_BECC[1]"/>
+			<isee:parameter name="CCS.depreciation_rate_of_end_of_pipe_Carbon_Capture_capital[1]" scaling="10"/>
 			<isee:parameter name="CCS.depreciation_rate_of_direct_air_carbon_capture_capital[1]" scaling="10"/>
-			<isee:parameter name="CCS.depreciation_rate_of_BECCS_capital[1]" scaling="10"/>
-			<isee:parameter name="CCS.stepping_on_toes_parameter_in_InjectionStorage_1[1]" scaling="10"/>
-			<isee:parameter name="CCS.Learning_Rate_1[1]" scaling="10"/>
-			<isee:parameter name="CCS.Initial_Installation_Costs_1[1]" scaling="0.1"/>
-			<isee:parameter name="CCS.Floor_Costs_1[1]"/>
+			<isee:parameter name="CCS.depreciation_rate_of_BECC_capital[1]" scaling="10"/>
+			<isee:parameter name="CCS.stepping_on_toes_parameter_in_storage[1]" scaling="10"/>
+			<isee:parameter name="CCS.Learning_Rate_carbon_storage[1]" scaling="10"/>
+			<isee:parameter name="CCS.Initial_Installation_Costs_carbon_storage[1]" scaling="0.1"/>
+			<isee:parameter name="CCS.Floor_Costs_carbon_storage[1]"/>
 			<isee:payoff name="CCS" action="min"/>
 			<isee:payoff name="SDG 10.1.1" action="min" inactive="true"/>
 		</isee:optimizer_specs>
@@ -1354,7 +1354,7 @@
 			</isee:payoff_element>
 		</isee:payoff_specs>
 		<isee:payoff_specs name="CCS" calibration="true" recompute_weights="true" compare_tolerance="0" compare_type="ls" compare_run="Calibration Data">
-			<isee:payoff_element name="CCS.End_of_Pipe_Carbon_Capture_Capacity[1]" weight="0.00351196382194174">
+			<isee:payoff_element name="CCS.end_of_pipe_Carbon_Capture_Capacity[1]" weight="0.00351196382194174">
 				<isee:time_range type="terminal_value"/>
 			</isee:payoff_element>
 			<isee:payoff_element name="CCS.direct_air_carbon_capture_Capacity[1]" weight="14.2810506014481">
@@ -1643,6 +1643,8 @@
 				<connect2 to="energy_investments.Moratorium_on_fossil_energy_year" from="Government_Regulations.Moratorium_on_fossil_energy_year"/>
 				<connect to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to="energy_investments.start_year" from="Government_Regulations.start_year"/>
+				<connect2 to="energy_investments.start_year" from="Government_Regulations.start_year"/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
@@ -2148,12 +2150,12 @@
 				<connect2 to="Employment.Population_1" from="Emissions.Population"/>
 				<connect to="Coastal_sea_level_rise.Total_CO2_Emissions" from="Emissions.Total_CO2_Emissions"/>
 				<connect2 to="Coastal_sea_level_rise.Total_CO2_Emissions" from="Emissions.Total_CO2_Emissions"/>
-				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
-				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
+				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
+				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.bio_fuel_primary_energy" from="bio_fuel_energy.bio_fuel_primary_energy"/>
 				<connect2 to="Emissions.bio_fuel_primary_energy" from="bio_fuel_energy.bio_fuel_primary_energy"/>
-				<connect to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
-				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
+				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
+				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect to="Emissions.Carbon_Intensity_1" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect2 to="Emissions.Carbon_Intensity_1" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect to="Emissions.CDD" from="energy_demand.CDD"/>
@@ -2238,8 +2240,8 @@
 				<connect2 to="Forest.Atmospheric_CO2_Concentration_1" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
 				<connect to="Grass.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
 				<connect2 to="Grass.Atmospheric_CO2_Concentration" from="CO2_Forcing.Atmospheric_CO2_Concentration"/>
-				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
+				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Land_Use_Forcing.agricultural_water_withdrawal" from="Freshwater.agricultural_water_withdrawal"/>
 				<connect2 to="Land_Use_Forcing.agricultural_water_withdrawal" from="Freshwater.agricultural_water_withdrawal"/>
 				<connect to="Land_Use_Forcing.Albedo" from="Land_Use_and_Agriculture.Albedo"/>
@@ -2872,16 +2874,16 @@
 				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
-				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
+				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
+				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect2 to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
 				<connect2 to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
-				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
-				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
+				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
+				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
@@ -2912,6 +2914,8 @@
 				<connect2 to="CCS.share_of_gas_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to="CCS.start_year" from="Government_Regulations.start_year"/>
+				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect2 to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="Emissions.CO2_emissions" from="Concrete.CO2_emissions"/>
@@ -3221,7 +3225,7 @@
 			<aux name="Simulation End">
 				<doc>${No Sensi}
 This is what determines when the model stops calculating</doc>
-				<eqn>2029</eqn>
+				<eqn>2150</eqn>
 				<format precision="1"/>
 				<range min="2023" max="2200"/>
 				<units>years</units>
@@ -3316,10 +3320,14 @@ This is what determines when the model stops calculating</doc>
 				<connect2 to="Animal_Products.start_year_1" from="Government_Regulations.start_year"/>
 				<connect to="bio_fuel_energy.Policy_Start_Year" from="Government_Regulations.start_year"/>
 				<connect2 to="bio_fuel_energy.Policy_Start_Year" from="Government_Regulations.start_year"/>
+				<connect to="CCS.start_year" from="Government_Regulations.start_year"/>
+				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Concrete.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="Concrete.start_year" from="Government_Regulations.start_year"/>
 				<connect to="Emissions.start_year" from="Government_Regulations.start_year"/>
 				<connect2 to="Emissions.start_year" from="Government_Regulations.start_year"/>
+				<connect to="energy_investments.start_year" from="Government_Regulations.start_year"/>
+				<connect2 to="energy_investments.start_year" from="Government_Regulations.start_year"/>
 				<connect to="fossil_energy_coal.Policy_Start_Year" from="Government_Regulations.start_year"/>
 				<connect2 to="fossil_energy_coal.Policy_Start_Year" from="Government_Regulations.start_year"/>
 				<connect to="fossil_energy_gas.Policy_Start_Year" from="Government_Regulations.start_year"/>
@@ -3454,7 +3462,7 @@ This is what determines when the model stops calculating</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="201.875" isee:scroll_y="35" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="5" isee:page_rows="8" isee:scroll_x="140.625" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -4331,16 +4339,13 @@ Lorem ipsum dolor sit amet</text_box>
 					</style>
 					<isee:shape background="#F7F7F7" border_width="thin" border_style="none" transparent_background="false" x="0" y="0" width="1066" height="600" kind="rectangle"/>
 					<graphics_frame z_index="2" fill="none" x="12.4806" y="16.9825" width="166" height="34">
-						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">/home/maria/Descargas/Stella_Architect_4.1.2_Linux/Stella_Architect/.app/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
+						<image width="121" height="20" size_to_parent="false" isee:transparency="0" isee:fixed_aspect_ratio="true">C:/Program Files/isee systems/Stella Architect/designs/Deluxe Prev-Next Blue Green Pastel_Graphics/Your logo dark.png</image>
 					</graphics_frame>
 				</view>
 			</isee:templates>
 			<isee:stories/>
 		</views>
 	</model>
-	<isee:controls>
-		<isee:control priority="interactive" name="Simulation_End" value="2200"/>
-	</isee:controls>
 	<isee:user_controlled>
 		<ent name="Simulation End" preserve="true" lock="false"/>
 		<ent name="Government Regulations.tax on CO2e emissions" preserve="true" lock="false"/>

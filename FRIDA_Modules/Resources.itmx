@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -284,16 +284,16 @@
 				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
-				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECCS_CO2_Captured"/>
+				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
+				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect2 to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
 				<connect2 to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
-				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.DAC_CO2_Captured"/>
-				<connect to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
-				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.End_of_Pipe_CO2_Captured"/>
+				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
+				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
+				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
@@ -324,6 +324,8 @@
 				<connect2 to="CCS.share_of_gas_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="CCS.share_of_oil_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to="CCS.start_year" from="Government_Regulations.start_year"/>
+				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect2 to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 			</module>
@@ -376,7 +378,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="292.5" isee:scroll_y="30.8333" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="3" isee:page_rows="3" zoom="40" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -416,7 +418,7 @@
 					<table color="black" background="#E0E0E0" text_align="right" font_size="12pt" orientation="vertical" wrap_text="false" isee:auto_fit="true" isee:use_alternate_row_colors="false" isee:unlimited_table_length="false" blank_column_width="80" column_width="160" interval="1" report_balances="beginning" report_flows="instantaneous" header_font_style="normal" header_font_weight="normal" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="12pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 				</style>
 				<module label_side="center" x="919.167" y="411.833" name="Concrete"/>
-				<module label_side="center" x="922" y="545" name="CCS"/>
+				<module label_side="center" x="919.167" y="545" name="CCS"/>
 			</view>
 		</views>
 	</model>
@@ -426,7 +428,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>End_of_Pipe_CO2_Captured+DAC_CO2_Captured+BECCS_CO2_Captured</eqn>
+				<eqn>end_of_pipe_CO2_Captured+direct_air_capture_CO2_Captured+BECC_CO2_Captured</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
@@ -763,7 +765,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<aux name="DAC CO2 Captured" access="output" isee:autocreated="true">
+			<aux name="direct air capture CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -794,10 +796,13 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Carbon_to_capture_per_year*cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</eqn>
+				<eqn>IF TIME &gt; start_year THEN
+Carbon_to_capture_per_year*cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture
+ELSE
+0</eqn>
 				<units>Mc$</units>
 			</aux>
-			<aux name="Installation\nCosts End of Pipe\nCarbon Capture">
+			<aux name="Installation\nCosts end of pipe\nCarbon Capture">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -820,10 +825,10 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Installation_Costs_End_of_Pipe_Carbon_Capture[Run])/UNIT_to_per_year</eqn>
+				<eqn>(Installation_Costs_end_of_pipe_Carbon_Capture[Run])/UNIT_to_per_year</eqn>
 				<units>Mc$/(MtCO2/year)</units>
 			</aux>
-			<aux name="depreciation rate of\nEnd of Pipe\nCarbon Capture capital">
+			<aux name="depreciation rate of\nend of pipe\nCarbon Capture capital">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -831,27 +836,27 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
-			<flow name="Depreciation of\nEnd of Pipe\nCarbon Capture Capacity">
+			<flow name="Depreciation of\nend of pipe\nCarbon Capture Capacity">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>End_of_Pipe_Carbon_Capture_Capacity[Run]*depreciation_rate_of_End_of_Pipe_Carbon_Capture_capital[Run]</eqn>
+				<eqn>end_of_pipe_Carbon_Capture_Capacity[Run]*depreciation_rate_of_end_of_pipe_Carbon_Capture_capital[Run]</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<stock name="End of Pipe\nCarbon Capture Capacity" access="output" isee:autocreated="true">
+			<stock name="end of pipe\nCarbon Capture Capacity" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Initial_End_of_Pipe_Carbon_Capture_Capacity[Run]</eqn>
-				<inflow>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</inflow>
-				<outflow>Depreciation_of_End_of_Pipe_Carbon_Capture_Capacity</outflow>
+				<eqn>Initial_end_of_pipe_Carbon_Capture_Capacity[Run]</eqn>
+				<inflow>Installation_of_end_of_pipe_Carbon_Capture_Capacity</inflow>
+				<outflow>Depreciation_of_end_of_pipe_Carbon_Capture_Capacity</outflow>
 				<non_negative/>
 				<units>MtCO2</units>
 			</stock>
-			<aux name="Initial End of Pipe\nCarbon Capture Capacity">
+			<aux name="Initial end of pipe\nCarbon Capture Capacity">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -861,28 +866,31 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<range min="50" max="150"/>
 				<units>MtCO2</units>
 			</aux>
-			<flow name="Installation of\nEnd of Pipe\nCarbon Capture Capacity">
+			<flow name="Installation of\nend of pipe\nCarbon Capture Capacity">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Investment_in_End_of_Pipe_Carbon_Capture)/cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<eqn>(Investment_in_end_of_pipe_Carbon_Capture)/cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<aux name="End of Pipe CO2 Captured" access="output" isee:autocreated="true">
+			<aux name="end of pipe CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>End_of_Pipe_Carbon_Capture_Capacity*Efficiency_for_end_of_pipe_carbon_capture*UNIT_to_per_year</eqn>
+				<eqn>end_of_pipe_Carbon_Capture_Capacity*Efficiency_for_end_of_pipe_carbon_capture*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Additional Investment in End of Pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(storing_carbon_from_coal_emissions+storing_carbon_from_oil_emissions+storing_carbon_from_gas_emissions)*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<eqn>IF TIME &gt; start_year THEN
+(storing_carbon_from_coal_emissions+storing_carbon_from_oil_emissions+storing_carbon_from_gas_emissions)*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture
+ELSE
+0</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Energy intensity in\ndirect air carbon capture">
@@ -896,7 +904,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Energy_intensity_in_direct_air_carbon_capture*DAC_CO2_Captured)/UNIT_to_per_year</eqn>
+				<eqn>(Energy_intensity_in_direct_air_carbon_capture*direct_air_capture_CO2_Captured)/UNIT_to_per_year</eqn>
 				<units>GWh*Million</units>
 			</aux>
 			<aux name="Energy intensity in end of pipe carbon capture">
@@ -906,11 +914,11 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<eqn>971667.444</eqn>
 				<units>GWh/MtCO2</units>
 			</aux>
-			<aux name="Energy demand from End of Pipe\nCarbon Capture">
+			<aux name="Energy demand from end of pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Energy_intensity_in_end_of_pipe_carbon_capture[Run]*End_of_Pipe_CO2_Captured[Run]</eqn>
+				<eqn>Energy_intensity_in_end_of_pipe_carbon_capture[Run]*end_of_pipe_CO2_Captured[Run]</eqn>
 				<units>GWh/Year</units>
 			</aux>
 			<aux name="Efficiency for end of pipe carbon capture">
@@ -931,14 +939,14 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>direct_air_carbon_capture_Capacity+End_of_Pipe_Carbon_Capture_Capacity+BECC_Capacity</eqn>
+				<eqn>direct_air_carbon_capture_Capacity+end_of_pipe_Carbon_Capture_Capacity+BECC_Capacity</eqn>
 				<units>MtCO2</units>
 			</aux>
 			<aux name="Total investment in CCS">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_BECCS+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_direct_air_carbon_capture+total_cost_of_storing_CO2)*UNIT_to_per_year</eqn>
+				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_BECC+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_direct_air_carbon_capture+total_cost_of_storing_CO2)*UNIT_to_per_year</eqn>
 				<units>Mc$/Year</units>
 			</aux>
 			<aux name="cost of storing CO2 per unit">
@@ -956,9 +964,9 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 (IF Captured_CO2_to_store = 0 THEN
 0
 ELSE
-((((cost_of_capturing_CO2_per_unit_with_BECCS*BECCS_CO2_Captured)
+((((cost_of_capturing_CO2_per_unit_with_BECC*BECC_CO2_Captured)
 +
-(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture)*End_of_Pipe_CO2_Captured))
+(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture)*end_of_pipe_CO2_Captured))
 /
 Captured_CO2_to_store))
 ELSE
@@ -1058,7 +1066,7 @@ middle of power generation storing cost</doc>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
-			<aux name="Investment in End of Pipe\nCarbon Capture">
+			<aux name="Investment in end of pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1160,7 +1168,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Initial_End_of_Pipe_Carbon_Capture_Capacity/   MAX(Cumulative_Capacity_Construction_for_end_of_pipe_capture, initial_end_of_pipe_for_the_consideration_of_cost_effects))^learning_rate_parameter_end_of_pipe_capture</eqn>
+				<eqn>(Initial_end_of_pipe_Carbon_Capture_Capacity/   MAX(Cumulative_Capacity_Construction_for_end_of_pipe_capture, initial_end_of_pipe_for_the_consideration_of_cost_effects))^learning_rate_parameter_end_of_pipe_capture</eqn>
 				<units>dmnl</units>
 			</aux>
 			<stock name="Cumulative\nCapacity Construction for end of pipe capture">
@@ -1180,20 +1188,20 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</eqn>
+				<eqn>Installation_of_end_of_pipe_Carbon_Capture_Capacity</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<aux name="Installation\nCosts BECCS">
+			<aux name="Installation\nCosts BECC">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Floor_Costs_BECCS[Run]+Reducible_Installation_Cost_component_in_BECCS)</eqn>
+				<eqn>(Floor_Costs_BECC[Run]+Reducible_Installation_Cost_component_in_BECC)</eqn>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="Floor Costs BECCS">
+			<aux name="Floor Costs BECC">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1203,14 +1211,14 @@ middle of power generation storing cost</doc>
 				<range min="30" max="300"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="cost of capturing\nCO2 per unit with BECCS">
+			<aux name="cost of capturing\nCO2 per unit with BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Installation_Costs_BECCS[Run])/UNIT_to_per_year</eqn>
+				<eqn>(Installation_Costs_BECC[Run])/UNIT_to_per_year</eqn>
 				<units>Mc$/(MtCO2/year)</units>
 			</aux>
-			<aux name="depreciation rate of\nBECCS capital">
+			<aux name="depreciation rate of\nBECC capital">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1218,11 +1226,11 @@ middle of power generation storing cost</doc>
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
-			<flow name="Depreciation of\nBECCS">
+			<flow name="Depreciation of\nBECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECC_Capacity[Run]*depreciation_rate_of_BECCS_capital[Run]</eqn>
+				<eqn>BECC_Capacity[Run]*depreciation_rate_of_BECC_capital[Run]</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
@@ -1232,13 +1240,13 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Initial_BECCS[Run]</eqn>
-				<inflow>Installation_of_BECCS_Capacity</inflow>
-				<outflow>Depreciation_of_BECCS</outflow>
+				<eqn>Initial_BECC[Run]</eqn>
+				<inflow>Installation_of_BECC_Capacity</inflow>
+				<outflow>Depreciation_of_BECC</outflow>
 				<non_negative/>
 				<units>MtCO2</units>
 			</stock>
-			<aux name="Initial BECCS">
+			<aux name="Initial BECC">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1248,52 +1256,55 @@ middle of power generation storing cost</doc>
 				<range min="50" max="150"/>
 				<units>MtCO2</units>
 			</aux>
-			<flow name="Installation of\nBECCS Capacity">
+			<flow name="Installation of\nBECC Capacity">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Investment_in_BECC)/cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
+				<eqn>(Investment_in_BECC)/cost_of_capturing_CO2_per_unit_with_BECC</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<aux name="BECCS CO2 Captured" access="output" isee:autocreated="true">
+			<aux name="BECC CO2 Captured" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECC_Capacity*Efficiency_for_BECCS*UNIT_to_per_year</eqn>
+				<eqn>BECC_Capacity*Efficiency_for_BECC*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="Additional Investment in BECCS">
+			<aux name="Additional Investment in BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECCS</eqn>
+				<eqn>IF TIME &gt; start_year THEN
+(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECC
+ELSE
+0</eqn>
 				<units>Mc$</units>
 			</aux>
-			<aux name="Energy intensity in BECCS">
+			<aux name="Energy intensity in BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>971667.444</eqn>
 				<units>GWh/MtCO2</units>
 			</aux>
-			<aux name="Energy demand from BECCS">
+			<aux name="Energy demand from BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Energy_intensity_in_BECCS[Run]*BECCS_CO2_Captured[Run]</eqn>
+				<eqn>Energy_intensity_in_BECC[Run]*BECC_CO2_Captured[Run]</eqn>
 				<units>GWh/Year</units>
 			</aux>
-			<aux name="Efficiency for BECCS">
+			<aux name="Efficiency for BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>0.9194</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Baseline Government\nfunded R&amp;D for BECCS">
+			<aux name="Baseline Government\nfunded R&amp;D for BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1305,10 +1316,10 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Additional_Investment_in_BECCS+&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;)</eqn>
+				<eqn>(Additional_Investment_in_BECC+&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;)</eqn>
 				<units>Mc$</units>
 			</aux>
-			<aux name="Learning Rate BECCS">
+			<aux name="Learning Rate BECC">
 				<doc>${Assumption,Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1318,7 +1329,7 @@ middle of power generation storing cost</doc>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
-			<aux name="BECCS Initial\nInstallation Costs">
+			<aux name="BECC Initial\nInstallation Costs">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1328,14 +1339,14 @@ middle of power generation storing cost</doc>
 				<range min="100" max="500"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="learning rate parameter\nBECCS">
+			<aux name="learning rate parameter\nBECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-((LN(1-Learning_Rate_BECCS))/LN(2))</eqn>
+				<eqn>-((LN(1-Learning_Rate_BECC))/LN(2))</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="stepping on toes parameter\nBECCS">
+			<aux name="stepping on toes parameter\nBECC">
 				<doc>${Assumption,Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1345,32 +1356,32 @@ middle of power generation storing cost</doc>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Reducible Installation\nCost component in\nBECCS">
+			<aux name="Reducible Installation\nCost component in\nBECC">
 				<doc>Price per energy unit </doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>BECCS_Initial_Installation_Costs * Effect_of_Learning_On_Cost_BECCS
-* Stepping_on_Toes_Punishment_BECCS</eqn>
+				<eqn>BECC_Initial_Installation_Costs * Effect_of_Learning_On_Cost_BECC
+* Stepping_on_Toes_Punishment_BECC</eqn>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="Stepping on Toes Punishment\nBECCS">
+			<aux name="Stepping on Toes Punishment\nBECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Cumulative_Capacity_Construction_for_BECCS/Perceived_cumulative_BECCS_capacity_construction)^stepping_on_toes_parameter_BECCS</eqn>
+				<eqn>(Cumulative_Capacity_Construction_for_BECC/Perceived_cumulative_BECC_capacity_construction)^stepping_on_toes_parameter_BECC</eqn>
 				<init_eqn>1</init_eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Perceived cumulative BECCS\ncapacity construction">
+			<aux name="Perceived cumulative BECC\ncapacity construction">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_BECCS, initial_BECCS_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_BECCS)</eqn>
+				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_BECC, initial_BECC_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_BECC)</eqn>
 				<isee:delay_aux/>
 				<units>MtCO2</units>
 			</aux>
-			<aux name="time to perceive\nchanges in construction\nof BECCS">
+			<aux name="time to perceive\nchanges in construction\nof BECC">
 				<doc>${Assumption}
 </doc>
 				<dimensions>
@@ -1380,31 +1391,31 @@ middle of power generation storing cost</doc>
 				<range min="0.5" max="5"/>
 				<units>Year</units>
 			</aux>
-			<aux name="Effect of Learning On Cost\nBECCS">
+			<aux name="Effect of Learning On Cost\nBECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Initial_BECCS/   MAX(Cumulative_Capacity_Construction_for_BECCS, initial_BECCS_for_the_consideration_of_cost_effects))^learning_rate_parameter_BECCS</eqn>
+				<eqn>(Initial_BECC/   MAX(Cumulative_Capacity_Construction_for_BECC, initial_BECC_for_the_consideration_of_cost_effects))^learning_rate_parameter_BECC</eqn>
 				<units>dmnl</units>
 			</aux>
-			<stock name="Cumulative\nCapacity Construction\nfor BECCS">
+			<stock name="Cumulative\nCapacity Construction\nfor BECC">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>1</eqn>
-				<inflow>accumulating_BECCS_capture_Construction</inflow>
+				<inflow>accumulating_BECC_capture_Construction</inflow>
 				<non_negative/>
 				<units>MtCO2</units>
 			</stock>
-			<aux name="initial BECCS for the\nconsideration of cost effects">
+			<aux name="initial BECC for the\nconsideration of cost effects">
 				<eqn>1</eqn>
 				<units>MtCO2</units>
 			</aux>
-			<flow name="accumulating BECCS\ncapture Construction">
+			<flow name="accumulating BECC\ncapture Construction">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Installation_of_BECCS_Capacity</eqn>
+				<eqn>Installation_of_BECC_Capacity</eqn>
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
@@ -1427,7 +1438,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>End_of_Pipe_CO2_Captured+BECCS_CO2_Captured</eqn>
+				<eqn>end_of_pipe_CO2_Captured+BECC_CO2_Captured</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="Realized CO2 from Energy" access="output" isee:autocreated="true">
@@ -1470,14 +1481,14 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Floor_Costs_1+Reducible_Installation_Cost_component_in_end_of_pipe_capture_1</eqn>
+				<eqn>Floor_Costs_carbon_storage+Reducible_Installation_Cost_component_in_end_of_pipe_capture_1</eqn>
 				<units>Mc$/MtCO2</units>
 			</aux>
 			<aux name="learning rate parameter end of pipe capture 1">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>-((LN(1-Learning_Rate_1))/LN(2))</eqn>
+				<eqn>-((LN(1-Learning_Rate_carbon_storage))/LN(2))</eqn>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Reducible Installation\nCost component in end of pipe capture 1">
@@ -1485,27 +1496,27 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Initial_Installation_Costs_1 * Effect_of_Learning_On_Cost_end_of_pipe_capture_1
-* Stepping_on_Toes_Punishment_end_of_pipe_capture_1</eqn>
+				<eqn>Initial_Installation_Costs_carbon_storage * Effect_of_Learning_On_Cost_end_of_pipe_capture_1
+* Stepping_on_Toes_Punishment_carbon_storage</eqn>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="Stepping on Toes Punishment end of pipe capture 1">
+			<aux name="Stepping on Toes Punishment\ncarbon storage">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Cumulative_Capacity_Construction_for_end_of_pipe_capture_1/Perceived_cumulative_end_of_pipe_capture_capacity_construction_1)^stepping_on_toes_parameter_in_InjectionStorage_1</eqn>
+				<eqn>(Cumulative_Capacity_Construction_for_carbon_storage/Perceived_cumulative_carbon_storage_capacity_construction)^stepping_on_toes_parameter_in_storage</eqn>
 				<init_eqn>1</init_eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Perceived cumulative end of pipe capture\ncapacity construction 1">
+			<aux name="Perceived cumulative carbon storage\ncapacity construction">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_end_of_pipe_capture_1, initial_end_of_pipe_for_the_consideration_of_cost_effects_1), time_to_perceive_changes_in_construction_of_end_of_pipe_capture_1)</eqn>
+				<eqn>DELAY(MAX(Cumulative_Capacity_Construction_for_carbon_storage, initial_carbon_storage_for_the_consideration_of_cost_effects), time_to_perceive_changes_in_construction_of_carbon_storage)</eqn>
 				<isee:delay_aux/>
 				<units>MtCO2</units>
 			</aux>
-			<aux name="time to perceive\nchanges in construction\nof end of pipe capture 1">
+			<aux name="time to perceive\nchanges in construction\nof carbon storage">
 				<doc>${Assumption}
 </doc>
 				<dimensions>
@@ -1519,14 +1530,14 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Initial_InjectionStorage_Capacity_1/   MAX(Cumulative_Capacity_Construction_for_end_of_pipe_capture_1, initial_end_of_pipe_for_the_consideration_of_cost_effects_1))^learning_rate_parameter_end_of_pipe_capture_1</eqn>
+				<eqn>(Initial_carbon_storage_capacity/   MAX(Cumulative_Capacity_Construction_for_carbon_storage, initial_carbon_storage_for_the_consideration_of_cost_effects))^learning_rate_parameter_end_of_pipe_capture_1</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="initial end of pipe for the\nconsideration of cost effects 1">
+			<aux name="initial carbon storage for the\nconsideration of cost effects">
 				<eqn>1</eqn>
 				<units>MtCO2</units>
 			</aux>
-			<aux name="Learning Rate 1">
+			<aux name="Learning Rate carbon storage">
 				<doc>${Assumption,Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1536,7 +1547,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Initial\nInstallation Costs 1">
+			<aux name="Initial\nInstallation Costs carbon storage">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1546,7 +1557,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<range min="50" max="400"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="Floor Costs 1">
+			<aux name="Floor Costs carbon storage">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1556,7 +1567,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<range min="2" max="30"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="stepping on toes parameter\nin InjectionStorage 1">
+			<aux name="stepping on toes parameter\nin storage">
 				<doc>${Assumption,Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1566,7 +1577,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Initial InjectionStorage\nCapacity 1">
+			<aux name="Initial carbon storage\ncapacity">
 				<doc>${Internal Calibration Parameter}
 </doc>
 				<dimensions>
@@ -1576,16 +1587,16 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<range min="1" max="15"/>
 				<units>MtCO2</units>
 			</aux>
-			<stock name="Cumulative\nCapacity Construction for end of pipe capture 1">
+			<stock name="Cumulative\nCapacity Construction\nfor carbon storage">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>1</eqn>
-				<inflow>accumulating_end_of_pipe_capture_Construction_1</inflow>
+				<inflow>accumulating_carbon_storage_Construction</inflow>
 				<non_negative/>
 				<units>MtCO2</units>
 			</stock>
-			<flow name="accumulating end of pipe capture Construction 1">
+			<flow name="accumulating carbon\nstorage Construction">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1607,7 +1618,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;</eqn>
+				<eqn>&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="share of ccs costs\ncovered by the goverment" access="input">
@@ -1623,7 +1634,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECCS)*share_of_ccs_costs_covered_by_the_goverment</eqn>
+				<eqn>(Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)*share_of_ccs_costs_covered_by_the_goverment</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="R&amp;D Government funding\nfrom the government\ninto carbon storage">
@@ -1662,7 +1673,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECCS)</eqn>
+				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Share of Government R&amp;D funding\ninto carbon capture">
@@ -1695,6 +1706,10 @@ cost_of_storing_CO2_per_unit_1*&quot;UNIT_Million_c$_to_c$&quot;
 ELSE
 cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<units>Mc$/(MtCO2/year)</units>
+			</aux>
+			<aux name="start year" access="input">
+				<eqn>2025</eqn>
+				<units>Year</units>
 			</aux>
 		</variables>
 		<views>
@@ -1745,7 +1760,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="6" isee:page_rows="4" isee:scroll_x="4271.25" isee:scroll_y="722.5" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="6" isee:page_rows="4" isee:scroll_x="3450" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1951,10 +1966,10 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 						<pt x="947.856" y="407.74"/>
 					</pts>
 				</flow>
-				<aux background="#FFAAFF" x="1257.1" y="407.74" name="DAC CO2 Captured"/>
+				<aux background="#FFAAFF" x="1257.1" y="407.74" name="direct air capture CO2 Captured"/>
 				<connector uid="117" angle="342.951">
 					<from>direct_air_carbon_capture_Capacity</from>
-					<to>DAC_CO2_Captured</to>
+					<to>direct_air_capture_CO2_Captured</to>
 				</connector>
 				<stock x="833.716" y="788.454" name="Cumulative\nCapacity Construction for direct air carbon capture"/>
 				<connector uid="161" angle="19.7856">
@@ -1975,7 +1990,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				</connector>
 				<aux x="470.481" y="259.795" name="Carbon to capture per year"/>
 				<connector uid="169" angle="322.334">
-					<from>DAC_CO2_Captured</from>
+					<from>direct_air_capture_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
 				</connector>
 				<aux x="792.231" y="259.795" name="Additional Investment in direct\nair carbon capture"/>
@@ -1987,48 +2002,48 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</from>
 					<to>Additional_Investment_in_direct_air_carbon_capture</to>
 				</connector>
-				<aux background="white" x="956.8" y="1563.04" name="Installation\nCosts End of Pipe\nCarbon Capture"/>
+				<aux background="white" x="956.8" y="1563.04" name="Installation\nCosts end of pipe\nCarbon Capture"/>
 				<aux color="blue" background="#00AA00" x="830.876" y="1563.04" name="Floor Costs end of\npipe carbon capture"/>
 				<connector uid="182" angle="0">
 					<from>Floor_Costs_end_of_pipe_carbon_capture</from>
-					<to>Installation_Costs_End_of_Pipe_Carbon_Capture</to>
+					<to>Installation_Costs_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<aux background="#FFAAFF" x="956.8" y="1495.14" name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture"/>
 				<connector uid="184" angle="90">
-					<from>Installation_Costs_End_of_Pipe_Carbon_Capture</from>
+					<from>Installation_Costs_end_of_pipe_Carbon_Capture</from>
 					<to>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1170.32" y="1323.07" name="depreciation rate of\nEnd of Pipe\nCarbon Capture capital"/>
-				<flow x="1084.91" y="1405.57" name="Depreciation of\nEnd of Pipe\nCarbon Capture Capacity">
+				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1170.32" y="1323.07" name="depreciation rate of\nend of pipe\nCarbon Capture capital"/>
+				<flow x="1084.91" y="1405.57" name="Depreciation of\nend of pipe\nCarbon Capture Capacity">
 					<pts>
 						<pt x="1055.8" y="1405.57"/>
 						<pt x="1138.02" y="1405.57"/>
 					</pts>
 				</flow>
-				<connector uid="185" angle="224.005">
-					<from>depreciation_rate_of_End_of_Pipe_Carbon_Capture_capital</from>
-					<to>Depreciation_of_End_of_Pipe_Carbon_Capture_Capacity</to>
+				<connector uid="185" angle="224.007">
+					<from>depreciation_rate_of_end_of_pipe_Carbon_Capture_capital</from>
+					<to>Depreciation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
-				<stock background="#FFAAFF" x="1033.3" y="1405.57" name="End of Pipe\nCarbon Capture Capacity"/>
+				<stock background="#FFAAFF" x="1033.3" y="1405.57" name="end of pipe\nCarbon Capture Capacity"/>
 				<connector uid="186" angle="24.9974">
-					<from>End_of_Pipe_Carbon_Capture_Capacity</from>
-					<to>Depreciation_of_End_of_Pipe_Carbon_Capture_Capacity</to>
+					<from>end_of_pipe_Carbon_Capture_Capacity</from>
+					<to>Depreciation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
-				<aux background="#AA55FF" x="1039.3" y="1455.25" name="Initial End of Pipe\nCarbon Capture Capacity"/>
-				<flow x="959.55" y="1405.57" name="Installation of\nEnd of Pipe\nCarbon Capture Capacity">
+				<aux background="#AA55FF" x="1039.3" y="1455.25" name="Initial end of pipe\nCarbon Capture Capacity"/>
+				<flow x="959.55" y="1405.57" name="Installation of\nend of pipe\nCarbon Capture Capacity">
 					<pts>
 						<pt x="908.3" y="1405.57"/>
 						<pt x="1010.8" y="1405.57"/>
 					</pts>
 				</flow>
-				<aux background="#FFAAFF" x="1318.71" y="1413.33" name="End of Pipe CO2 Captured"/>
+				<aux background="#FFAAFF" x="1318.71" y="1413.33" name="end of pipe CO2 Captured"/>
 				<connector uid="187" angle="328.952">
-					<from>End_of_Pipe_Carbon_Capture_Capacity</from>
-					<to>End_of_Pipe_CO2_Captured</to>
+					<from>end_of_pipe_Carbon_Capture_Capacity</from>
+					<to>end_of_pipe_CO2_Captured</to>
 				</connector>
 				<connector uid="192" angle="88.2452">
 					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
-					<to>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</to>
+					<to>Installation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
 				<aux x="884.156" y="1221.25" name="Additional Investment in End of Pipe\nCarbon Capture"/>
 				<connector uid="194" angle="183.82">
@@ -2038,7 +2053,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<aux background="#AA00FF" x="1258.94" y="545.55" name="Energy intensity in\ndirect air carbon capture"/>
 				<aux x="1258.94" y="493.883" name="Energy demand from direct air carbon capture"/>
 				<connector uid="196" angle="271.224">
-					<from>DAC_CO2_Captured</from>
+					<from>direct_air_capture_CO2_Captured</from>
 					<to>Energy_demand_from_direct_air_carbon_capture</to>
 				</connector>
 				<connector uid="197" angle="186.519">
@@ -2050,18 +2065,18 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="205" angle="15.0371">
-					<from>End_of_Pipe_CO2_Captured</from>
+					<from>end_of_pipe_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
 				</connector>
 				<aux background="#AA55FF" x="1318.71" y="1524.5" name="Energy intensity in end of pipe carbon capture"/>
-				<aux x="1318.71" y="1473.25" name="Energy demand from End of Pipe\nCarbon Capture"/>
+				<aux x="1318.71" y="1473.25" name="Energy demand from end of pipe\nCarbon Capture"/>
 				<connector uid="236" angle="189.979">
 					<from>Energy_intensity_in_end_of_pipe_carbon_capture</from>
-					<to>Energy_demand_from_End_of_Pipe_Carbon_Capture</to>
+					<to>Energy_demand_from_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="237" angle="271.051">
-					<from>End_of_Pipe_CO2_Captured</from>
-					<to>Energy_demand_from_End_of_Pipe_Carbon_Capture</to>
+					<from>end_of_pipe_CO2_Captured</from>
+					<to>Energy_demand_from_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="200" angle="2.16986">
 					<from>storing_carbon_from_oil_emissions</from>
@@ -2075,11 +2090,11 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<aux background="#AA00FF" x="1257.1" y="361.073" name="Efficiency for direct air carbon capture"/>
 				<connector uid="244" angle="6.77571">
 					<from>Efficiency_for_direct_air_carbon_capture</from>
-					<to>DAC_CO2_Captured</to>
+					<to>direct_air_capture_CO2_Captured</to>
 				</connector>
 				<connector uid="245" angle="6.99552">
 					<from>Efficiency_for_end_of_pipe_carbon_capture</from>
-					<to>End_of_Pipe_CO2_Captured</to>
+					<to>end_of_pipe_CO2_Captured</to>
 				</connector>
 				<aux background="#FFAAFF" x="3093.18" y="502.836" name="Total Capture Capacity"/>
 				<connector uid="248" angle="332.935">
@@ -2244,7 +2259,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<text_box uid="353" x="5101.54" y="2828.83" width="260" height="71">Trying to find a way to combine incoming investment to allow progression and the possibility to change the capture of emissions</text_box>
 				<connector uid="354" angle="12.8922">
 					<from>storing_carbon_from_biofuel_emissions</from>
-					<to>Additional_Investment_in_BECCS</to>
+					<to>Additional_Investment_in_BECC</to>
 				</connector>
 				<connector uid="371" angle="86.8164">
 					<from>CO2_emissions_from_coal</from>
@@ -2252,18 +2267,18 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				</connector>
 				<aux x="1039.3" y="1221.25" name="Baseline Government\nfunded R&amp;D for end of\npipe carbon capture"/>
 				<aux x="1004.48" y="254.081" name="Baseline Government\nfunded R&amp;D in direct\nair carbon capture"/>
-				<aux x="959.55" y="1316.88" name="Investment in End of Pipe\nCarbon Capture"/>
+				<aux x="959.55" y="1316.88" name="Investment in end of pipe\nCarbon Capture"/>
 				<connector uid="389" angle="270">
-					<from>Investment_in_End_of_Pipe_Carbon_Capture</from>
-					<to>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</to>
+					<from>Investment_in_end_of_pipe_Carbon_Capture</from>
+					<to>Installation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
 				<connector uid="390" angle="308.253">
 					<from>Additional_Investment_in_End_of_Pipe_Carbon_Capture</from>
-					<to>Investment_in_End_of_Pipe_Carbon_Capture</to>
+					<to>Investment_in_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="391" angle="230.47">
 					<from>&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;</from>
-					<to>Investment_in_End_of_Pipe_Carbon_Capture</to>
+					<to>Investment_in_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<aux x="896.606" y="316.25" name="Investment in direct\nair carbon capture"/>
 				<connector uid="392" angle="270">
@@ -2378,155 +2393,155 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture</to>
 				</connector>
 				<connector uid="430" angle="171.439">
-					<from>Installation_of_End_of_Pipe_Carbon_Capture_Capacity</from>
+					<from>Installation_of_end_of_pipe_Carbon_Capture_Capacity</from>
 					<to>accumulating_end_of_pipe_capture_Construction</to>
 				</connector>
 				<connector uid="432" angle="89.774">
 					<from>Reducible_Installation_Cost_component_in_end_of_pipe_capture</from>
-					<to>Installation_Costs_End_of_Pipe_Carbon_Capture</to>
+					<to>Installation_Costs_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="433" x="726.978" y="1982.57" width="580" height="58">BECC</text_box>
-				<aux background="white" x="989.3" y="2508.54" name="Installation\nCosts BECCS"/>
-				<aux color="blue" background="#00AA00" x="839.475" y="2508.54" name="Floor Costs BECCS"/>
+				<aux background="white" x="989.3" y="2508.54" name="Installation\nCosts BECC"/>
+				<aux color="blue" background="#00AA00" x="839.475" y="2508.54" name="Floor Costs BECC"/>
 				<connector uid="436" angle="0">
-					<from>Floor_Costs_BECCS</from>
-					<to>Installation_Costs_BECCS</to>
+					<from>Floor_Costs_BECC</from>
+					<to>Installation_Costs_BECC</to>
 				</connector>
-				<aux background="#FFAAFF" x="989.3" y="2440.64" name="cost of capturing\nCO2 per unit with BECCS"/>
+				<aux background="#FFAAFF" x="989.3" y="2440.64" name="cost of capturing\nCO2 per unit with BECC"/>
 				<connector uid="437" angle="90">
-					<from>Installation_Costs_BECCS</from>
-					<to>cost_of_capturing_CO2_per_unit_with_BECCS</to>
+					<from>Installation_Costs_BECC</from>
+					<to>cost_of_capturing_CO2_per_unit_with_BECC</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1202.82" y="2268.57" name="depreciation rate of\nBECCS capital"/>
-				<flow x="1117.41" y="2351.07" name="Depreciation of\nBECCS">
+				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1202.82" y="2268.57" name="depreciation rate of\nBECC capital"/>
+				<flow x="1117.41" y="2351.07" name="Depreciation of\nBECC">
 					<pts>
 						<pt x="1088.3" y="2351.07"/>
 						<pt x="1170.52" y="2351.07"/>
 					</pts>
 				</flow>
 				<connector uid="438" angle="224.007">
-					<from>depreciation_rate_of_BECCS_capital</from>
-					<to>Depreciation_of_BECCS</to>
+					<from>depreciation_rate_of_BECC_capital</from>
+					<to>Depreciation_of_BECC</to>
 				</connector>
 				<stock background="#FFAAFF" x="1065.8" y="2351.07" name="BECC Capacity"/>
 				<connector uid="439" angle="24.9974">
 					<from>BECC_Capacity</from>
-					<to>Depreciation_of_BECCS</to>
+					<to>Depreciation_of_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1071.8" y="2400.75" name="Initial BECCS"/>
-				<flow x="992.05" y="2351.07" name="Installation of\nBECCS Capacity">
+				<aux background="#AA55FF" x="1071.8" y="2400.75" name="Initial BECC"/>
+				<flow x="992.05" y="2351.07" name="Installation of\nBECC Capacity">
 					<pts>
 						<pt x="940.8" y="2351.07"/>
 						<pt x="1043.3" y="2351.07"/>
 					</pts>
 				</flow>
-				<aux background="#FFAAFF" x="1351.21" y="2358.83" name="BECCS CO2 Captured"/>
+				<aux background="#FFAAFF" x="1351.21" y="2358.83" name="BECC CO2 Captured"/>
 				<connector uid="440" angle="328.952">
 					<from>BECC_Capacity</from>
-					<to>BECCS_CO2_Captured</to>
+					<to>BECC_CO2_Captured</to>
 				</connector>
 				<connector uid="441" angle="88.2452">
-					<from>cost_of_capturing_CO2_per_unit_with_BECCS</from>
-					<to>Installation_of_BECCS_Capacity</to>
+					<from>cost_of_capturing_CO2_per_unit_with_BECC</from>
+					<to>Installation_of_BECC_Capacity</to>
 				</connector>
-				<aux x="916.656" y="2166.75" name="Additional Investment in BECCS"/>
+				<aux x="916.656" y="2166.75" name="Additional Investment in BECC"/>
 				<connector uid="442" angle="183.82">
-					<from>cost_of_capturing_CO2_per_unit_with_BECCS</from>
-					<to>Additional_Investment_in_BECCS</to>
+					<from>cost_of_capturing_CO2_per_unit_with_BECC</from>
+					<to>Additional_Investment_in_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1351.21" y="2470" name="Energy intensity in BECCS"/>
-				<aux x="1351.21" y="2418.75" name="Energy demand from BECCS"/>
+				<aux background="#AA55FF" x="1351.21" y="2470" name="Energy intensity in BECC"/>
+				<aux x="1351.21" y="2418.75" name="Energy demand from BECC"/>
 				<connector uid="443" angle="189.979">
-					<from>Energy_intensity_in_BECCS</from>
-					<to>Energy_demand_from_BECCS</to>
+					<from>Energy_intensity_in_BECC</from>
+					<to>Energy_demand_from_BECC</to>
 				</connector>
 				<connector uid="444" angle="271.051">
-					<from>BECCS_CO2_Captured</from>
-					<to>Energy_demand_from_BECCS</to>
+					<from>BECC_CO2_Captured</from>
+					<to>Energy_demand_from_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1351.21" y="2306.64" name="Efficiency for BECCS"/>
+				<aux background="#AA55FF" x="1351.21" y="2306.64" name="Efficiency for BECC"/>
 				<connector uid="445" angle="6.99552">
-					<from>Efficiency_for_BECCS</from>
-					<to>BECCS_CO2_Captured</to>
+					<from>Efficiency_for_BECC</from>
+					<to>BECC_CO2_Captured</to>
 				</connector>
-				<aux x="1071.8" y="2166.75" name="Baseline Government\nfunded R&amp;D for BECCS"/>
+				<aux x="1071.8" y="2166.75" name="Baseline Government\nfunded R&amp;D for BECC"/>
 				<aux x="992.05" y="2262.38" name="Investment in BECC"/>
 				<connector uid="449" angle="270">
 					<from>Investment_in_BECC</from>
-					<to>Installation_of_BECCS_Capacity</to>
+					<to>Installation_of_BECC_Capacity</to>
 				</connector>
 				<connector uid="450" angle="308.253">
-					<from>Additional_Investment_in_BECCS</from>
+					<from>Additional_Investment_in_BECC</from>
 					<to>Investment_in_BECC</to>
 				</connector>
 				<connector uid="451" angle="230.47">
-					<from>&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;</from>
+					<from>&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;</from>
 					<to>Investment_in_BECC</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="842.212" y="2667.09" name="Learning Rate BECCS"/>
-				<aux background="#00AA00" x="839.475" y="2591.71" name="BECCS Initial\nInstallation Costs"/>
-				<aux label_side="top" x="916.322" y="2667.09" name="learning rate parameter\nBECCS"/>
+				<aux color="blue" background="#00AA00" x="842.212" y="2667.09" name="Learning Rate BECC"/>
+				<aux background="#00AA00" x="839.475" y="2591.71" name="BECC Initial\nInstallation Costs"/>
+				<aux label_side="top" x="916.322" y="2667.09" name="learning rate parameter\nBECC"/>
 				<connector uid="457" angle="0">
-					<from>Learning_Rate_BECCS</from>
-					<to>learning_rate_parameter_BECCS</to>
+					<from>Learning_Rate_BECC</from>
+					<to>learning_rate_parameter_BECC</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="1126.42" y="2649.09" name="stepping on toes parameter\nBECCS"/>
-				<aux background="white" x="988.972" y="2591.71" name="Reducible Installation\nCost component in\nBECCS"/>
+				<aux color="blue" background="#00AA00" x="1126.42" y="2649.09" name="stepping on toes parameter\nBECC"/>
+				<aux background="white" x="988.972" y="2591.71" name="Reducible Installation\nCost component in\nBECC"/>
 				<connector uid="458" angle="0">
-					<from>BECCS_Initial_Installation_Costs</from>
-					<to>Reducible_Installation_Cost_component_in_BECCS</to>
+					<from>BECC_Initial_Installation_Costs</from>
+					<to>Reducible_Installation_Cost_component_in_BECC</to>
 				</connector>
-				<aux x="1129.42" y="2591.71" name="Stepping on Toes Punishment\nBECCS"/>
+				<aux x="1129.42" y="2591.71" name="Stepping on Toes Punishment\nBECC"/>
 				<connector uid="459" angle="87.0071">
-					<from>stepping_on_toes_parameter_BECCS</from>
-					<to>Stepping_on_Toes_Punishment_BECCS</to>
+					<from>stepping_on_toes_parameter_BECC</from>
+					<to>Stepping_on_Toes_Punishment_BECC</to>
 				</connector>
 				<connector uid="460" angle="180">
-					<from>Stepping_on_Toes_Punishment_BECCS</from>
-					<to>Reducible_Installation_Cost_component_in_BECCS</to>
+					<from>Stepping_on_Toes_Punishment_BECC</from>
+					<to>Reducible_Installation_Cost_component_in_BECC</to>
 				</connector>
-				<aux label_side="bottom" x="1032.96" y="2751.69" name="Perceived cumulative BECCS\ncapacity construction"/>
-				<aux label_side="right" label_angle="315" x="1129.42" y="2751.69" name="time to perceive\nchanges in construction\nof BECCS"/>
+				<aux label_side="bottom" x="1032.96" y="2751.69" name="Perceived cumulative BECC\ncapacity construction"/>
+				<aux label_side="right" label_angle="315" x="1129.42" y="2751.69" name="time to perceive\nchanges in construction\nof BECC"/>
 				<connector uid="461" angle="180">
-					<from>time_to_perceive_changes_in_construction_of_BECCS</from>
-					<to>Perceived_cumulative_BECCS_capacity_construction</to>
+					<from>time_to_perceive_changes_in_construction_of_BECC</from>
+					<to>Perceived_cumulative_BECC_capacity_construction</to>
 				</connector>
 				<connector uid="462" angle="48.1454">
-					<from>Perceived_cumulative_BECCS_capacity_construction</from>
-					<to>Stepping_on_Toes_Punishment_BECCS</to>
+					<from>Perceived_cumulative_BECC_capacity_construction</from>
+					<to>Stepping_on_Toes_Punishment_BECC</to>
 				</connector>
-				<aux x="987.972" y="2667.09" name="Effect of Learning On Cost\nBECCS"/>
+				<aux x="987.972" y="2667.09" name="Effect of Learning On Cost\nBECC"/>
 				<connector uid="463" angle="89.24">
-					<from>Effect_of_Learning_On_Cost_BECCS</from>
-					<to>Reducible_Installation_Cost_component_in_BECCS</to>
+					<from>Effect_of_Learning_On_Cost_BECC</from>
+					<to>Reducible_Installation_Cost_component_in_BECC</to>
 				</connector>
 				<connector uid="464" angle="0">
-					<from>learning_rate_parameter_BECCS</from>
-					<to>Effect_of_Learning_On_Cost_BECCS</to>
+					<from>learning_rate_parameter_BECC</from>
+					<to>Effect_of_Learning_On_Cost_BECC</to>
 				</connector>
-				<stock x="926.216" y="2758.51" name="Cumulative\nCapacity Construction\nfor BECCS"/>
+				<stock x="926.216" y="2758.51" name="Cumulative\nCapacity Construction\nfor BECC"/>
 				<connector uid="465" angle="19.7856">
-					<from>Cumulative_Capacity_Construction_for_BECCS</from>
-					<to>Effect_of_Learning_On_Cost_BECCS</to>
+					<from>Cumulative_Capacity_Construction_for_BECC</from>
+					<to>Effect_of_Learning_On_Cost_BECC</to>
 				</connector>
 				<connector uid="466" angle="358.783">
-					<from>Cumulative_Capacity_Construction_for_BECCS</from>
-					<to>Perceived_cumulative_BECCS_capacity_construction</to>
+					<from>Cumulative_Capacity_Construction_for_BECC</from>
+					<to>Perceived_cumulative_BECC_capacity_construction</to>
 				</connector>
 				<connector uid="467" angle="356.408">
-					<from>Cumulative_Capacity_Construction_for_BECCS</from>
-					<to>Stepping_on_Toes_Punishment_BECCS</to>
+					<from>Cumulative_Capacity_Construction_for_BECC</from>
+					<to>Stepping_on_Toes_Punishment_BECC</to>
 				</connector>
-				<aux x="1429.48" y="2696.8" name="initial BECCS for the\nconsideration of cost effects"/>
+				<aux x="1429.48" y="2696.8" name="initial BECC for the\nconsideration of cost effects"/>
 				<connector uid="468" angle="176.15">
-					<from>initial_BECCS_for_the_consideration_of_cost_effects</from>
-					<to>Effect_of_Learning_On_Cost_BECCS</to>
+					<from>initial_BECC_for_the_consideration_of_cost_effects</from>
+					<to>Effect_of_Learning_On_Cost_BECC</to>
 				</connector>
 				<connector uid="469" angle="187.881">
-					<from>initial_BECCS_for_the_consideration_of_cost_effects</from>
-					<to>Perceived_cumulative_BECCS_capacity_construction</to>
+					<from>initial_BECC_for_the_consideration_of_cost_effects</from>
+					<to>Perceived_cumulative_BECC_capacity_construction</to>
 				</connector>
-				<flow color="blue" background="white" x="857.475" y="2758.69" name="accumulating BECCS\ncapture Construction">
+				<flow color="blue" background="white" x="857.475" y="2758.69" name="accumulating BECC\ncapture Construction">
 					<pts>
 						<pt x="811.234" y="2758.69"/>
 						<pt x="903.716" y="2758.69"/>
@@ -2536,18 +2551,18 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>
 						<alias uid="471"/>
 					</from>
-					<to>Effect_of_Learning_On_Cost_BECCS</to>
+					<to>Effect_of_Learning_On_Cost_BECC</to>
 				</connector>
 				<connector uid="472" angle="171.439">
-					<from>Installation_of_BECCS_Capacity</from>
-					<to>accumulating_BECCS_capture_Construction</to>
+					<from>Installation_of_BECC_Capacity</from>
+					<to>accumulating_BECC_capture_Construction</to>
 				</connector>
 				<connector uid="473" angle="89.774">
-					<from>Reducible_Installation_Cost_component_in_BECCS</from>
-					<to>Installation_Costs_BECCS</to>
+					<from>Reducible_Installation_Cost_component_in_BECC</from>
+					<to>Installation_Costs_BECC</to>
 				</connector>
 				<connector uid="474" angle="53.329">
-					<from>BECCS_CO2_Captured</from>
+					<from>BECC_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
 				</connector>
 				<aux x="369.5" y="1446.21" name="Emissions from fossil fuels"/>
@@ -2647,13 +2662,13 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<stacked_container uid="513" x="5076.25" y="1184.36">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured by category" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" right_axis="true" show_y_axis="true">
-							<entity name="DAC_CO2_Captured[*]"/>
+							<entity name="direct_air_capture_CO2_Captured[*]"/>
 						</plot>
 						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="End_of_Pipe_CO2_Captured[*]"/>
+							<entity name="end_of_pipe_CO2_Captured[*]"/>
 						</plot>
 						<plot color="fuchsia" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
-							<entity name="BECCS_CO2_Captured[*]"/>
+							<entity name="BECC_CO2_Captured[*]"/>
 						</plot>
 					</graph>
 				</stacked_container>
@@ -2671,20 +2686,20 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<aux background="white" x="2236.8" y="1558.37" name="Installation\nCosts End of Pipe\nCarbon Capture 1"/>
 				<aux label_side="top" x="2163.82" y="1716.92" name="learning rate parameter end of pipe capture 1"/>
 				<aux background="white" x="2236.47" y="1641.54" name="Reducible Installation\nCost component in end of pipe capture 1"/>
-				<aux x="2376.92" y="1641.54" name="Stepping on Toes Punishment end of pipe capture 1"/>
+				<aux x="2376.92" y="1641.54" name="Stepping on Toes Punishment\ncarbon storage"/>
 				<connector uid="523" angle="180">
-					<from>Stepping_on_Toes_Punishment_end_of_pipe_capture_1</from>
+					<from>Stepping_on_Toes_Punishment_carbon_storage</from>
 					<to>Reducible_Installation_Cost_component_in_end_of_pipe_capture_1</to>
 				</connector>
-				<aux label_side="bottom" x="2280.46" y="1801.52" name="Perceived cumulative end of pipe capture\ncapacity construction 1"/>
-				<aux label_side="right" label_angle="315" x="2376.92" y="1801.52" name="time to perceive\nchanges in construction\nof end of pipe capture 1"/>
+				<aux label_side="bottom" x="2280.46" y="1801.52" name="Perceived cumulative carbon storage\ncapacity construction"/>
+				<aux label_side="right" label_angle="315" x="2376.92" y="1801.52" name="time to perceive\nchanges in construction\nof carbon storage"/>
 				<connector uid="524" angle="180">
-					<from>time_to_perceive_changes_in_construction_of_end_of_pipe_capture_1</from>
-					<to>Perceived_cumulative_end_of_pipe_capture_capacity_construction_1</to>
+					<from>time_to_perceive_changes_in_construction_of_carbon_storage</from>
+					<to>Perceived_cumulative_carbon_storage_capacity_construction</to>
 				</connector>
 				<connector uid="525" angle="48.1454">
-					<from>Perceived_cumulative_end_of_pipe_capture_capacity_construction_1</from>
-					<to>Stepping_on_Toes_Punishment_end_of_pipe_capture_1</to>
+					<from>Perceived_cumulative_carbon_storage_capacity_construction</from>
+					<to>Stepping_on_Toes_Punishment_carbon_storage</to>
 				</connector>
 				<aux x="2235.47" y="1716.92" name="Effect of Learning On Cost end of pipe capture 1"/>
 				<connector uid="526" angle="89.24">
@@ -2695,14 +2710,14 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>learning_rate_parameter_end_of_pipe_capture_1</from>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture_1</to>
 				</connector>
-				<aux x="2676.98" y="1746.63" name="initial end of pipe for the\nconsideration of cost effects 1"/>
+				<aux x="2676.98" y="1746.63" name="initial carbon storage for the\nconsideration of cost effects"/>
 				<connector uid="528" angle="176.15">
-					<from>initial_end_of_pipe_for_the_consideration_of_cost_effects_1</from>
+					<from>initial_carbon_storage_for_the_consideration_of_cost_effects</from>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture_1</to>
 				</connector>
 				<connector uid="529" angle="187.881">
-					<from>initial_end_of_pipe_for_the_consideration_of_cost_effects_1</from>
-					<to>Perceived_cumulative_end_of_pipe_capture_capacity_construction_1</to>
+					<from>initial_carbon_storage_for_the_consideration_of_cost_effects</from>
+					<to>Perceived_cumulative_carbon_storage_capacity_construction</to>
 				</connector>
 				<connector uid="532" angle="89.774">
 					<from>Reducible_Installation_Cost_component_in_end_of_pipe_capture_1</from>
@@ -2712,33 +2727,33 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>Installation_Costs_End_of_Pipe_Carbon_Capture_1</from>
 					<to>cost_of_storing_CO2_per_unit</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="2061.31" y="1716.92" name="Learning Rate 1"/>
-				<aux background="#00AA00" label_side="left" x="2118.22" y="1641.54" name="Initial\nInstallation Costs 1"/>
-				<aux color="blue" background="#00AA00" label_side="left" x="2127.88" y="1558.37" name="Floor Costs 1"/>
+				<aux color="blue" background="#00AA00" x="2061.31" y="1716.92" name="Learning Rate carbon storage"/>
+				<aux background="#00AA00" label_side="left" x="2118.22" y="1641.54" name="Initial\nInstallation Costs carbon storage"/>
+				<aux color="blue" background="#00AA00" label_side="left" x="2127.88" y="1558.37" name="Floor Costs carbon storage"/>
 				<connector uid="538" angle="0">
-					<from>Floor_Costs_1</from>
+					<from>Floor_Costs_carbon_storage</from>
 					<to>Installation_Costs_End_of_Pipe_Carbon_Capture_1</to>
 				</connector>
 				<connector uid="539" angle="0">
-					<from>Initial_Installation_Costs_1</from>
+					<from>Initial_Installation_Costs_carbon_storage</from>
 					<to>Reducible_Installation_Cost_component_in_end_of_pipe_capture_1</to>
 				</connector>
 				<connector uid="540" angle="0">
-					<from>Learning_Rate_1</from>
+					<from>Learning_Rate_carbon_storage</from>
 					<to>learning_rate_parameter_end_of_pipe_capture_1</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="2376.92" y="1705.22" name="stepping on toes parameter\nin InjectionStorage 1"/>
+				<aux color="blue" background="#00AA00" x="2376.92" y="1705.22" name="stepping on toes parameter\nin storage"/>
 				<connector uid="541" angle="91.4684">
-					<from>stepping_on_toes_parameter_in_InjectionStorage_1</from>
-					<to>Stepping_on_Toes_Punishment_end_of_pipe_capture_1</to>
+					<from>stepping_on_toes_parameter_in_storage</from>
+					<to>Stepping_on_Toes_Punishment_carbon_storage</to>
 				</connector>
-				<aux background="#00AA00" x="2512.32" y="1746.63" name="Initial InjectionStorage\nCapacity 1"/>
+				<aux background="#00AA00" x="2512.32" y="1746.63" name="Initial carbon storage\ncapacity"/>
 				<connector uid="542" angle="181.241">
-					<from>Initial_InjectionStorage_Capacity_1</from>
+					<from>Initial_carbon_storage_capacity</from>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture_1</to>
 				</connector>
-				<stock x="2159.38" y="1812.52" name="Cumulative\nCapacity Construction for end of pipe capture 1"/>
-				<flow color="blue" background="white" x="2079.31" y="1812.52" name="accumulating end of pipe capture Construction 1">
+				<stock x="2159.38" y="1812.52" name="Cumulative\nCapacity Construction\nfor carbon storage"/>
+				<flow color="blue" background="white" x="2079.31" y="1812.52" name="accumulating carbon\nstorage Construction">
 					<pts>
 						<pt x="2021.73" y="1812.52"/>
 						<pt x="2136.88" y="1812.52"/>
@@ -2759,19 +2774,19 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				</connector>
 				<connector uid="544" angle="177.271">
 					<from>Captured_CO2_to_store</from>
-					<to>accumulating_end_of_pipe_capture_Construction_1</to>
+					<to>accumulating_carbon_storage_Construction</to>
 				</connector>
 				<connector uid="545" angle="18.6118">
-					<from>Cumulative_Capacity_Construction_for_end_of_pipe_capture_1</from>
+					<from>Cumulative_Capacity_Construction_for_carbon_storage</from>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture_1</to>
 				</connector>
 				<connector uid="546" angle="5.19102">
-					<from>Cumulative_Capacity_Construction_for_end_of_pipe_capture_1</from>
-					<to>Perceived_cumulative_end_of_pipe_capture_capacity_construction_1</to>
+					<from>Cumulative_Capacity_Construction_for_carbon_storage</from>
+					<to>Perceived_cumulative_carbon_storage_capacity_construction</to>
 				</connector>
 				<connector uid="547" angle="356.427">
-					<from>Cumulative_Capacity_Construction_for_end_of_pipe_capture_1</from>
-					<to>Stepping_on_Toes_Punishment_end_of_pipe_capture_1</to>
+					<from>Cumulative_Capacity_Construction_for_carbon_storage</from>
+					<to>Stepping_on_Toes_Punishment_carbon_storage</to>
 				</connector>
 				<connector uid="548" angle="257.568">
 					<from>
@@ -2890,19 +2905,19 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>
 						<alias uid="448"/>
 					</from>
-					<to>BECCS_CO2_Captured</to>
+					<to>BECC_CO2_Captured</to>
 				</connector>
 				<connector uid="447" angle="178.547">
 					<from>
 						<alias uid="448"/>
 					</from>
-					<to>cost_of_capturing_CO2_per_unit_with_BECCS</to>
+					<to>cost_of_capturing_CO2_per_unit_with_BECC</to>
 				</connector>
 				<connector uid="398" angle="26.3701">
 					<from>
 						<alias uid="368"/>
 					</from>
-					<to>End_of_Pipe_CO2_Captured</to>
+					<to>end_of_pipe_CO2_Captured</to>
 				</connector>
 				<connector uid="369" angle="178.547">
 					<from>
@@ -2926,7 +2941,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>
 						<alias uid="202"/>
 					</from>
-					<to>DAC_CO2_Captured</to>
+					<to>direct_air_capture_CO2_Captured</to>
 				</connector>
 				<connector uid="166" angle="180">
 					<from>
@@ -3042,7 +3057,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 							<entity name="cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture[1]"/>
 						</plot>
 						<plot color="fuchsia" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
-							<entity name="cost_of_capturing_CO2_per_unit_with_BECCS[1]"/>
+							<entity name="cost_of_capturing_CO2_per_unit_with_BECC[1]"/>
 						</plot>
 						<plot color="#008F44" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
 							<entity name="Average_cost_of_capturing_CO2_per_unit[1]"/>
@@ -3095,7 +3110,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
 				</connector>
-				<stacked_container uid="705" x="4907.67" y="1324.35" width="560" height="617.667">
+				<stacked_container uid="705" x="5052.67" y="1322.68" width="560" height="617.667">
 					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
@@ -3137,17 +3152,34 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 						</plot>
 					</graph>
 				</stacked_container>
+				<aux font_style="italic" font_weight="bold" x="830.876" y="1160.75" name="start year"/>
+				<connector uid="708" angle="29.3663">
+					<from>start_year</from>
+					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="709" angle="350.792">
+					<from>
+						<alias uid="710"/>
+					</from>
+					<to>Additional_Investment_in_BECC</to>
+				</connector>
+				<connector uid="711" angle="8.67026">
+					<from>
+						<alias uid="712"/>
+					</from>
+					<to>Additional_Investment_in_direct_air_carbon_capture</to>
+				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="2948.63" y="422.973" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="247" x="3076.63" y="382.473" width="45" height="35">
-					<of>End_of_Pipe_Carbon_Capture_Capacity</of>
+					<of>end_of_pipe_Carbon_Capture_Capacity</of>
 				</alias>
 				<alias background="#AA00FF" font_style="italic" uid="256" x="1184.86" y="720.243" width="18" height="18">
 					<of>Initial_direct_air_carbon_capture_Capacity</of>
 				</alias>
 				<alias background="#AA55FF" font_style="italic" uid="268" x="1222.16" y="1742.3" width="18" height="18">
-					<of>Initial_End_of_Pipe_Carbon_Capture_Capacity</of>
+					<of>Initial_end_of_pipe_Carbon_Capture_Capacity</of>
 				</alias>
 				<alias color="blue" background="white" font_style="italic" uid="275" x="3606.46" y="975.113" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -3160,10 +3192,10 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<of>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="279" x="4223.63" y="818.033" width="18" height="18">
-					<of>End_of_Pipe_CO2_Captured</of>
+					<of>end_of_pipe_CO2_Captured</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="280" x="3848.2" y="846.113" width="18" height="18">
-					<of>DAC_CO2_Captured</of>
+					<of>direct_air_capture_CO2_Captured</of>
 				</alias>
 				<alias font_style="italic" uid="290" x="3723.01" y="939.393" width="18" height="18">
 					<of>Captured_CO2_to_store</of>
@@ -3187,7 +3219,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<of>cost_of_storing_CO2_per_unit_1</of>
 				</alias>
 				<alias background="#AA55FF" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
-					<of>Initial_BECCS</of>
+					<of>Initial_BECC</of>
 				</alias>
 				<alias color="blue" background="white" font_style="italic" uid="478" x="4583.83" y="376.973" width="18" height="18">
 					<shape type="circle" radius="18"/>
@@ -3197,25 +3229,25 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<of>CO2_emissions_from_biofuels</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="482" x="4883.83" y="381.75" width="18" height="18">
-					<of>End_of_Pipe_CO2_Captured</of>
+					<of>end_of_pipe_CO2_Captured</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="485" x="5033.83" y="381.75" width="18" height="18">
-					<of>BECCS_CO2_Captured</of>
+					<of>BECC_CO2_Captured</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="506" x="3184.38" y="395.375" width="45" height="35">
 					<of>BECC_Capacity</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="549" x="3973.99" y="846.833" width="18" height="18">
-					<of>cost_of_capturing_CO2_per_unit_with_BECCS</of>
+					<of>cost_of_capturing_CO2_per_unit_with_BECC</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="551" x="4057.33" y="800.833" width="18" height="18">
-					<of>BECCS_CO2_Captured</of>
+					<of>BECC_CO2_Captured</of>
 				</alias>
 				<alias font_style="italic" label_side="bottom" uid="556" x="3484.76" y="360.25" width="18" height="18">
 					<of>&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;</of>
 				</alias>
 				<alias font_style="italic" uid="552" x="3484.76" y="439.056" width="18" height="18">
-					<of>&quot;Baseline_Government_funded_R&amp;D_for_BECCS&quot;</of>
+					<of>&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;</of>
 				</alias>
 				<alias font_style="italic" uid="553" x="3483.13" y="286.25" width="18" height="18">
 					<of>&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;</of>
@@ -3227,7 +3259,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<of>Additional_Investment_in_End_of_Pipe_Carbon_Capture</of>
 				</alias>
 				<alias font_style="italic" uid="583" x="3481.72" y="633.375" width="18" height="18">
-					<of>Additional_Investment_in_BECCS</of>
+					<of>Additional_Investment_in_BECC</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="673" x="4214.06" y="519.875" width="18" height="18">
 					<of>total_cost_of_storing_CO2</of>
@@ -3243,6 +3275,12 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				</alias>
 				<alias background="red" font_style="italic" uid="202" x="1107.36" y="484.42" width="18" height="18">
 					<of>UNIT_to_per_year</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="710" x="874.822" y="2097" width="18" height="18">
+					<of>start_year</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="712" x="779.542" y="337.407" width="18" height="18">
+					<of>start_year</of>
 				</alias>
 			</view>
 		</views>
