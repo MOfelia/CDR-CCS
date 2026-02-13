@@ -5,7 +5,7 @@
 		<name>Government Regulations</name>
 		<uuid>cf8a5bb3-8c41-49fc-b752-b9a407cc4656</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -309,7 +309,7 @@ https://www.nature.com/articles/s41586-024-08106-4
 				<gf>
 					<xscale min="2020" max="2100"/>
 					<yscale min="0" max="300"/>
-					<ypts>0,0,0,0,0,0,0,0,0</ypts>
+					<ypts>14.3,68.6,101.4,122.9,152.9,175.7,192.9,221.4,240</ypts>
 				</gf>
 				<units>c$/(tCO2e/year)</units>
 			</aux>
@@ -559,9 +559,9 @@ Repeated variable that is already in CCS</doc>
 Repeated variable that is already in CCS</doc>
 				<eqn>TIME</eqn>
 				<gf>
-					<xscale min="2030" max="2100"/>
+					<xscale min="2030" max="2250"/>
 					<yscale min="0" max="1"/>
-					<ypts>0,0,0,0,0,0,0,0,0</ypts>
+					<ypts>0,0.176,0.329,0.405,0.467,0.467,0.471,0.49,0.51</ypts>
 				</gf>
 				<units>dmnl</units>
 			</aux>
