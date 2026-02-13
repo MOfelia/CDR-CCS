@@ -276,28 +276,44 @@
 			</module>
 			<module name="CCS" isee:label="">
 				<format scale_by="auto"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
 				<connect to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect2 to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
 				<connect2 to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
+				<connect to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect2 to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
+				<connect to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect2 to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
@@ -314,6 +330,8 @@
 				<connect2 to="CCS.CO2_emissions_from_oil" from="Emissions.CO2_emissions_from_oil"/>
 				<connect to="CCS.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
 				<connect2 to="CCS.GtC_to_MtCO2" from="Emissions.GtC_to_MtCO2"/>
+				<connect to="CCS.Maximum_bugdet_for_CCS_investments" from="Government_Regulations.Maximum_bugdet_for_CCS_investments"/>
+				<connect2 to="CCS.Maximum_bugdet_for_CCS_investments" from="Government_Regulations.Maximum_bugdet_for_CCS_investments"/>
 				<connect to="CCS.Realized_CO2_emissions_from_biofuel" from="Emissions.Realized_CO2_emissions_from_biofuel"/>
 				<connect2 to="CCS.Realized_CO2_emissions_from_biofuel" from="Emissions.Realized_CO2_emissions_from_biofuel"/>
 				<connect to="CCS.Realized_CO2_emissions_from_gas" from="Emissions.Realized_CO2_emissions_from_gas"/>
@@ -336,6 +354,8 @@
 				<connect2 to="CCS.start_year" from="Government_Regulations.start_year"/>
 				<connect to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect2 to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect to='CCS."UNIT_Million_c$_to_c$_1"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='CCS."UNIT_Million_c$_to_c$_1"' from='Government."UNIT_Million_c$_to_c$"'/>
 			</module>
 		</variables>
 		<views>
@@ -386,7 +406,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="3" isee:page_rows="3" zoom="40" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="290.5" isee:scroll_y="303.5" zoom="200" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -487,21 +507,30 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>share_of_coal_emissions_stored*Realized_CO2_emissions_from_coal</eqn>
+				<eqn>IF TIME&gt;(start_year+5) THEN
+share_of_coal_emissions_stored*Realized_CO2_emissions_from_coal
+ELSE
+0</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="storing carbon from gas\nemissions">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>share_of_gas_emissions_stored*Realized_CO2_emissions_from_gas</eqn>
+				<eqn>IF TIME&gt;(start_year+5) THEN
+share_of_gas_emissions_stored*Realized_CO2_emissions_from_gas
+ELSE
+0</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="storing carbon from biofuel\nemissions">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(share_of_biofuel_emissions_stored*Realized_CO2_emissions_from_biofuel)*Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</eqn>
+				<eqn>IF TIME&gt;(start_year+5) THEN
+(share_of_biofuel_emissions_stored*Realized_CO2_emissions_from_biofuel)*Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles
+ELSE
+0</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<flow name="CO2 Emissions from Leakage" access="output" isee:autocreated="true">
@@ -535,7 +564,10 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>share_of_oil_emissions_stored*Realized_CO2_emissions_from_oil</eqn>
+				<eqn>IF TIME&gt;(start_year+5) THEN
+share_of_oil_emissions_stored*Realized_CO2_emissions_from_oil
+ELSE
+0</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="GtC to MtCO2" access="input">
@@ -577,14 +609,14 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>203.330209989162</eqn>
+				<eqn>203.055026188748</eqn>
 				<range min="1" max="1000"/>
 				<units>dmnl</units>
 			</aux>
 			<aux name="Exponent of cost curve">
 				<doc>${Assumption}
 </doc>
-				<eqn>3.06910239596025</eqn>
+				<eqn>3.0714984883575</eqn>
 				<range min="0" max="10"/>
 				<units>dmnl</units>
 			</aux>
@@ -620,7 +652,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.280458037900845</eqn>
+				<eqn>0.280737852895496</eqn>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -630,7 +662,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2992.76594110541</eqn>
+				<eqn>2992.71517275088</eqn>
 				<range min="500" max="3000"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -647,7 +679,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.171465043585671</eqn>
+				<eqn>0.172261065150463</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -699,7 +731,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>183.507047374495</eqn>
+				<eqn>183.451872486832</eqn>
 				<range min="50" max="200"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -714,7 +746,7 @@ cost_of_storing_CO2_per_unit_1</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.005</eqn>
+				<eqn>0.0149820986087809</eqn>
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -774,7 +806,7 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<eqn>TIME</eqn>
 				<gf>
 					<xscale min="2025" max="2150"/>
-					<yscale min="0" max="10000"/>
+					<yscale min="0" max="150"/>
 					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
 				</gf>
 				<units>MtCO2/Year</units>
@@ -783,7 +815,10 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Carbon_to_capture_per_year*cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</eqn>
+				<eqn>IF TIME&gt;(start_year+5) THEN
+Carbon_to_capture_per_year*cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture
+ELSE
+0</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Installation\nCosts end of pipe\nCarbon Capture">
@@ -801,11 +836,11 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>15</eqn>
+				<eqn>15.998462517034</eqn>
 				<range min="15" max="200"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture">
+			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -867,14 +902,11 @@ Investment_in_direct_air_carbon_capture/cost_of_capturing_CO2_per_unit_with_dire
 				<eqn>end_of_pipe_Carbon_Capture_Capacity*Efficiency_for_end_of_pipe_carbon_capture*UNIT_to_per_year</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="Additional Investment in End of Pipe\nCarbon Capture">
+			<aux name="Actual additional investment in End of Pipe\nCarbon Capture">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;start_year THEN
-(storing_carbon_from_coal_emissions+storing_carbon_from_oil_emissions+storing_carbon_from_gas_emissions)*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture
-ELSE
-0</eqn>
+				<eqn>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal+Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil+Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Energy intensity in\ndirect air carbon capture">
@@ -930,7 +962,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_BECC+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_direct_air_carbon_capture+total_cost_of_storing_CO2)*UNIT_to_per_year</eqn>
+				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_BECC+Actual_additional_investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_direct_air_carbon_capture+total_cost_of_storing_CO2)*UNIT_to_per_year</eqn>
 				<units>Mc$/Year</units>
 			</aux>
 			<aux name="cost of storing CO2 per unit">
@@ -1038,7 +1070,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>196.039681941362</eqn>
+				<eqn>195.987020502346</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1046,7 +1078,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>6.63455988822187</eqn>
+				<eqn>6.61910591282434</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1054,7 +1086,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Additional_Investment_in_End_of_Pipe_Carbon_Capture+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;</eqn>
+				<eqn>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Investment in direct\nair carbon capture">
@@ -1082,7 +1114,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.171924630036533</eqn>
+				<eqn>0.169520307424279</eqn>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1092,7 +1124,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>500</eqn>
+				<eqn>498.992486171351</eqn>
 				<range min="100" max="500"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1109,7 +1141,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.5</eqn>
+				<eqn>0.489996619551586</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1191,11 +1223,11 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>49.9695001418388</eqn>
+				<eqn>51.0528529876618</eqn>
 				<range min="15" max="300"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
-			<aux name="cost of capturing\nCO2 per unit with BECC">
+			<aux name="cost of capturing\nCO2 per unit with BECC" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1206,7 +1238,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0983635626113922</eqn>
+				<eqn>0.0899943025071995</eqn>
 				<range min="0.005" max="0.1"/>
 				<units>1/year</units>
 			</aux>
@@ -1261,10 +1293,7 @@ middle of power generation storing cost</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF TIME&gt;start_year THEN
-(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECC
-ELSE
-0</eqn>
+				<eqn>(storing_carbon_from_biofuel_emissions)*cost_of_capturing_CO2_per_unit_with_BECC</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Energy intensity in BECC">
@@ -1292,7 +1321,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>12.3773751503095</eqn>
+				<eqn>10.7166832769408</eqn>
 				<range min="5" max="3000"/>
 				<units>Mc$</units>
 			</aux>
@@ -1309,7 +1338,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.0465082998070711</eqn>
+				<eqn>0.0489224031602157</eqn>
 				<range min="0.01" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1319,7 +1348,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>330.048641045257</eqn>
+				<eqn>330.442267427619</eqn>
 				<range min="100" max="500"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1336,7 +1365,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.494514674317055</eqn>
+				<eqn>0.488433300145573</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1403,35 +1432,14 @@ ELSE
 				<non_negative/>
 				<units>MtCO2/Year</units>
 			</flow>
-			<aux name="Emission from Energy">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>Emissions_from_fossil_fuels+CO2_emissions_from_biofuels</eqn>
-				<units>MtCO2/Year</units>
-			</aux>
-			<aux name="Emissions captured from Energy">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>end_of_pipe_CO2_Captured+BECC_CO2_Captured</eqn>
-				<units>MtCO2/Year</units>
-			</aux>
-			<aux name="Realized CO2 from Energy" access="output" isee:autocreated="true">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>Emission_from_Energy-Emissions_captured_from_Energy</eqn>
-				<units>MtCO2/Year</units>
-			</aux>
 			<aux name="Maximum possible share of bioliquids that doesnt go to vehicles">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Bioliquid_to_power+Bioliquid_to_fuel</eqn>
+				<eqn>Biomass_to_power+Biomass_to_liquids</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Bioliquid to power">
+			<aux name="Biomass to power">
 				<doc>BECCS deployment: a reality check
 MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTUZZ</doc>
 				<dimensions>
@@ -1440,7 +1448,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<eqn>0.503</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="Bioliquid to fuel">
+			<aux name="Biomass to liquids">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1519,7 +1527,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.201535623825376</eqn>
+				<eqn>0.20195115143841</eqn>
 				<range min="0.01" max="0.4"/>
 				<units>dmnl</units>
 			</aux>
@@ -1529,7 +1537,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>399.997140558853</eqn>
+				<eqn>398.977473608954</eqn>
 				<range min="50" max="400"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1539,7 +1547,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2.10219648760528</eqn>
+				<eqn>2.10096732088426</eqn>
 				<range min="2" max="30"/>
 				<units>Mc$/MtCO2</units>
 			</aux>
@@ -1549,7 +1557,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>0.499967157236121</eqn>
+				<eqn>0.489937199805263</eqn>
 				<range min="0.1" max="0.5"/>
 				<units>dmnl</units>
 			</aux>
@@ -1610,7 +1618,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)*share_of_ccs_costs_covered_by_the_goverment</eqn>
+				<eqn>(Additional_Investment_in_direct_air_carbon_capture+Actual_additional_investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)*share_of_ccs_costs_covered_by_the_goverment</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="R&amp;D Government funding\nfrom the government\ninto carbon storage">
@@ -1649,7 +1657,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Additional_Investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)</eqn>
+				<eqn>(&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;+&quot;Baseline_Government_funded_R&amp;D_for_end_of_pipe_carbon_capture&quot;+&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;+Additional_Investment_in_direct_air_carbon_capture+Actual_additional_investment_in_End_of_Pipe_Carbon_Capture+Additional_Investment_in_BECC)</eqn>
 				<units>Mc$</units>
 			</aux>
 			<aux name="Share of Government R&amp;D funding\ninto carbon capture">
@@ -1744,6 +1752,100 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
+			<aux name="Emission from Energy">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Emissions_from_fossil_fuels+CO2_emissions_from_biofuels</eqn>
+				<units>MtCO2/Year</units>
+			</aux>
+			<aux name="Realized CO2 from Energy" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Emission_from_Energy-Emissions_captured_from_Energy</eqn>
+				<units>MtCO2/Year</units>
+			</aux>
+			<aux name="Emissions captured from Energy">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>end_of_pipe_CO2_Captured+BECC_CO2_Captured</eqn>
+				<units>MtCO2/Year</units>
+			</aux>
+			<aux name="Maximum bugdet for CCS investments" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$</units>
+			</aux>
+			<aux name="Available total budget for additional investment in End of Pipe\nCarbon Capture">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Maximum_bugdet_for_CCS_investments*&quot;UNIT_Million_c$_to_c$_1&quot;</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Demanded additional investment in End of Pipe\nCarbon Capture for coal">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>storing_carbon_from_coal_emissions*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Demanded additional investment in End of Pipe\nCarbon Capture for oil">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>storing_carbon_from_oil_emissions*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Demanded additional investment in End of Pipe\nCarbon Capture for gas">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>storing_carbon_from_gas_emissions*cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Actual additional investment in End of Pipe\nCarbon Capture for coal">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture=0 THEN
+0
+ELSE
+(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal/(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture))*Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Actual additional investment in End of Pipe\nCarbon Capture for oil">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture=0 THEN
+0
+ELSE
+(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil/(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture))*Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Actual additional investment in End of Pipe\nCarbon Capture for gas">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>IF Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture=0 THEN
+0
+ELSE
+(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas/(Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture))*Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="Demanded additional investment in End of Pipe\nCarbon Capture">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas+Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal+Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</eqn>
+				<units>Mc$</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$ 1" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -1793,7 +1895,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="6" isee:page_rows="4" isee:scroll_y="1029" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="6" isee:page_rows="4" isee:scroll_y="225" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1838,17 +1940,17 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 						<pt x="2421.01" y="1166"/>
 					</pts>
 				</flow>
-				<aux font_style="italic" font_weight="bold" x="234.5" y="1123.75" name="share of coal emissions stored"/>
-				<aux font_style="italic" font_weight="bold" x="369.5" y="1123.75" name="share of oil\nemissions stored"/>
-				<aux font_style="italic" font_weight="bold" label_side="bottom" x="528.667" y="1123.75" name="share of gas\nemissions stored"/>
-				<aux font_style="italic" font_weight="bold" x="540.417" y="2057.21" name="share of biofuel\nemissions stored"/>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" x="198.667" y="1087.92" name="share of coal emissions stored"/>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" x="375.333" y="1090.42" name="share of oil\nemissions stored"/>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="bottom" x="574.5" y="1090.42" name="share of gas\nemissions stored"/>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" x="540.417" y="2057.21" name="share of biofuel\nemissions stored"/>
 				<aux font_style="italic" font_weight="bold" label_side="bottom" x="540.417" y="2351.07" name="CO2 emissions from biofuels"/>
-				<aux x="234.5" y="1240.75" name="storing carbon from coal\nemissions"/>
-				<connector uid="2" angle="270">
+				<aux x="199.5" y="1375.75" name="storing carbon from coal\nemissions"/>
+				<connector uid="2" angle="270.166">
 					<from>share_of_coal_emissions_stored</from>
 					<to>storing_carbon_from_coal_emissions</to>
 				</connector>
-				<aux x="528.667" y="1240.75" name="storing carbon from gas\nemissions"/>
+				<aux x="574.5" y="1366.58" name="storing carbon from gas\nemissions"/>
 				<connector uid="3" angle="270">
 					<from>share_of_gas_emissions_stored</from>
 					<to>storing_carbon_from_gas_emissions</to>
@@ -1875,8 +1977,8 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<to>total_cost_of_storing_CO2</to>
 				</connector>
 				<aux x="2443.51" y="1418.72" name="UNIT GtC to tC"/>
-				<aux x="369.5" y="1240.75" name="storing carbon from oil\nemissions"/>
-				<connector uid="15" angle="274.289">
+				<aux x="368.833" y="1329.25" name="storing carbon from oil\nemissions"/>
+				<connector uid="15" angle="268.441">
 					<from>share_of_oil_emissions_stored</from>
 					<to>storing_carbon_from_oil_emissions</to>
 				</connector>
@@ -2006,7 +2108,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</from>
 					<to>Installation_of_direct_air_carbon_capture_Capacity</to>
 				</connector>
-				<aux x="470.481" y="259.795" name="Carbon to capture per year"/>
+				<aux background="#FFAA00" x="470.481" y="259.795" name="Carbon to capture per year"/>
 				<connector uid="169" angle="322.334">
 					<from>direct_air_capture_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
@@ -2063,11 +2165,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
 					<to>Installation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
-				<aux x="884.156" y="1221.25" name="Additional Investment in End of Pipe\nCarbon Capture"/>
-				<connector uid="194" angle="183.82">
-					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
-				</connector>
+				<aux x="854" y="1221.25" name="Actual additional investment in End of Pipe\nCarbon Capture"/>
 				<aux background="#AA00FF" x="1258.94" y="545.55" name="Energy intensity in\ndirect air carbon capture"/>
 				<aux x="1258.94" y="493.883" name="Energy demand from direct air carbon capture"/>
 				<connector uid="196" angle="271.224">
@@ -2077,10 +2175,6 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<connector uid="197" angle="186.519">
 					<from>Energy_intensity_in_direct_air_carbon_capture</from>
 					<to>Energy_demand_from_direct_air_carbon_capture</to>
-				</connector>
-				<connector uid="201" angle="1.71927">
-					<from>storing_carbon_from_coal_emissions</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="205" angle="15.0371">
 					<from>end_of_pipe_CO2_Captured</from>
@@ -2095,14 +2189,6 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<connector uid="237" angle="271.051">
 					<from>end_of_pipe_CO2_Captured</from>
 					<to>Energy_demand_from_end_of_pipe_Carbon_Capture</to>
-				</connector>
-				<connector uid="200" angle="2.16986">
-					<from>storing_carbon_from_oil_emissions</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
-				</connector>
-				<connector uid="199" angle="3.13976">
-					<from>storing_carbon_from_gas_emissions</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
 				</connector>
 				<aux background="#AA55FF" x="1318.71" y="1361.14" name="Efficiency for end of pipe carbon capture"/>
 				<aux background="#AA00FF" x="1257.1" y="361.073" name="Efficiency for direct air carbon capture"/>
@@ -2286,8 +2372,8 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>Investment_in_end_of_pipe_Carbon_Capture</from>
 					<to>Installation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
-				<connector uid="390" angle="308.253">
-					<from>Additional_Investment_in_End_of_Pipe_Carbon_Capture</from>
+				<connector uid="390" angle="317.823">
+					<from>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
 					<to>Investment_in_end_of_pipe_Carbon_Capture</to>
 				</connector>
 				<connector uid="391" angle="230.47">
@@ -2310,7 +2396,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="404" x="4662.5" y="2454.17" width="580" height="58">OLD STRUCTURE</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="405" x="2069.62" y="1004.04" width="580" height="58">Injection/Storage of CO2</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="406" x="3708.3" y="170.754" width="617.5" height="58">CCS Overview (Capture + Injection/Storage)</text_box>
-				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="407" x="714.478" y="1083.07" width="580" height="58">End of Pipe CO2 Capture</text_box>
+				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="407" x="1028.71" y="997.237" width="580" height="58">End of Pipe CO2 Capture</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="408" x="706.145" y="142.237" width="580" height="58">Direct Air CO2 Capture</text_box>
 				<aux x="1336.98" y="726.743" name="initial direct air carbon capture for the\nconsideration of cost effects"/>
 				<connector uid="412" angle="176.15">
@@ -2579,44 +2665,15 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>BECC_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
 				</connector>
-				<aux x="4663.67" y="466.973" name="Emission from Energy"/>
-				<connector uid="480" angle="228.006">
-					<from>
-						<alias uid="481"/>
-					</from>
-					<to>Emission_from_Energy</to>
-				</connector>
-				<aux x="4979" y="479.333" name="Emissions captured from Energy"/>
-				<connector uid="483" angle="312.885">
-					<from>
-						<alias uid="482"/>
-					</from>
-					<to>Emissions_captured_from_Energy</to>
-				</connector>
-				<connector uid="484" angle="241.514">
-					<from>
-						<alias uid="485"/>
-					</from>
-					<to>Emissions_captured_from_Energy</to>
-				</connector>
-				<aux background="#F9F06B" x="4825.33" y="557.667" name="Realized CO2 from Energy"/>
-				<connector uid="486" angle="330.707">
-					<from>Emission_from_Energy</from>
-					<to>Realized_CO2_from_Energy</to>
-				</connector>
-				<connector uid="487" angle="207.011">
-					<from>Emissions_captured_from_Energy</from>
-					<to>Realized_CO2_from_Energy</to>
-				</connector>
 				<aux x="377" y="2174.21" name="Maximum possible share of bioliquids that doesnt go to vehicles"/>
-				<aux x="290.833" y="2102.21" name="Bioliquid to power"/>
-				<aux x="290.833" y="2262.38" name="Bioliquid to fuel"/>
+				<aux x="290.833" y="2102.21" name="Biomass to power"/>
+				<aux x="290.833" y="2262.38" name="Biomass to liquids"/>
 				<connector uid="488" angle="358.624">
-					<from>Bioliquid_to_power</from>
+					<from>Biomass_to_power</from>
 					<to>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</to>
 				</connector>
 				<connector uid="489" angle="13.1625">
-					<from>Bioliquid_to_fuel</from>
+					<from>Biomass_to_liquids</from>
 					<to>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</to>
 				</connector>
 				<connector uid="490" angle="0">
@@ -2814,7 +2871,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					</from>
 					<to>&quot;Baseline_Government_R&amp;D_funding_into_carbon_capture&quot;</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="3677.5" y="480.875" name="share of ccs costs\ncovered by the goverment"/>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="bottom" x="3677.5" y="495.042" name="share of ccs costs\ncovered by the goverment"/>
 				<aux x="3677.5" y="567.375" name="Additional Government R&amp;D funding\ninto carbon capture"/>
 				<connector uid="584" angle="8.21121">
 					<from>
@@ -3105,7 +3162,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
 				</connector>
-				<stacked_container uid="705" x="5052.67" y="1322.68" width="560" height="617.667">
+				<stacked_container uid="705" x="5392.67" y="1330.81" width="560" height="617.667">
 					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
@@ -3147,50 +3204,34 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 						</plot>
 					</graph>
 				</stacked_container>
-				<aux font_style="italic" font_weight="bold" x="830.876" y="1160.75" name="start year"/>
-				<connector uid="713" angle="336.369">
-					<from>start_year</from>
-					<to>Additional_Investment_in_End_of_Pipe_Carbon_Capture</to>
-				</connector>
-				<connector uid="714" angle="323.39">
-					<from>
-						<alias uid="710"/>
-					</from>
-					<to>Additional_Investment_in_BECC</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="232.5" y="1365" name="Realized CO2 emissions from coal"/>
-				<connector uid="751" angle="88.977">
+				<aux font_style="italic" font_weight="bold" x="79.6447" y="1238.42" name="start year"/>
+				<aux font_style="italic" font_weight="bold" x="199.5" y="1543.66" name="Realized CO2 emissions from coal"/>
+				<connector uid="751" angle="90">
 					<from>Realized_CO2_emissions_from_coal</from>
 					<to>storing_carbon_from_coal_emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="367.5" y="1365" name="Realized CO2\nemissions from oil"/>
-				<connector uid="752" angle="89.0778">
+				<aux font_style="italic" font_weight="bold" x="368.833" y="1545.25" name="Realized CO2\nemissions from oil"/>
+				<connector uid="752" angle="90">
 					<from>Realized_CO2_emissions_from_oil</from>
 					<to>storing_carbon_from_oil_emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="528.667" y="1365" name="Realized CO2\nemissions from gas"/>
-				<connector uid="753" angle="89.112">
+				<aux font_style="italic" font_weight="bold" x="583.667" y="1542.5" name="Realized CO2\nemissions from gas"/>
+				<connector uid="753" angle="92.9829">
 					<from>Realized_CO2_emissions_from_gas</from>
 					<to>storing_carbon_from_gas_emissions</to>
 				</connector>
-				<aux x="367.5" y="1572.57" name="Emissions from fossil fuels"/>
-				<connector uid="479" angle="311.172">
-					<from>
-						<alias uid="478"/>
-					</from>
-					<to>Emission_from_Energy</to>
-				</connector>
-				<aux font_style="italic" font_weight="bold" x="367.5" y="1513.25" name="CO2 emissions from oil"/>
+				<aux x="375.833" y="1723.4" name="Emissions from fossil fuels"/>
+				<aux font_style="italic" font_weight="bold" x="375.833" y="1664.08" name="CO2 emissions from oil"/>
 				<connector uid="476" angle="270">
 					<from>CO2_emissions_from_oil</from>
 					<to>Emissions_from_fossil_fuels</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="220.5" y="1513.75" name="CO2 emissions from coal"/>
+				<aux font_style="italic" font_weight="bold" x="228.833" y="1664.58" name="CO2 emissions from coal"/>
 				<connector uid="475" angle="338.192">
 					<from>CO2_emissions_from_coal</from>
 					<to>Emissions_from_fossil_fuels</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="525.667" y="1513.25" name="CO2 emissions from gas"/>
+				<aux font_style="italic" font_weight="bold" x="534" y="1664.08" name="CO2 emissions from gas"/>
 				<connector uid="477" angle="200.558">
 					<from>CO2_emissions_from_gas</from>
 					<to>Emissions_from_fossil_fuels</to>
@@ -3199,6 +3240,209 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<connector uid="754" angle="87.4104">
 					<from>Realized_CO2_emissions_from_biofuel</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
+				</connector>
+				<stacked_container uid="755" x="4828.55" y="1330.8" width="560" height="617.667">
+					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
+							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#552B00" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
+							<entity name='energy_supply."Fossil_Energy_Output_Share,_oil"[1]'/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#9C4E00" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
+							<entity name='energy_supply."Fossil_Energy_Output_Share,_gas"[1]'/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#00AAFF" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
+							<entity name="energy_supply.Hydropower_Output_Share[1]"/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#FF55FF" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
+							<entity name="energy_supply.Nuclear_Energy_Output_Share[1]"/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#00D900" isee:keep_zero_visible="true" pen_width="1" index="5" show_y_axis="true">
+							<entity name="energy_supply.Bio_Energy_Output_Share[1]"/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#FEEA6C" isee:keep_zero_visible="true" pen_width="1" index="6" show_y_axis="true">
+							<entity name="energy_supply.Solar_Energy_Output_Share[1]"/>
+							<isee:data name="Baseline"/>
+						</plot>
+						<plot color="#AAAAFF" isee:keep_zero_visible="true" pen_width="1" index="7" show_y_axis="true">
+							<entity name="energy_supply.Wind_Energy_Output_Share[1]"/>
+							<isee:data name="Baseline"/>
+						</plot>
+					</graph>
+				</stacked_container>
+				<aux x="4663.67" y="466.973" name="Emission from Energy"/>
+				<aux background="#F9F06B" x="4825.33" y="557.667" name="Realized CO2 from Energy"/>
+				<connector uid="486" angle="330.707">
+					<from>Emission_from_Energy</from>
+					<to>Realized_CO2_from_Energy</to>
+				</connector>
+				<aux x="4979" y="479.333" name="Emissions captured from Energy"/>
+				<connector uid="487" angle="207.011">
+					<from>Emissions_captured_from_Energy</from>
+					<to>Realized_CO2_from_Energy</to>
+				</connector>
+				<connector uid="479" angle="311.172">
+					<from>
+						<alias uid="478"/>
+					</from>
+					<to>Emission_from_Energy</to>
+				</connector>
+				<connector uid="484" angle="241.514">
+					<from>
+						<alias uid="485"/>
+					</from>
+					<to>Emissions_captured_from_Energy</to>
+				</connector>
+				<connector uid="483" angle="312.885">
+					<from>
+						<alias uid="482"/>
+					</from>
+					<to>Emissions_captured_from_Energy</to>
+				</connector>
+				<connector uid="480" angle="228.006">
+					<from>
+						<alias uid="481"/>
+					</from>
+					<to>Emission_from_Energy</to>
+				</connector>
+				<connector uid="756" angle="312.86">
+					<from>start_year</from>
+					<to>storing_carbon_from_coal_emissions</to>
+				</connector>
+				<connector uid="757" angle="302.098">
+					<from>start_year</from>
+					<to>storing_carbon_from_oil_emissions</to>
+				</connector>
+				<connector uid="758" angle="317.489">
+					<from>start_year</from>
+					<to>storing_carbon_from_gas_emissions</to>
+				</connector>
+				<connector uid="759" angle="211.34">
+					<from>
+						<alias uid="710"/>
+					</from>
+					<to>storing_carbon_from_biofuel_emissions</to>
+				</connector>
+				<connector uid="760" angle="351.674">
+					<from>
+						<alias uid="761"/>
+					</from>
+					<to>Additional_Investment_in_direct_air_carbon_capture</to>
+				</connector>
+				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="left" x="731.712" y="999.667" name="Maximum bugdet for CCS investments"/>
+				<aux x="738.333" y="1052.08" name="Available total budget for additional investment in End of Pipe\nCarbon Capture"/>
+				<connector uid="762" angle="323.475">
+					<from>Maximum_bugdet_for_CCS_investments</from>
+					<to>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<aux x="249.99" y="1423.9" name="Demanded additional investment in End of Pipe\nCarbon Capture for coal"/>
+				<connector uid="763" angle="341.357">
+					<from>storing_carbon_from_coal_emissions</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</to>
+				</connector>
+				<connector uid="764" angle="297.275">
+					<from>
+						<alias uid="765"/>
+					</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</to>
+				</connector>
+				<aux label_side="top" x="409.99" y="1255.42" name="Demanded additional investment in End of Pipe\nCarbon Capture for oil"/>
+				<connector uid="766" angle="24.8478">
+					<from>
+						<alias uid="765"/>
+					</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</to>
+				</connector>
+				<connector uid="767" angle="85.8624">
+					<from>storing_carbon_from_oil_emissions</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</to>
+				</connector>
+				<aux label_side="bottom" x="617.49" y="1414.24" name="Demanded additional investment in End of Pipe\nCarbon Capture for gas"/>
+				<connector uid="768" angle="337.055">
+					<from>storing_carbon_from_gas_emissions</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</to>
+				</connector>
+				<connector uid="769" angle="338.509">
+					<from>
+						<alias uid="765"/>
+					</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</to>
+				</connector>
+				<aux x="249.99" y="1481.97" name="Actual additional investment in End of Pipe\nCarbon Capture for coal"/>
+				<connector uid="770" angle="252.646">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</to>
+				</connector>
+				<connector uid="773" angle="192.053">
+					<from>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</to>
+				</connector>
+				<aux label_side="top" x="409.99" y="1311.25" name="Actual additional investment in End of Pipe\nCarbon Capture for oil"/>
+				<connector uid="775" angle="295">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</to>
+				</connector>
+				<connector uid="777" angle="243.284">
+					<from>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</to>
+				</connector>
+				<aux x="617.49" y="1472.91" name="Actual additional investment in End of Pipe\nCarbon Capture for gas"/>
+				<connector uid="778" angle="295">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</to>
+				</connector>
+				<connector uid="781" angle="278.978">
+					<from>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</to>
+				</connector>
+				<connector uid="782" angle="23.3476">
+					<from>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="783" angle="11.4581">
+					<from>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="784" angle="46.778">
+					<from>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<aux x="702.5" y="1231.67" name="Demanded additional investment in End of Pipe\nCarbon Capture"/>
+				<connector uid="785" angle="39.3383">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="786" angle="53.8521">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="787" angle="14.2926">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</from>
+					<to>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
+				</connector>
+				<connector uid="788" angle="270">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_gas</to>
+				</connector>
+				<connector uid="789" angle="225">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_oil</to>
+				</connector>
+				<connector uid="790" angle="221.496">
+					<from>Demanded_additional_investment_in_End_of_Pipe_Carbon_Capture</from>
+					<to>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture_for_coal</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" label_side="right" x="805.822" y="1034.08" name="UNIT Million c$ to c$ 1"/>
+				<connector uid="791" angle="168.675">
+					<from>&quot;UNIT_Million_c$_to_c$_1&quot;</from>
+					<to>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
 				</connector>
 				<alias background="#FFAAFF" font_style="italic" uid="246" x="2948.63" y="422.973" width="45" height="35">
 					<of>direct_air_carbon_capture_Capacity</of>
@@ -3252,15 +3496,6 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<alias background="#AA55FF" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
 					<of>Initial_BECC</of>
 				</alias>
-				<alias font_style="italic" font_weight="bold" uid="481" x="4727.17" y="376.556" width="18.8333" height="18.8333">
-					<of>CO2_emissions_from_biofuels</of>
-				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="482" x="4883.83" y="381.75" width="18" height="18">
-					<of>end_of_pipe_CO2_Captured</of>
-				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="485" x="5033.83" y="381.75" width="18" height="18">
-					<of>BECC_CO2_Captured</of>
-				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="506" x="3184.38" y="395.375" width="45" height="35">
 					<of>BECC_Capacity</of>
 				</alias>
@@ -3283,7 +3518,7 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 					<of>Additional_Investment_in_direct_air_carbon_capture</of>
 				</alias>
 				<alias font_style="italic" uid="582" x="3481.72" y="575.875" width="18" height="18">
-					<of>Additional_Investment_in_End_of_Pipe_Carbon_Capture</of>
+					<of>Actual_additional_investment_in_End_of_Pipe_Carbon_Capture</of>
 				</alias>
 				<alias font_style="italic" uid="583" x="3481.72" y="633.375" width="18" height="18">
 					<of>Additional_Investment_in_BECC</of>
@@ -3303,12 +3538,27 @@ cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<alias background="red" font_style="italic" uid="202" x="1107.36" y="484.42" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
-				<alias font_style="italic" font_weight="bold" uid="710" x="874.822" y="2097" width="18" height="18">
+				<alias font_style="italic" font_weight="bold" uid="710" x="693.989" y="2066.21" width="18" height="18">
 					<of>start_year</of>
 				</alias>
 				<alias color="blue" background="white" font_style="italic" uid="478" x="4583.83" y="376.973" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>Emissions_from_fossil_fuels</of>
+				</alias>
+				<alias background="#FFAAFF" font_style="italic" uid="485" x="5033.83" y="381.75" width="18" height="18">
+					<of>BECC_CO2_Captured</of>
+				</alias>
+				<alias background="#FFAAFF" font_style="italic" uid="482" x="4883.83" y="381.75" width="18" height="18">
+					<of>end_of_pipe_CO2_Captured</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="481" x="4727.17" y="376.556" width="18.8333" height="18.8333">
+					<of>CO2_emissions_from_biofuels</of>
+				</alias>
+				<alias font_style="italic" font_weight="bold" uid="761" x="712.667" y="204.333" width="18" height="18">
+					<of>start_year</of>
+				</alias>
+				<alias background="#FFAAFF" font_style="italic" uid="765" x="70.6447" y="1298.24" width="18" height="18">
+					<of>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</of>
 				</alias>
 			</view>
 		</views>

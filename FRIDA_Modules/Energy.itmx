@@ -494,8 +494,10 @@
 				<connect2 to="Government.fuel_extraction_tax_rate" from="fossil_energy_coal.fuel_extraction_effective_tax_rate"/>
 				<connect to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -516,8 +518,12 @@
 				<connect2 to="fossil_energy_coal.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
 				<connect2 to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
+				<connect to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect2 to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_extraction_capacity"/>
@@ -530,6 +536,8 @@
 				<connect2 to="fossil_energy_coal.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
+				<connect to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect to="fossil_energy_coal.UNIT_MtCO2_to_tCO2e" from="Climate_Units.UNIT_MtCO2_to_tCO2e"/>
@@ -550,8 +558,10 @@
 				<connect2 to="Government.fuel_extraction_tax_rate_2" from="fossil_energy_gas.fuel_extraction_effective_tax_rate"/>
 				<connect to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -578,8 +588,12 @@
 				<connect2 to="fossil_energy_gas.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect2 to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
+				<connect to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect2 to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_energy_production_capacity"/>
@@ -590,6 +604,8 @@
 				<connect2 to="fossil_energy_gas.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect to="Emissions.Carbon_Intensity_1" from="fossil_energy_oil.Carbon_Intensity"/>
@@ -608,8 +624,10 @@
 				<connect2 to="Government.fuel_extraction_tax_rate_1" from="fossil_energy_oil.fuel_extraction_effective_tax_rate"/>
 				<connect to="energy_investments.stranded_capital_2" from="fossil_energy_oil.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital_2" from="fossil_energy_oil.stranded_capital"/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -636,8 +654,12 @@
 				<connect2 to="fossil_energy_oil.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect2 to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_energy_production_capacity"/>
@@ -648,6 +670,8 @@
 				<connect2 to="fossil_energy_oil.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect to="energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_6" from="nuclear_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
@@ -682,8 +706,10 @@
 				<connect2 to="bio_fuel_energy.biofuels_CO2e_emissions_tax_reduction_share" from="Government_Regulations.biofuels_CO2e_emissions_tax_reduction_share"/>
 				<connect to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
 				<connect2 to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect2 to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -710,6 +736,10 @@
 				<connect2 to="bio_fuel_energy.Policy_Start_Year" from="Government_Regulations.start_year"/>
 				<connect to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
 				<connect2 to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
+				<connect to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect2 to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect to="bio_fuel_energy.tax_on_CO2e_emissions" from="Government_Regulations.tax_on_CO2e_emissions"/>
@@ -718,6 +748,8 @@
 				<connect2 to="bio_fuel_energy.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect2 to="energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect to="Sea_Level.Installation_of_Hydropower_Capacity" from="hydropower_energy.Installation_of_Hydropower_Capacity"/>
@@ -3984,7 +4016,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="527.5" isee:scroll_y="1024.38" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="8" isee:scroll_x="517.5" isee:scroll_y="893.75" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5216,8 +5248,10 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
 				<connect to="bio_fuel_energy.Carbon_Intensity" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect2 to="bio_fuel_energy.Carbon_Intensity" from="fossil_energy_oil.Carbon_Intensity"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect2 to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -5252,8 +5286,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="bio_fuel_energy.secondary_energy_output_from_liquid_fuels" from="fossil_energy_oil.secondary_energy_output_from_liquid_fuels"/>
 				<connect to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
 				<connect2 to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
+				<connect to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="bio_fuel_energy.share_of_liquid_fuel_that_is_bio" from="fossil_energy_oil.share_of_liquid_fuel_that_is_bio"/>
 				<connect2 to="bio_fuel_energy.share_of_liquid_fuel_that_is_bio" from="fossil_energy_oil.share_of_liquid_fuel_that_is_bio"/>
+				<connect to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect2 to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect to="bio_fuel_energy.tax_on_CO2e_emissions" from="Government_Regulations.tax_on_CO2e_emissions"/>
@@ -5262,6 +5300,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="bio_fuel_energy.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect2 to="energy_investments.Cost_of_Extra_Energy_Output_through_Capital_per_Unit_4" from="hydropower_energy.Cost_net_of_taxes_of_Extra_Energy_Output_through_Capital_per_Unit"/>
 				<connect to="Sea_Level.Installation_of_Hydropower_Capacity" from="hydropower_energy.Installation_of_Hydropower_Capacity"/>
@@ -5412,8 +5452,10 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="Secondary_Fossil_Energy_Output_1" from="fossil_energy_coal.Secondary_Fossil_Energy_Output"/>
 				<connect to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -5440,8 +5482,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_coal.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
 				<connect2 to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
+				<connect to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect2 to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_extraction_capacity"/>
@@ -5454,6 +5500,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_coal.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
+				<connect to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect to="fossil_energy_coal.UNIT_MtCO2_to_tCO2e" from="Climate_Units.UNIT_MtCO2_to_tCO2e"/>
@@ -5476,8 +5524,10 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="Secondary_Fossil_Energy_Output_3" from="fossil_energy_gas.Secondary_Fossil_Energy_Output"/>
 				<connect to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
 				<connect2 to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -5510,8 +5560,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_gas.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect2 to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
+				<connect to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect2 to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_energy_production_capacity"/>
@@ -5522,6 +5576,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_gas.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect to="bio_fuel_energy.Carbon_Intensity" from="fossil_energy_oil.Carbon_Intensity"/>
@@ -5552,8 +5608,10 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="energy_investments.stranded_capital_2" from="fossil_energy_oil.stranded_capital"/>
 				<connect to="fossil_energy_oil.bio_fuel_energy_output" from="bio_fuel_energy.bio_fuel_primary_energy"/>
 				<connect2 to="fossil_energy_oil.bio_fuel_energy_output" from="bio_fuel_energy.bio_fuel_primary_energy"/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -5586,8 +5644,12 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_oil.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect2 to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_energy_production_capacity"/>
@@ -5598,6 +5660,8 @@ https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_c
 				<connect2 to="fossil_energy_oil.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 			</module>
@@ -5897,7 +5961,7 @@ Arbitrary unit of energy used to calculate the differentials of cost to produce 
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="133" isee:scroll_y="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="133" isee:scroll_y="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -6785,8 +6849,10 @@ ELSE
 				<connect2 to="energy_investments.stranded_capital" from="fossil_energy_coal.stranded_capital"/>
 				<connect to="fossil_energy.stranded_capital_1" from="fossil_energy_coal.stranded_capital"/>
 				<connect2 to="stranded_capital_1" from="fossil_energy_coal.stranded_capital"/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_coal.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -6813,8 +6879,12 @@ ELSE
 				<connect2 to="fossil_energy_coal.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_coal.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_coal_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_coal.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
 				<connect2 to="fossil_energy_coal.share_of_coal_emissions_stored" from="Government_Regulations.share_of_coal_emissions_stored"/>
+				<connect to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect2 to="fossil_energy_coal.tax_for_newly_installed_coal_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_energy_production_capacity"/>
 				<connect to="fossil_energy_coal.tax_for_newly_installed_coal_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_coal_extraction_capacity"/>
@@ -6827,6 +6897,8 @@ ELSE
 				<connect2 to="fossil_energy_coal.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_ktN2O_to_tCO2e" from="Climate_Units.UNIT_ktN2O_to_tCO2e"/>
+				<connect to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect2 to="fossil_energy_coal.UNIT_MtCH4_to_tCO2e" from="Climate_Units.UNIT_MtCH4_to_tCO2e"/>
 				<connect to="fossil_energy_coal.UNIT_MtCO2_to_tCO2e" from="Climate_Units.UNIT_MtCO2_to_tCO2e"/>
@@ -6872,8 +6944,10 @@ ELSE
 				<connect2 to="stranded_capital_3" from="fossil_energy_oil.stranded_capital"/>
 				<connect to="fossil_energy_oil.bio_fuel_energy_output" from="bio_fuel_energy.bio_fuel_primary_energy"/>
 				<connect2 to="fossil_energy_oil.bio_fuel_energy_output" from="bio_fuel_energy.bio_fuel_primary_energy"/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_oil.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -6906,8 +6980,12 @@ ELSE
 				<connect2 to="fossil_energy_oil.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_oil.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_oil_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_oil.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
 				<connect2 to="fossil_energy_oil.share_of_coal_emissions_stored" from="Government_Regulations.share_of_oil_emissions_stored"/>
+				<connect to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect2 to="fossil_energy_oil.tax_for_newly_installed_oil_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_extraction_capacity"/>
 				<connect to="fossil_energy_oil.tax_for_newly_installed_oil_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_oil_energy_production_capacity"/>
@@ -6918,6 +6996,8 @@ ELSE
 				<connect2 to="fossil_energy_oil.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_oil.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_oil.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 			</module>
@@ -6947,8 +7027,10 @@ ELSE
 				<connect2 to="energy_investments.stranded_capital_1" from="fossil_energy_gas.stranded_capital"/>
 				<connect to="fossil_energy.stranded_capital_2" from="fossil_energy_gas.stranded_capital"/>
 				<connect2 to="stranded_capital_2" from="fossil_energy_gas.stranded_capital"/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect2 to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
+				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="fossil_energy_gas.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -6981,8 +7063,12 @@ ELSE
 				<connect2 to="fossil_energy_gas.Qbtu_to_zJ" from="Energy_Units.UNIT_Qbtu_to_zJ"/>
 				<connect to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
 				<connect2 to="fossil_energy_gas.rate_of_decommissioning_fossil_fuel_extraction_capital" from="Government_Regulations.rate_of_decommissioning_gas_fossil_fuel_extraction_capital"/>
+				<connect to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="fossil_energy_gas.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
 				<connect2 to="fossil_energy_gas.share_of_coal_emissions_stored" from="Government_Regulations.share_of_gas_emissions_stored"/>
+				<connect to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect2 to="fossil_energy_gas.tax_for_newly_installed_gas_extraction_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_extraction_capacity"/>
 				<connect to="fossil_energy_gas.tax_for_newly_installed_gas_energy_production_capacity" from="Government_Regulations.tax_rate_on_newly_installed_gas_energy_production_capacity"/>
@@ -6993,6 +7079,8 @@ ELSE
 				<connect2 to="fossil_energy_gas.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="fossil_energy_gas.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 				<connect2 to="fossil_energy_gas.zJ_to_TWh" from="Energy_Units.UNIT_zJ_to_TWh"/>
 			</module>
@@ -8216,15 +8304,11 @@ electricity from coal is 10468TWh/year, secondary energy from coal is 18281
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit</eqn>
+				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
+extra_CO2_storage_per_unit*(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture/&quot;UNIT_Million_c$_to_c$&quot;)*(1-share_of_ccs_costs_covered_by_the_goverment)
+ELSE
+extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(kWh/Years)</units>
-			</aux>
-			<aux name="cost of storing CO2 per unit" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/(MtCO2/year)</units>
 			</aux>
 			<aux name="extra CO2 storage per unit">
 				<dimensions>
@@ -8511,6 +8595,34 @@ We apply this independent of fuel for now.</doc>
 				<range min="0.5" max="5"/>
 				<units>dmnl</units>
 			</aux>
+			<aux name="share of ccs costs\ncovered by the goverment" access="input">
+				<eqn>TIME</eqn>
+				<gf>
+					<xscale min="1980" max="2150"/>
+					<yscale min="0" max="100"/>
+					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
+				</gf>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/(MtCO2/year)</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
+			<aux name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of storing CO2 per unit 1" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/(MtCO2/year)</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -8560,7 +8672,7 @@ We apply this independent of fuel for now.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="686.667" isee:scroll_y="705.833" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -9095,11 +9207,6 @@ We apply this independent of fuel for now.</doc>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="1125.63" y="1477.63" name="tax for newly installed\ncoal extraction capacity"/>
 				<aux x="1450.01" y="1242.73" name="extra CO2 storage cost burden"/>
-				<aux font_style="italic" font_weight="bold" x="1450.01" y="1304.48" name="cost of storing CO2 per unit"/>
-				<connector uid="203" angle="90">
-					<from>cost_of_storing_CO2_per_unit</from>
-					<to>extra_CO2_storage_cost_burden</to>
-				</connector>
 				<aux x="1598.04" y="1193.48" name="extra CO2 storage per unit"/>
 				<connector uid="206" angle="165.827">
 					<from>GtC_to_MtCO2</from>
@@ -9505,6 +9612,31 @@ We apply this independent of fuel for now.</doc>
 						</plot>
 					</graph>
 				</stacked_container>
+				<aux font_style="italic" font_weight="bold" x="1413.91" y="1169.38" name="share of ccs costs\ncovered by the goverment"/>
+				<connector uid="290" angle="294.073">
+					<from>share_of_ccs_costs_covered_by_the_goverment</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1348.54" y="1260.73" name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture"/>
+				<connector uid="291" angle="28.4007">
+					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1377.91" y="1325.73" name="UNIT Million c$ to c$"/>
+				<connector uid="292" angle="49.02">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1520" y="1337" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
+				<connector uid="294" angle="106.39">
+					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1426.66" y="1381.25" name="cost of storing CO2 per unit 1"/>
+				<connector uid="295" angle="68.7033">
+					<from>cost_of_storing_CO2_per_unit_1</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
 				<alias uid="47" x="1592.04" y="153.5" width="18" height="18">
 					<of>damage_rate_of_energy_capital_from_STA</of>
 				</alias>
@@ -10277,15 +10409,11 @@ specifies ~6623TWh/year electricity geenereation from oil. Calib data for second
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit</eqn>
+				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
+extra_CO2_storage_per_unit*(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture/&quot;UNIT_Million_c$_to_c$&quot;)*(1-share_of_ccs_costs_covered_by_the_goverment)
+ELSE
+extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(kWh/Years)</units>
-			</aux>
-			<aux name="cost of storing CO2 per unit" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/(MtCO2/year)</units>
 			</aux>
 			<aux name="extra CO2 storage per unit">
 				<dimensions>
@@ -10551,6 +10679,34 @@ We apply this independent of fuel for now.</doc>
 				<range min="0.5" max="5"/>
 				<units>dmnl</units>
 			</aux>
+			<aux name="share of ccs costs\ncovered by the goverment" access="input">
+				<eqn>TIME</eqn>
+				<gf>
+					<xscale min="1980" max="2150"/>
+					<yscale min="0" max="100"/>
+					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
+				</gf>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/(MtCO2/year)</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
+			<aux name="cost of storing CO2 per unit 1" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/(MtCO2/year)</units>
+			</aux>
+			<aux name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -10600,7 +10756,7 @@ We apply this independent of fuel for now.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="3" isee:page_rows="4" isee:scroll_x="654.286" isee:scroll_y="771.429" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="3" isee:page_rows="4" isee:scroll_x="760" isee:scroll_y="770" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -11131,11 +11287,6 @@ We apply this independent of fuel for now.</doc>
 				<aux font_style="italic" font_weight="bold" x="1109.36" y="1384.49" name="tax for newly installed\ngas extraction capacity"/>
 				<aux font_style="italic" font_weight="bold" x="1714.86" y="832.767" name="tax for newly installed gas energy\nproduction capacity"/>
 				<aux x="1414.01" y="1230.23" name="extra CO2 storage cost burden"/>
-				<aux font_style="italic" font_weight="bold" x="1414.01" y="1291.98" name="cost of storing CO2 per unit"/>
-				<connector uid="176" angle="90">
-					<from>cost_of_storing_CO2_per_unit</from>
-					<to>extra_CO2_storage_cost_burden</to>
-				</connector>
 				<aux x="1562.04" y="1180.98" name="extra CO2 storage per unit"/>
 				<connector uid="177" angle="198.403">
 					<from>extra_CO2_storage_per_unit</from>
@@ -11517,6 +11668,31 @@ We apply this independent of fuel for now.</doc>
 				<connector uid="253" angle="354.436">
 					<from>ratio_of_capital_over_fuel</from>
 					<to>reference_ratio_of_capital_over_fuel</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1524.29" y="1256.43" name="share of ccs costs\ncovered by the goverment"/>
+				<aux font_style="italic" font_weight="bold" x="1292.14" y="1264.29" name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture"/>
+				<connector uid="254" angle="20.556">
+					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<connector uid="255" angle="191.636">
+					<from>share_of_ccs_costs_covered_by_the_goverment</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1418.8" y="1308.49" name="UNIT Million c$ to c$"/>
+				<connector uid="256" angle="85.5122">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1451.43" y="1365.71" name="cost of storing CO2 per unit 1"/>
+				<aux font_style="italic" font_weight="bold" x="1470.71" y="1415.71" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
+				<connector uid="257" angle="72.9795">
+					<from>cost_of_storing_CO2_per_unit_1</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<connector uid="258" angle="131.999">
+					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
 				</connector>
 				<alias uid="47" x="1586.35" y="125.833" width="18" height="18">
 					<of>damage_rate_of_energy_capital_from_STA</of>
@@ -12322,15 +12498,11 @@ https://ourworldindata.org/grapher/fossil-fuel-production</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit</eqn>
+				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
+extra_CO2_storage_per_unit*(cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture/&quot;UNIT_Million_c$_to_c$&quot;)*(1-share_of_ccs_costs_covered_by_the_goverment)
+ELSE
+extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(kWh/Years)</units>
-			</aux>
-			<aux name="cost of storing CO2 per unit" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/(MtCO2/year)</units>
 			</aux>
 			<aux name="extra CO2 storage per unit">
 				<dimensions>
@@ -12596,6 +12768,34 @@ We apply this independent of fuel for now.</doc>
 				<range min="0.5" max="5"/>
 				<units>dmnl</units>
 			</aux>
+			<aux name="share of ccs costs\ncovered by the goverment" access="input">
+				<eqn>TIME</eqn>
+				<gf>
+					<xscale min="1980" max="2150"/>
+					<yscale min="0" max="100"/>
+					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
+				</gf>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/(MtCO2/year)</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
+			<aux name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of storing CO2 per unit 1" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/(MtCO2/year)</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -12645,7 +12845,7 @@ We apply this independent of fuel for now.</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="921.875" isee:scroll_y="924.375" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="951.875" isee:scroll_y="839.375" zoom="160" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -13207,11 +13407,6 @@ We apply this independent of fuel for now.</doc>
 					<to>Primary_Liquid_FUEL</to>
 				</connector>
 				<aux x="1524.39" y="1242.11" name="extra CO2 storage cost burden"/>
-				<aux font_style="italic" font_weight="bold" x="1524.39" y="1303.86" name="cost of storing CO2 per unit"/>
-				<connector uid="220" angle="90">
-					<from>cost_of_storing_CO2_per_unit</from>
-					<to>extra_CO2_storage_cost_burden</to>
-				</connector>
 				<aux x="1672.42" y="1192.86" name="extra CO2 storage per unit"/>
 				<connector uid="221" angle="198.403">
 					<from>extra_CO2_storage_per_unit</from>
@@ -13597,6 +13792,31 @@ We apply this independent of fuel for now.</doc>
 				<connector uid="313" angle="167.297">
 					<from>secondary_energy_output_from_liquid_fuels</from>
 					<to>conversion_efficiency_of_fossil_fuels_to_secondary_fossil_energy</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1520" y="1183.75" name="share of ccs costs\ncovered by the goverment"/>
+				<aux font_style="italic" font_weight="bold" x="1512.04" y="1335.63" name="cost of capturing\nCO2 per unit with end\nof pipe carbon capture"/>
+				<connector uid="314" angle="131.339">
+					<from>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<connector uid="315" angle="274.302">
+					<from>share_of_ccs_costs_covered_by_the_goverment</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1589.38" y="1157.5" name="UNIT Million c$ to c$"/>
+				<connector uid="316" angle="232.474">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1537.5" y="1406.25" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
+				<aux font_style="italic" font_weight="bold" x="1580" y="1374.38" name="cost of storing CO2 per unit 1"/>
+				<connector uid="317" angle="91.3972">
+					<from>cost_of_storing_CO2_per_unit_1</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<connector uid="318" angle="87.9546">
+					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
 				</connector>
 				<alias uid="47" x="1552.96" y="134.333" width="18" height="18">
 					<of>damage_rate_of_energy_capital_from_STA</of>
@@ -14334,8 +14554,10 @@ Wind_Energy_Output+
 				<connect2 to="bio_fuel_energy.biofuels_SO2_emissions_tax_reduction_share" from="Government_Regulations.biofuels_SO2_emissions_tax_reduction_share"/>
 				<connect to="bio_fuel_energy.Carbon_Intensity" from="fossil_energy_oil.Carbon_Intensity"/>
 				<connect2 to="bio_fuel_energy.Carbon_Intensity" from="fossil_energy_oil.Carbon_Intensity"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit" from='CCS."Average_cost_of_CCS_per_unit_in_c$"'/>
+				<connect to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect2 to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
+				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
+				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect2 to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_CH4_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_CH4_emissions"/>
 				<connect to="bio_fuel_energy.coupling_factor_of_fossil_fuels_and_N2O_emissions" from="Emissions.coupling_factor_of_fossil_fuels_and_N2O_emissions"/>
@@ -14370,8 +14592,12 @@ Wind_Energy_Output+
 				<connect2 to="bio_fuel_energy.secondary_energy_output_from_liquid_fuels" from="fossil_energy_oil.secondary_energy_output_from_liquid_fuels"/>
 				<connect to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
 				<connect2 to="bio_fuel_energy.share_of_biofuel_emissions_stored" from="Government_Regulations.share_of_biofuel_emissions_stored"/>
+				<connect to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
+				<connect2 to="bio_fuel_energy.share_of_ccs_costs_covered_by_the_goverment" from="Government_Regulations.share_of_ccs_costs_covered_by_the_goverment"/>
 				<connect to="bio_fuel_energy.share_of_liquid_fuel_that_is_bio" from="fossil_energy_oil.share_of_liquid_fuel_that_is_bio"/>
 				<connect2 to="bio_fuel_energy.share_of_liquid_fuel_that_is_bio" from="fossil_energy_oil.share_of_liquid_fuel_that_is_bio"/>
+				<connect to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
+				<connect2 to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect2 to="bio_fuel_energy.tax_for_newly_installed_other_energy_capacity" from="Government_Regulations.tax_rate_on_newly_installed_bio_energy_capacity"/>
 				<connect to="bio_fuel_energy.tax_on_CO2e_emissions" from="Government_Regulations.tax_on_CO2e_emissions"/>
@@ -14380,6 +14606,8 @@ Wind_Energy_Output+
 				<connect2 to="bio_fuel_energy.tax_on_SO2_emissions" from="Government_Regulations.tax_on_SO2_emissions"/>
 				<connect to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
 				<connect2 to="bio_fuel_energy.TWh_to_kWh" from="Energy_Units.UNIT_TWh_to_kWh"/>
+				<connect to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
+				<connect2 to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 			</module>
 			<aux name="bio fuel secondary energy output" access="input">
 				<dimensions>
@@ -14553,7 +14781,7 @@ Wind_Energy_Output+
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1091" page_height="761" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="66.6667" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1091" page_height="761" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="66.6667" isee:scroll_y="33.3333" zoom="180" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -14992,15 +15220,11 @@ Supplementary Table S10 which says roughly 12 % in 2018 is that.</doc>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit</eqn>
+				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;=1 THEN
+extra_CO2_storage_per_unit*(cost_of_capturing_CO2_per_unit_with_BECC/&quot;UNIT_Million_c$_to_c$&quot;)*(1-share_of_ccs_costs_covered_by_the_goverment)
+ELSE
+extra_CO2_storage_per_unit*cost_of_storing_CO2_per_unit_1</eqn>
 				<units>c$/(kWh/Years)</units>
-			</aux>
-			<aux name="cost of storing CO2 per unit" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/(MtCO2/year)</units>
 			</aux>
 			<aux name="share of biofuel\nemissions stored" access="input">
 				<eqn>TIME</eqn>
@@ -15260,6 +15484,34 @@ ELSE
 				<eqn>bio_fuel_primary_energy_content*bio_fuel_production</eqn>
 				<units>zJ/Year</units>
 			</aux>
+			<aux name="share of ccs costs\ncovered by the goverment" access="input">
+				<eqn>TIME</eqn>
+				<gf>
+					<xscale min="1980" max="2150"/>
+					<yscale min="0" max="100"/>
+					<ypts>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</ypts>
+				</gf>
+				<units>dmnl</units>
+			</aux>
+			<aux name="cost of capturing\nCO2 per unit with BECC" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/(MtCO2/year)</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
+			<aux name="cost of storing CO2 per unit 1" access="input">
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/(MtCO2/year)</units>
+			</aux>
+			<aux name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)" access="input">
+				<eqn>1</eqn>
+				<units>dmnl</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -15309,7 +15561,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1120" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="324.286" isee:scroll_y="208.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="349.286" isee:scroll_y="393.571" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -15493,8 +15745,8 @@ ELSE
 					<to>cost_of_extra_capacity_needed_for_delta_Energy</to>
 				</connector>
 				<aux background="#FFAAFF" x="509.321" y="399.654" name="bio fuel production"/>
-				<aux x="718.384" y="285.001" name="PCal per Mt of fuel"/>
-				<connector uid="51" angle="268.563">
+				<aux x="749.813" y="303.001" name="PCal per Mt of fuel"/>
+				<connector uid="51" angle="237.228">
 					<from>PCal_per_Mt_of_fuel</from>
 					<to>crops_demanded_for_bio_fuel</to>
 				</connector>
@@ -15534,11 +15786,6 @@ ELSE
 					<to>share_of_crop_demand_that_is_fuel</to>
 				</connector>
 				<aux x="1054.71" y="853.624" name="extra CO2 storage cost burden"/>
-				<aux font_style="italic" font_weight="bold" x="1066.21" y="777.824" name="cost of storing CO2 per unit"/>
-				<connector uid="61" angle="261.376">
-					<from>cost_of_storing_CO2_per_unit</from>
-					<to>extra_CO2_storage_cost_burden</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" x="1314.29" y="637.143" name="share of biofuel\nemissions stored"/>
 				<aux label_side="right" x="1124.5" y="498.571" name="relative carbon intensity of\nbiofuels to petroleum fuels"/>
 				<aux font_style="italic" font_weight="bold" x="1044" y="431.571" name="Carbon Intensity"/>
@@ -15812,6 +16059,31 @@ ELSE
 				<connector uid="4" angle="180">
 					<from>bio_fuel_primary_energy_content</from>
 					<to>bio_fuel_primary_energy</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="957.143" y="801.429" name="share of ccs costs\ncovered by the goverment"/>
+				<connector uid="136" angle="0">
+					<from>share_of_ccs_costs_covered_by_the_goverment</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1044" y="910.554" name="cost of capturing\nCO2 per unit with BECC"/>
+				<connector uid="137" angle="56.4115">
+					<from>cost_of_capturing_CO2_per_unit_with_BECC</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1057.86" y="780" name="UNIT Million c$ to c$"/>
+				<connector uid="138" angle="290.956">
+					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1090" y="992.857" name="cost of storing CO2 per unit 1"/>
+				<connector uid="139" angle="87.337">
+					<from>cost_of_storing_CO2_per_unit_1</from>
+					<to>extra_CO2_storage_cost_burden</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1130.71" y="905" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
+				<connector uid="140" angle="136.432">
+					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
+					<to>extra_CO2_storage_cost_burden</to>
 				</connector>
 			</view>
 		</views>
