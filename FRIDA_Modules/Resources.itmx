@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -280,8 +280,6 @@
 				<connect2 to="Emissions.BECCS_CO2_Captured" from="CCS.BECC_CO2_Captured"/>
 				<connect to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
 				<connect2 to="Emissions.Leakage" from="CCS.CO2_Emissions_from_Leakage"/>
-				<connect to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
-				<connect2 to="Emissions.CO2_Emissions_from_Leakage_1" from="CCS.CO2_Emissions_from_Leakage_1"/>
 				<connect to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
 				<connect2 to="bio_fuel_energy.cost_of_capturing_CO2_per_unit_with_BECC" from="CCS.cost_of_capturing_CO2_per_unit_with_BECC"/>
 				<connect to="fossil_energy_coal.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
@@ -290,32 +288,10 @@
 				<connect2 to="fossil_energy_gas.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
 				<connect2 to="fossil_energy_oil.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture" from="CCS.cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture"/>
-				<connect to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect2 to="bio_fuel_energy.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect2 to="fossil_energy_coal.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect2 to="fossil_energy_gas.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
-				<connect2 to="fossil_energy_oil.cost_of_storing_CO2_per_unit_1" from="CCS.cost_of_storing_CO2_per_unit_1"/>
 				<connect to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect2 to="CO2_Forcing.DA_CO2_Captured" from="CCS.direct_air_capture_CO2_Captured"/>
 				<connect to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
 				<connect2 to="Emissions.Captured_CO2_to_store" from="CCS.end_of_pipe_CO2_Captured"/>
-				<connect to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to='bio_fuel_energy."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to="Emissions.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to="energy_investments.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to='fossil_energy_coal."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to='fossil_energy_gas."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to='fossil_energy_oil."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"' from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
-				<connect2 to="Government.SWITCH_For_new_CCS_structure" from='CCS."SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)"'/>
 				<connect to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
 				<connect2 to="Government.Total_investment_in_CCS_from_the_government" from="CCS.Total_investment_in_CCS_from_the_government"/>
 				<connect to="energy_investments.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
@@ -624,10 +600,7 @@ Slope_of_cost_curve*
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
-&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;/&quot;UNIT_Million_c$_to_c$&quot;
-ELSE
-cost_of_storing_CO2_per_unit_1</eqn>
+				<eqn>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;/&quot;UNIT_Million_c$_to_c$&quot;</eqn>
 				<units>c$/(MtCO2/year)</units>
 			</aux>
 			<aux name="cost of storing carbon per unit">
@@ -976,87 +949,15 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF &quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot; = 1 THEN
-(IF Captured_CO2_to_store = 0 THEN
+				<eqn>IF Captured_CO2_to_store = 0 THEN
 0
 ELSE
 ((((cost_of_capturing_CO2_per_unit_with_BECC*BECC_CO2_Captured)
 +
 (cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture)*end_of_pipe_CO2_Captured))
 /
-Captured_CO2_to_store))
-ELSE
-0</eqn>
+Captured_CO2_to_store)</eqn>
 				<units>Mc$/(MtCO2/year)</units>
-			</aux>
-			<stock name="stored CO2 1">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>0</eqn>
-				<inflow>Storing_CO2</inflow>
-				<outflow>CO2_Emissions_from_Leakage_1</outflow>
-				<non_negative/>
-				<units>MtCO2</units>
-			</stock>
-			<flow name="Storing CO2">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>storing_carbon_from_coal_emissions + storing_carbon_from_oil_emissions + storing_carbon_from_gas_emissions + storing_carbon_from_biofuel_emissions</eqn>
-				<non_negative/>
-				<units>MtCO2/Year</units>
-			</flow>
-			<aux name="cost of storing carbon per unit 1" access="output" isee:autocreated="true">
-				<doc>${External Parameter,No Sensi}
-https://www.iea.org/commentaries/is-carbon-capture-too-expensive
-middle of power generation storing cost</doc>
-				<eqn>75</eqn>
-				<units>c$/(tC/year)</units>
-			</aux>
-			<flow name="CO2 Emissions from Leakage 1" access="output" isee:autocreated="true">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>stored_CO2_leakage_rate_1*stored_CO2_1</eqn>
-				<non_negative/>
-				<units>MtCO2/Year</units>
-			</flow>
-			<aux name="cost of storing CO2" access="output" isee:autocreated="true">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>Storing_CO2 * cost_of_storing_CO2_per_unit_1</eqn>
-				<units>c$</units>
-			</aux>
-			<aux name="UNIT GtC to tC 1">
-				<doc>${Unit}
-</doc>
-				<eqn>1000000000</eqn>
-				<units>tC/GtC</units>
-			</aux>
-			<aux name="stored Carbon 1">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>stored_CO2_1 / GtC_to_MtCO2</eqn>
-				<units>GtC</units>
-			</aux>
-			<aux name="cost of storing CO2 per unit 1" access="output" isee:autocreated="true">
-				<eqn>UNIT_GtC_to_tC_1 / GtC_to_MtCO2 * cost_of_storing_carbon_per_unit_1</eqn>
-				<units>c$/(MtCO2/year)</units>
-			</aux>
-			<aux name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)" access="output" isee:autocreated="true">
-				<eqn>1</eqn>
-				<format precision="1"/>
-				<range min="0" max="1"/>
-				<units>dmnl</units>
-			</aux>
-			<aux name="stored CO2 leakage rate 1">
-				<doc>${Internal Calibration Parameter,No Sensi}
-</doc>
-				<eqn>0</eqn>
-				<units>dmnl/year</units>
 			</aux>
 			<flow name="Depreciation of\ndirect air carbon capture Capacity">
 				<dimensions>
@@ -1685,10 +1586,7 @@ MATHILDE FAJARDY, DR. ALEXANDRE KÖBERLE, DR. NIALL MAC DOWELL, DR. ANDREA FANTU
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF Captured_CO2_to_store = 0 THEN
-cost_of_storing_CO2_per_unit_1*&quot;UNIT_Million_c$_to_c$&quot;
-ELSE
-cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
+				<eqn>cost_of_storing_CO2_per_unit+Average_cost_of_capturing_CO2_per_unit</eqn>
 				<units>Mc$/(MtCO2/year)</units>
 			</aux>
 			<aux name="start year" access="input">
@@ -1895,7 +1793,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="4" isee:scroll_x="5426.67" isee:scroll_y="631.667" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="6" isee:scroll_y="900" zoom="80" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1940,10 +1838,10 @@ ELSE
 						<pt x="2421.01" y="1166"/>
 					</pts>
 				</flow>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" x="198.667" y="1087.92" name="share of coal emissions stored"/>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" x="375.333" y="1090.42" name="share of oil\nemissions stored"/>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="bottom" x="574.5" y="1090.42" name="share of gas\nemissions stored"/>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="bottom" x="540.417" y="2057.21" name="share of biofuel\nemissions stored"/>
+				<aux background="white" font_style="italic" font_weight="bold" x="198.667" y="1087.92" name="share of coal emissions stored"/>
+				<aux background="white" font_style="italic" font_weight="bold" x="375.333" y="1090.42" name="share of oil\nemissions stored"/>
+				<aux background="white" font_style="italic" font_weight="bold" label_side="bottom" x="574.5" y="1090.42" name="share of gas\nemissions stored"/>
+				<aux background="white" font_style="italic" font_weight="bold" label_side="bottom" x="540.417" y="2057.21" name="share of biofuel\nemissions stored"/>
 				<aux font_style="italic" font_weight="bold" label_side="bottom" x="540.417" y="2351.07" name="CO2 emissions from biofuels"/>
 				<aux x="199.5" y="1375.75" name="storing carbon from coal\nemissions"/>
 				<connector uid="2" angle="270.166">
@@ -1971,7 +1869,7 @@ ELSE
 					<from>stored_CO2_leakage_rate</from>
 					<to>CO2_Emissions_from_Leakage</to>
 				</connector>
-				<aux background="#FFAAFF" x="2239.38" y="1264" name="total cost of storing CO2"/>
+				<aux background="white" x="2239.38" y="1264" name="total cost of storing CO2"/>
 				<connector uid="12" angle="270">
 					<from>Captured_CO2_to_store</from>
 					<to>total_cost_of_storing_CO2</to>
@@ -1991,7 +1889,7 @@ ELSE
 				<aux color="black" background="#AA55FF" font_color="black" x="2782.75" y="1494.95" name="Resource base"/>
 				<aux color="black" background="white" font_color="black" label_side="bottom" x="2626.27" y="1512.45" name="Relative initial step for effect"/>
 				<aux background="white" x="2661.81" y="1467.27" name="Effect of scarcity on cost"/>
-				<aux color="black" background="#00AA00" font_color="black" x="2758.15" y="1397.99" name="Slope of cost curve"/>
+				<aux color="black" background="white" font_color="black" x="2758.15" y="1397.99" name="Slope of cost curve"/>
 				<connector uid="22" angle="51.8103">
 					<from>Relative_initial_step_for_effect</from>
 					<to>Effect_of_scarcity_on_cost</to>
@@ -2004,13 +1902,13 @@ ELSE
 					<from>Resource_base</from>
 					<to>Effect_of_scarcity_on_cost</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" x="2835.83" y="1442.47" name="Exponent of cost curve"/>
+				<aux color="black" background="white" font_color="black" x="2835.83" y="1442.47" name="Exponent of cost curve"/>
 				<connector uid="25" angle="188.111">
 					<from>Exponent_of_cost_curve</from>
 					<to>Effect_of_scarcity_on_cost</to>
 				</connector>
 				<text_box uid="26" x="2649.62" y="1559.27" width="171.772" height="21.5714">Available storage scarcity</text_box>
-				<aux background="white" label_side="top" x="3672.12" y="1238.83" name="Average cost of CCS per unit in c$"/>
+				<aux background="white" label_side="top" x="3133.37" y="1176.33" name="Average cost of CCS per unit in c$"/>
 				<aux x="2443.51" y="1365.08" name="cost of storing carbon per unit"/>
 				<connector uid="61" angle="270">
 					<from>GtC_to_MtCO2</from>
@@ -2020,16 +1918,15 @@ ELSE
 					<from>UNIT_GtC_to_tC</from>
 					<to>cost_of_storing_carbon_per_unit</to>
 				</connector>
-				<text_box uid="65" x="2610.51" y="1606.04" width="260" height="71">These variables have to be on a per year basis (because of investments per year, and the cost adjacent to energy production in fossil fuels and biofuels)</text_box>
 				<aux background="white" x="896.472" y="563.55" name="direct air carbon capture Installation\nCosts"/>
-				<aux color="blue" background="#00AA00" x="749.712" y="697.03" name="Learning Rate direct air carbon capture"/>
-				<aux background="#00AA00" x="770.322" y="621.65" name="direct air carbon capture Initial\nInstallation Costs"/>
+				<aux color="blue" background="white" x="749.712" y="697.03" name="Learning Rate direct air carbon capture"/>
+				<aux background="white" x="770.322" y="621.65" name="direct air carbon capture Initial\nInstallation Costs"/>
 				<aux label_side="top" x="823.822" y="697.03" name="learning rate parameter direct air carbon capture"/>
 				<connector uid="94" angle="0">
 					<from>Learning_Rate_direct_air_carbon_capture</from>
 					<to>learning_rate_parameter_direct_air_carbon_capture</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="1033.92" y="679.03" name="stepping on toes parameter direct air carbon capture"/>
+				<aux color="blue" background="white" x="1033.92" y="679.03" name="stepping on toes parameter direct air carbon capture"/>
 				<aux background="white" x="896.472" y="621.65" name="Reducible Installation\nCost component in direct air carbon capture"/>
 				<connector uid="95" angle="0">
 					<from>direct_air_carbon_capture_Initial_Installation_Costs</from>
@@ -2063,7 +1960,7 @@ ELSE
 					<from>learning_rate_parameter_direct_air_carbon_capture</from>
 					<to>Effect_of_Learning_On_Cost_direct_air_carbon_capture</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="770.542" y="563.55" name="direct air carbon capture Floor Costs"/>
+				<aux color="blue" background="white" x="770.542" y="563.55" name="direct air carbon capture Floor Costs"/>
 				<connector uid="102" angle="83.0948">
 					<from>Reducible_Installation_Cost_component_in_direct_air_carbon_capture</from>
 					<to>direct_air_carbon_capture_Installation_Costs</to>
@@ -2077,9 +1974,9 @@ ELSE
 					<from>direct_air_carbon_capture_Installation_Costs</from>
 					<to>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" x="1082.78" y="346.407" name="depreciation rate of\ndirect air carbon capture capital"/>
+				<aux color="black" background="white" font_color="black" x="1082.78" y="346.407" name="depreciation rate of\ndirect air carbon capture capital"/>
 				<stock background="#FFAAFF" x="970.356" y="407.74" name="direct air carbon\ncapture Capacity"/>
-				<aux background="#AA55FF" x="970.356" y="455.42" name="Initial direct air\ncarbon capture Capacity"/>
+				<aux background="white" x="970.356" y="455.42" name="Initial direct air\ncarbon capture Capacity"/>
 				<flow x="896.606" y="407.74" name="Installation of\ndirect air carbon capture Capacity">
 					<pts>
 						<pt x="845.356" y="407.74"/>
@@ -2108,7 +2005,7 @@ ELSE
 					<from>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</from>
 					<to>Installation_of_direct_air_carbon_capture_Capacity</to>
 				</connector>
-				<aux background="#FFAA00" x="470.481" y="259.795" name="Carbon to capture per year"/>
+				<aux background="white" x="470.481" y="259.795" name="Carbon to capture per year"/>
 				<connector uid="169" angle="322.334">
 					<from>direct_air_capture_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
@@ -2123,7 +2020,7 @@ ELSE
 					<to>Additional_Investment_in_direct_air_carbon_capture</to>
 				</connector>
 				<aux background="white" x="956.8" y="1563.04" name="Installation\nCosts end of pipe\nCarbon Capture"/>
-				<aux color="blue" background="#00AA00" x="830.876" y="1563.04" name="Floor Costs end of\npipe carbon capture"/>
+				<aux color="blue" background="white" x="830.876" y="1563.04" name="Floor Costs end of\npipe carbon capture"/>
 				<connector uid="182" angle="0">
 					<from>Floor_Costs_end_of_pipe_carbon_capture</from>
 					<to>Installation_Costs_end_of_pipe_Carbon_Capture</to>
@@ -2133,7 +2030,7 @@ ELSE
 					<from>Installation_Costs_end_of_pipe_Carbon_Capture</from>
 					<to>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1170.32" y="1323.07" name="depreciation rate of\nend of pipe\nCarbon Capture capital"/>
+				<aux color="black" background="white" font_color="black" label_side="bottom" x="1170.32" y="1323.07" name="depreciation rate of\nend of pipe\nCarbon Capture capital"/>
 				<flow x="1084.91" y="1405.57" name="Depreciation of\nend of pipe\nCarbon Capture Capacity">
 					<pts>
 						<pt x="1055.8" y="1405.57"/>
@@ -2149,7 +2046,7 @@ ELSE
 					<from>end_of_pipe_Carbon_Capture_Capacity</from>
 					<to>Depreciation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
-				<aux background="#AA55FF" x="1039.3" y="1455.25" name="Initial end of pipe\nCarbon Capture Capacity"/>
+				<aux background="white" x="1039.3" y="1455.25" name="Initial end of pipe\nCarbon Capture Capacity"/>
 				<flow x="959.55" y="1405.57" name="Installation of\nend of pipe\nCarbon Capture Capacity">
 					<pts>
 						<pt x="908.3" y="1405.57"/>
@@ -2166,7 +2063,7 @@ ELSE
 					<to>Installation_of_end_of_pipe_Carbon_Capture_Capacity</to>
 				</connector>
 				<aux x="854" y="1221.25" name="Actual additional investment in End of Pipe\nCarbon Capture"/>
-				<aux background="#AA00FF" x="1258.94" y="545.55" name="Energy intensity in\ndirect air carbon capture"/>
+				<aux background="white" x="1258.94" y="545.55" name="Energy intensity in\ndirect air carbon capture"/>
 				<aux x="1258.94" y="493.883" name="Energy demand from direct air carbon capture"/>
 				<connector uid="196" angle="271.224">
 					<from>direct_air_capture_CO2_Captured</from>
@@ -2180,7 +2077,7 @@ ELSE
 					<from>end_of_pipe_CO2_Captured</from>
 					<to>Captured_CO2_to_store</to>
 				</connector>
-				<aux background="#AA55FF" x="1318.71" y="1524.5" name="Energy intensity in end of pipe carbon capture"/>
+				<aux background="white" x="1318.71" y="1524.5" name="Energy intensity in end of pipe carbon capture"/>
 				<aux x="1318.71" y="1473.25" name="Energy demand from end of pipe\nCarbon Capture"/>
 				<connector uid="236" angle="189.979">
 					<from>Energy_intensity_in_end_of_pipe_carbon_capture</from>
@@ -2190,8 +2087,8 @@ ELSE
 					<from>end_of_pipe_CO2_Captured</from>
 					<to>Energy_demand_from_end_of_pipe_Carbon_Capture</to>
 				</connector>
-				<aux background="#AA55FF" x="1318.71" y="1361.14" name="Efficiency for end of pipe carbon capture"/>
-				<aux background="#AA00FF" x="1257.1" y="361.073" name="Efficiency for direct air carbon capture"/>
+				<aux background="white" x="1318.71" y="1361.14" name="Efficiency for end of pipe carbon capture"/>
+				<aux background="white" x="1257.1" y="361.073" name="Efficiency for direct air carbon capture"/>
 				<connector uid="244" angle="6.77571">
 					<from>Efficiency_for_direct_air_carbon_capture</from>
 					<to>direct_air_capture_CO2_Captured</to>
@@ -2229,8 +2126,8 @@ ELSE
 					<from>cost_of_storing_CO2_per_unit</from>
 					<to>cost_of_storing_carbon_per_unit</to>
 				</connector>
-				<aux background="white" x="3956.99" y="976.233" name="Average cost of capturing CO2 per unit"/>
-				<connector uid="295" angle="352.945">
+				<aux background="white" x="3301.99" y="957.483" name="Average cost of capturing CO2 per unit"/>
+				<connector uid="295" angle="334.973">
 					<from>
 						<alias uid="290"/>
 					</from>
@@ -2248,100 +2145,6 @@ ELSE
 					</from>
 					<to>Average_cost_of_capturing_CO2_per_unit</to>
 				</connector>
-				<stock x="4997.17" y="2642.16" name="stored CO2 1"/>
-				<flow x="4896.75" y="2642.16" name="Storing CO2">
-					<pts>
-						<pt x="4818.83" y="2642.16"/>
-						<pt x="4974.67" y="2642.16"/>
-					</pts>
-				</flow>
-				<aux x="4895.5" y="2908.83" name="cost of storing carbon per unit 1"/>
-				<flow x="5110.17" y="2642.16" name="CO2 Emissions from Leakage 1">
-					<pts>
-						<pt x="5019.67" y="2642.16"/>
-						<pt x="5224.67" y="2642.16"/>
-					</pts>
-				</flow>
-				<connector uid="323" angle="26.5651">
-					<from>stored_CO2_1</from>
-					<to>CO2_Emissions_from_Leakage_1</to>
-				</connector>
-				<aux x="4896.75" y="2723.83" name="cost of storing CO2"/>
-				<connector uid="324" angle="269.999">
-					<from>Storing_CO2</from>
-					<to>cost_of_storing_CO2</to>
-				</connector>
-				<aux x="4755.5" y="2846.33" name="UNIT GtC to tC 1"/>
-				<aux x="4997.17" y="2716.33" name="stored Carbon 1"/>
-				<connector uid="325" angle="270">
-					<from>stored_CO2_1</from>
-					<to>stored_Carbon_1</to>
-				</connector>
-				<aux label_side="top" x="4895.5" y="2846.33" name="cost of storing CO2 per unit 1"/>
-				<connector uid="327" angle="90">
-					<from>cost_of_storing_carbon_per_unit_1</from>
-					<to>cost_of_storing_CO2_per_unit_1</to>
-				</connector>
-				<connector uid="328" angle="0">
-					<from>UNIT_GtC_to_tC_1</from>
-					<to>cost_of_storing_CO2_per_unit_1</to>
-				</connector>
-				<connector uid="330" angle="89.4154">
-					<from>cost_of_storing_CO2_per_unit_1</from>
-					<to>cost_of_storing_CO2</to>
-				</connector>
-				<connector uid="331" angle="328.253">
-					<from>
-						<alias uid="332"/>
-					</from>
-					<to>Storing_CO2</to>
-				</connector>
-				<connector uid="333" angle="342.759">
-					<from>
-						<alias uid="334"/>
-					</from>
-					<to>Storing_CO2</to>
-				</connector>
-				<connector uid="335" angle="343.028">
-					<from>
-						<alias uid="336"/>
-					</from>
-					<to>Storing_CO2</to>
-				</connector>
-				<connector uid="337" angle="0.489696">
-					<from>
-						<alias uid="338"/>
-					</from>
-					<to>Storing_CO2</to>
-				</connector>
-				<connector uid="339" angle="96.8105">
-					<from>
-						<alias uid="340"/>
-					</from>
-					<to>stored_Carbon_1</to>
-				</connector>
-				<connector uid="341" angle="174.303">
-					<from>
-						<alias uid="340"/>
-					</from>
-					<to>cost_of_storing_CO2_per_unit_1</to>
-				</connector>
-				<aux background="red" x="4055.55" y="1179.25" width="53" height="53" name="SWITCH to new CCS structure\n(zero if you want to see model\nwith old structure)"/>
-				<connector uid="345" angle="184.613">
-					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
-					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
-				</connector>
-				<connector uid="346" angle="207.977">
-					<from>
-						<alias uid="347"/>
-					</from>
-					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
-				</connector>
-				<aux x="5110.17" y="2566.08" name="stored CO2 leakage rate 1"/>
-				<connector uid="348" angle="278.827">
-					<from>stored_CO2_leakage_rate_1</from>
-					<to>CO2_Emissions_from_Leakage_1</to>
-				</connector>
 				<flow x="1022.48" y="407.74" name="Depreciation of\ndirect air carbon capture Capacity">
 					<pts>
 						<pt x="992.856" y="407.74"/>
@@ -2356,11 +2159,6 @@ ELSE
 					<from>depreciation_rate_of_direct_air_carbon_capture_capital</from>
 					<to>Depreciation_of_direct_air_carbon_capture_Capacity</to>
 				</connector>
-				<connector uid="349" angle="118.586">
-					<from>&quot;SWITCH_to_new_CCS_structure_(zero_if_you_want_to_see_model_with_old_structure)&quot;</from>
-					<to>Average_cost_of_capturing_CO2_per_unit</to>
-				</connector>
-				<text_box uid="353" x="5101.54" y="2828.83" width="260" height="71">Trying to find a way to combine incoming investment to allow progression and the possibility to change the capture of emissions</text_box>
 				<connector uid="354" angle="12.8922">
 					<from>storing_carbon_from_biofuel_emissions</from>
 					<to>Additional_Investment_in_BECC</to>
@@ -2393,9 +2191,8 @@ ELSE
 					<from>&quot;Baseline_Government_funded_R&amp;D_in_direct_air_carbon_capture&quot;</from>
 					<to>Investment_in_direct_air_carbon_capture</to>
 				</connector>
-				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="404" x="4662.5" y="2454.17" width="580" height="58">OLD STRUCTURE</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="405" x="2069.62" y="1004.04" width="580" height="58">Injection/Storage of CO2</text_box>
-				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="406" x="3708.3" y="170.754" width="617.5" height="58">CCS Overview (Capture + Injection/Storage)</text_box>
+				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="406" x="3304.73" y="170.754" width="617.5" height="58">CCS Overview (Capture + Injection/Storage)</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="407" x="1028.71" y="997.237" width="580" height="58">End of Pipe CO2 Capture</text_box>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="408" x="706.145" y="142.237" width="580" height="58">Direct Air CO2 Capture</text_box>
 				<aux x="1336.98" y="726.743" name="initial direct air carbon capture for the\nconsideration of cost effects"/>
@@ -2417,14 +2214,14 @@ ELSE
 					<from>Installation_of_direct_air_carbon_capture_Capacity</from>
 					<to>accumulating_direct_air_carbon_capture_Construction</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="809.712" y="1721.59" name="Learning Rate end of pipe capture"/>
-				<aux background="#00AA00" x="830.322" y="1646.21" name="end of pipe capture Initial\nInstallation Costs"/>
+				<aux color="blue" background="white" x="809.712" y="1721.59" name="Learning Rate end of pipe capture"/>
+				<aux background="white" x="830.322" y="1646.21" name="end of pipe capture Initial\nInstallation Costs"/>
 				<aux label_side="top" x="883.822" y="1721.59" name="learning rate parameter end of pipe capture"/>
 				<connector uid="416" angle="0">
 					<from>Learning_Rate_end_of_pipe_capture</from>
 					<to>learning_rate_parameter_end_of_pipe_capture</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="1091.92" y="1703.59" name="stepping on toes parameter end of pipe capture"/>
+				<aux color="blue" background="white" x="1091.92" y="1703.59" name="stepping on toes parameter end of pipe capture"/>
 				<aux background="white" x="956.472" y="1646.21" name="Reducible Installation\nCost component in end of pipe capture"/>
 				<connector uid="417" angle="0">
 					<from>end_of_pipe_capture_Initial_Installation_Costs</from>
@@ -2502,7 +2299,7 @@ ELSE
 				</connector>
 				<text_box font_weight="bold" text_align="center" font_size="28pt" uid="433" x="726.978" y="1982.57" width="580" height="58">BECC</text_box>
 				<aux background="white" x="989.3" y="2508.54" name="Installation\nCosts BECC"/>
-				<aux color="blue" background="#00AA00" x="839.475" y="2508.54" name="Floor Costs BECC"/>
+				<aux color="blue" background="white" x="839.475" y="2508.54" name="Floor Costs BECC"/>
 				<connector uid="436" angle="0">
 					<from>Floor_Costs_BECC</from>
 					<to>Installation_Costs_BECC</to>
@@ -2512,7 +2309,7 @@ ELSE
 					<from>Installation_Costs_BECC</from>
 					<to>cost_of_capturing_CO2_per_unit_with_BECC</to>
 				</connector>
-				<aux color="black" background="#00AA00" font_color="black" label_side="bottom" x="1202.82" y="2268.57" name="depreciation rate of\nBECC capital"/>
+				<aux color="black" background="white" font_color="black" label_side="bottom" x="1202.82" y="2268.57" name="depreciation rate of\nBECC capital"/>
 				<flow x="1117.41" y="2351.07" name="Depreciation of\nBECC">
 					<pts>
 						<pt x="1088.3" y="2351.07"/>
@@ -2528,7 +2325,7 @@ ELSE
 					<from>BECC_Capacity</from>
 					<to>Depreciation_of_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1071.8" y="2400.75" name="Initial BECC"/>
+				<aux background="white" x="1071.8" y="2400.75" name="Initial BECC"/>
 				<flow x="992.05" y="2351.07" name="Installation of\nBECC Capacity">
 					<pts>
 						<pt x="940.8" y="2351.07"/>
@@ -2549,7 +2346,7 @@ ELSE
 					<from>cost_of_capturing_CO2_per_unit_with_BECC</from>
 					<to>Additional_Investment_in_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1351.21" y="2470" name="Energy intensity in BECC"/>
+				<aux background="white" x="1351.21" y="2470" name="Energy intensity in BECC"/>
 				<aux x="1351.21" y="2418.75" name="Energy demand from BECC"/>
 				<connector uid="443" angle="189.979">
 					<from>Energy_intensity_in_BECC</from>
@@ -2559,7 +2356,7 @@ ELSE
 					<from>BECC_CO2_Captured</from>
 					<to>Energy_demand_from_BECC</to>
 				</connector>
-				<aux background="#AA55FF" x="1351.21" y="2306.64" name="Efficiency for BECC"/>
+				<aux background="white" x="1351.21" y="2306.64" name="Efficiency for BECC"/>
 				<connector uid="445" angle="6.99552">
 					<from>Efficiency_for_BECC</from>
 					<to>BECC_CO2_Captured</to>
@@ -2578,14 +2375,14 @@ ELSE
 					<from>&quot;Baseline_Government_funded_R&amp;D_for_BECC&quot;</from>
 					<to>Investment_in_BECC</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="842.212" y="2667.09" name="Learning Rate BECC"/>
-				<aux background="#00AA00" x="839.475" y="2591.71" name="BECC Initial\nInstallation Costs"/>
+				<aux color="blue" background="white" x="842.212" y="2667.09" name="Learning Rate BECC"/>
+				<aux background="white" x="839.475" y="2591.71" name="BECC Initial\nInstallation Costs"/>
 				<aux label_side="top" x="916.322" y="2667.09" name="learning rate parameter\nBECC"/>
 				<connector uid="457" angle="0">
 					<from>Learning_Rate_BECC</from>
 					<to>learning_rate_parameter_BECC</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="1126.42" y="2649.09" name="stepping on toes parameter\nBECC"/>
+				<aux color="blue" background="white" x="1126.42" y="2649.09" name="stepping on toes parameter\nBECC"/>
 				<aux background="white" x="988.972" y="2591.71" name="Reducible Installation\nCost component in\nBECC"/>
 				<connector uid="458" angle="0">
 					<from>BECC_Initial_Installation_Costs</from>
@@ -2680,8 +2477,8 @@ ELSE
 					<from>Maximum_possible_share_of_bioliquids_that_doesnt_go_to_vehicles</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="3644.54" y="1137.26" name="UNIT Million c$ to c$"/>
-				<connector uid="504" angle="254.078">
+				<aux font_style="italic" font_weight="bold" x="3100.79" y="1067.26" name="UNIT Million c$ to c$"/>
+				<connector uid="504" angle="255.518">
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
 				</connector>
@@ -2691,8 +2488,8 @@ ELSE
 					</from>
 					<to>Total_Capture_Capacity</to>
 				</connector>
-				<stacked_container uid="511" x="4717.5" y="923.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured from energy emissions" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="511" x="3287.5" y="1663.9">
+					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured from energy emissions" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Realized_CO2_from_Energy[*]"/>
 						</plot>
@@ -2701,7 +2498,7 @@ ELSE
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="512" x="4717.5" y="1184.36">
+				<stacked_container uid="512" x="3287.5" y="1924.36">
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 emissions by category" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Emissions.CO2_emissions_from_biofuels[*]"/>
@@ -2711,8 +2508,8 @@ ELSE
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="513" x="5076.25" y="1184.36">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured by category" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="513" x="3646.25" y="1924.36">
+					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured by category" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" right_axis="true" show_y_axis="true">
 							<entity name="direct_air_capture_CO2_Captured[*]"/>
 						</plot>
@@ -2724,11 +2521,10 @@ ELSE
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="514" x="5076.25" y="923.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Stored CO2" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="514" x="3646.25" y="1663.9">
+					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Stored CO2" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="stored_CO2[MAX]"/>
-							<isee:data name="50% BECCS"/>
 						</plot>
 					</graph>
 				</stacked_container>
@@ -2780,9 +2576,9 @@ ELSE
 					<from>Installation_Costs_End_of_Pipe_Carbon_Capture_1</from>
 					<to>cost_of_storing_CO2_per_unit</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="2061.31" y="1716.92" name="Learning Rate carbon storage"/>
-				<aux background="#00AA00" label_side="left" x="2118.22" y="1641.54" name="Initial\nInstallation Costs carbon storage"/>
-				<aux color="blue" background="#00AA00" label_side="left" x="2127.88" y="1558.37" name="Floor Costs carbon storage"/>
+				<aux color="blue" background="white" x="2061.31" y="1716.92" name="Learning Rate carbon storage"/>
+				<aux background="white" label_side="left" x="2118.22" y="1641.54" name="Initial\nInstallation Costs carbon storage"/>
+				<aux color="blue" background="white" label_side="left" x="2127.88" y="1558.37" name="Floor Costs carbon storage"/>
 				<connector uid="538" angle="0">
 					<from>Floor_Costs_carbon_storage</from>
 					<to>Installation_Costs_End_of_Pipe_Carbon_Capture_1</to>
@@ -2795,12 +2591,12 @@ ELSE
 					<from>Learning_Rate_carbon_storage</from>
 					<to>learning_rate_parameter_end_of_pipe_capture_1</to>
 				</connector>
-				<aux color="blue" background="#00AA00" x="2376.92" y="1705.22" name="stepping on toes parameter\nin storage"/>
+				<aux color="blue" background="white" x="2376.92" y="1705.22" name="stepping on toes parameter\nin storage"/>
 				<connector uid="541" angle="91.4684">
 					<from>stepping_on_toes_parameter_in_storage</from>
 					<to>Stepping_on_Toes_Punishment_carbon_storage</to>
 				</connector>
-				<aux background="#00AA00" x="2512.32" y="1746.63" name="Initial carbon storage\ncapacity"/>
+				<aux background="white" x="2512.32" y="1746.63" name="Initial carbon storage\ncapacity"/>
 				<connector uid="542" angle="181.241">
 					<from>Initial_carbon_storage_capacity</from>
 					<to>Effect_of_Learning_On_Cost_end_of_pipe_capture_1</to>
@@ -2872,7 +2668,7 @@ ELSE
 					</from>
 					<to>&quot;Baseline_Government_R&amp;D_funding_into_carbon_capture&quot;</to>
 				</connector>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="bottom" x="3677.5" y="495.042" name="share of ccs costs\ncovered by the goverment"/>
+				<aux background="white" font_style="italic" font_weight="bold" label_side="bottom" x="3677.5" y="495.042" name="share of ccs costs\ncovered by the goverment"/>
 				<aux x="3677.5" y="567.375" name="Additional Government R&amp;D funding\ninto carbon capture"/>
 				<connector uid="584" angle="8.21121">
 					<from>
@@ -2953,7 +2749,7 @@ ELSE
 					</from>
 					<to>Total_investment_in_CCS</to>
 				</connector>
-				<aux background="red" label_side="bottom" x="2174.88" y="1374.68" name="UNIT to per year"/>
+				<aux background="white" label_side="bottom" x="2174.88" y="1374.68" name="UNIT to per year"/>
 				<connector uid="454" angle="26.3701">
 					<from>
 						<alias uid="448"/>
@@ -3101,8 +2897,8 @@ ELSE
 					</from>
 					<to>Share_of_investment_into_carbon_storage</to>
 				</connector>
-				<stacked_container uid="692" x="4542.5" y="1322.47" width="350" height="255">
-					<graph width="350" height="255" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="692" x="3112.5" y="2062.47" width="350" height="255">
+					<graph width="350" height="255" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture[1]"/>
 						</plot>
@@ -3132,82 +2928,21 @@ ELSE
 					</from>
 					<to>Share_of_investment_into_carbon_storage</to>
 				</connector>
-				<aux background="white" label_side="top" x="3756.98" y="1137.26" name="Average cost of CCS\nper unit in Mc$"/>
-				<connector uid="698" angle="302.531">
-					<from>
-						<alias uid="290"/>
-					</from>
-					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
-				</connector>
-				<connector uid="699" angle="155.938">
-					<from>
-						<alias uid="347"/>
-					</from>
-					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
-				</connector>
-				<connector uid="700" angle="337.74">
+				<aux background="white" label_side="top" x="3213.23" y="1067.26" name="Average cost of CCS\nper unit in Mc$"/>
+				<connector uid="700" angle="352.718">
 					<from>
 						<alias uid="275"/>
 					</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
 				</connector>
-				<connector uid="701" angle="243.837">
+				<connector uid="701" angle="256.042">
 					<from>Average_cost_of_capturing_CO2_per_unit</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
 				</connector>
-				<connector uid="702" angle="242.721">
+				<connector uid="702" angle="246.388">
 					<from>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</from>
 					<to>&quot;Average_cost_of_CCS_per_unit_in_c$&quot;</to>
 				</connector>
-				<connector uid="703" angle="27.7561">
-					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
-					<to>&quot;Average_cost_of_CCS_per_unit_in_Mc$&quot;</to>
-				</connector>
-				<stacked_container uid="705" x="5392.67" y="1330.81" width="560" height="617.667">
-					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
-							<isee:data name="50% BECCS"/>
-						</plot>
-						<plot color="#552B00" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_oil"[1]'/>
-						</plot>
-						<plot color="#9C4E00" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_gas"[1]'/>
-						</plot>
-						<plot color="#00AAFF" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
-							<entity name="energy_supply.Hydropower_Output_Share[1]"/>
-						</plot>
-						<plot color="#FF55FF" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
-							<entity name="energy_supply.Nuclear_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#00D900" isee:keep_zero_visible="true" pen_width="1" index="5" show_y_axis="true">
-							<entity name="energy_supply.Bio_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#FEEA6C" isee:keep_zero_visible="true" pen_width="1" index="6" show_y_axis="true">
-							<entity name="energy_supply.Solar_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#AAAAFF" isee:keep_zero_visible="true" pen_width="1" index="7" show_y_axis="true">
-							<entity name="energy_supply.Wind_Energy_Output_Share[1]"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="706" x="5440" y="923.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="EMB" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[*]"/>
-							<isee:data name="EMB"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="707" x="5440" y="1184.36">
-					<graph grid_color="#26A269" width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="EMB" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Food_Demand.crops_for_energy[*]"/>
-							<isee:data name="EMB"/>
-						</plot>
-					</graph>
-				</stacked_container>
 				<aux font_style="italic" font_weight="bold" x="79.6447" y="1238.42" name="start year"/>
 				<aux font_style="italic" font_weight="bold" x="199.5" y="1543.66" name="Realized CO2 emissions from coal"/>
 				<connector uid="751" angle="90">
@@ -3245,49 +2980,13 @@ ELSE
 					<from>Realized_CO2_emissions_from_biofuel</from>
 					<to>storing_carbon_from_biofuel_emissions</to>
 				</connector>
-				<stacked_container uid="755" x="4828.55" y="1330.8" width="560" height="617.667">
-					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
-							<isee:data name="EMB"/>
-						</plot>
-						<plot color="#552B00" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_oil"[1]'/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#9C4E00" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_gas"[1]'/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#00AAFF" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
-							<entity name="energy_supply.Hydropower_Output_Share[1]"/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#FF55FF" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
-							<entity name="energy_supply.Nuclear_Energy_Output_Share[1]"/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#00D900" isee:keep_zero_visible="true" pen_width="1" index="5" show_y_axis="true">
-							<entity name="energy_supply.Bio_Energy_Output_Share[1]"/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#FEEA6C" isee:keep_zero_visible="true" pen_width="1" index="6" show_y_axis="true">
-							<entity name="energy_supply.Solar_Energy_Output_Share[1]"/>
-							<isee:data name="Baseline"/>
-						</plot>
-						<plot color="#AAAAFF" isee:keep_zero_visible="true" pen_width="1" index="7" show_y_axis="true">
-							<entity name="energy_supply.Wind_Energy_Output_Share[1]"/>
-							<isee:data name="Baseline"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<aux x="4663.67" y="466.973" name="Emission from Energy"/>
-				<aux background="#F9F06B" x="4825.33" y="557.667" name="Realized CO2 from Energy"/>
+				<aux x="3733.67" y="1005.72" name="Emission from Energy"/>
+				<aux background="white" x="3895.33" y="1096.42" name="Realized CO2 from Energy"/>
 				<connector uid="486" angle="330.707">
 					<from>Emission_from_Energy</from>
 					<to>Realized_CO2_from_Energy</to>
 				</connector>
-				<aux x="4979" y="479.333" name="Emissions captured from Energy"/>
+				<aux x="4049" y="1018.08" name="Emissions captured from Energy"/>
 				<connector uid="487" angle="207.011">
 					<from>Emissions_captured_from_Energy</from>
 					<to>Realized_CO2_from_Energy</to>
@@ -3340,7 +3039,7 @@ ELSE
 					</from>
 					<to>Additional_Investment_in_direct_air_carbon_capture</to>
 				</connector>
-				<aux background="#FFAA00" font_style="italic" font_weight="bold" label_side="left" x="731.712" y="999.667" name="Maximum bugdet for CCS investments"/>
+				<aux background="white" font_style="italic" font_weight="bold" label_side="left" x="731.712" y="999.667" name="Maximum bugdet for CCS investments"/>
 				<aux x="738.333" y="1052.08" name="Available total budget for additional investment in End of Pipe\nCarbon Capture"/>
 				<connector uid="762" angle="323.475">
 					<from>Maximum_bugdet_for_CCS_investments</from>
@@ -3448,87 +3147,17 @@ ELSE
 					<from>&quot;UNIT_Million_c$_to_c$_1&quot;</from>
 					<to>Available_total_budget_for_additional_investment_in_End_of_Pipe_Carbon_Capture</to>
 				</connector>
-				<stacked_container uid="792" x="5799" y="1184.36">
-					<graph grid_color="#26A269" width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="792" x="4009" y="1924.36">
+					<graph grid_color="#26A269" width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Food_Demand.crops_for_energy[*]"/>
-							<isee:data name="50% BECCS"/>
 						</plot>
 					</graph>
 				</stacked_container>
-				<stacked_container uid="793" x="5799" y="923.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
+				<stacked_container uid="793" x="4009" y="1663.9">
+					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[*]"/>
-							<isee:data name="50% BECCS"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="794" x="5958.11" y="1330.81" width="560" height="617.667">
-					<graph width="560" height="617.667" type="area" isee:sum_stacked_legend="false" isee:stacked_show_hover_values="true" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Energy mix share" isee:fill_intensity="0.1" isee:stacked_area_max="1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="black" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_coal"[1]'/>
-							<isee:data name="50BECCS+75taxes"/>
-						</plot>
-						<plot color="#552B00" isee:keep_zero_visible="true" pen_width="1" index="1" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_oil"[1]'/>
-						</plot>
-						<plot color="#9C4E00" isee:keep_zero_visible="true" pen_width="1" index="2" show_y_axis="true">
-							<entity name='energy_supply."Fossil_Energy_Output_Share,_gas"[1]'/>
-						</plot>
-						<plot color="#00AAFF" isee:keep_zero_visible="true" pen_width="1" index="3" show_y_axis="true">
-							<entity name="energy_supply.Hydropower_Output_Share[1]"/>
-						</plot>
-						<plot color="#FF55FF" isee:keep_zero_visible="true" pen_width="1" index="4" show_y_axis="true">
-							<entity name="energy_supply.Nuclear_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#00D900" isee:keep_zero_visible="true" pen_width="1" index="5" show_y_axis="true">
-							<entity name="energy_supply.Bio_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#FEEA6C" isee:keep_zero_visible="true" pen_width="1" index="6" show_y_axis="true">
-							<entity name="energy_supply.Solar_Energy_Output_Share[1]"/>
-						</plot>
-						<plot color="#AAAAFF" isee:keep_zero_visible="true" pen_width="1" index="7" show_y_axis="true">
-							<entity name="energy_supply.Wind_Energy_Output_Share[1]"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="795" x="6157.67" y="923.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[*]"/>
-							<isee:data name="50BECCS+75taxes"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="796" x="6157.67" y="1184.36">
-					<graph grid_color="#26A269" width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Food_Demand.crops_for_energy[*]"/>
-							<isee:data name="50BECCS+75taxes"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="797" x="6726.67" y="798.247" width="447.5" height="505">
-					<graph width="447.5" height="505" comparative="true" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="bio_fuel_energy.bio_fuel_production_Capacity[1]"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="800" x="6520.67" y="927.9">
-					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Energy_Balance_Model.Surface_Temperature_Anomaly[*]"/>
-							<isee:data name="50BECCS+240taxes"/>
-						</plot>
-					</graph>
-				</stacked_container>
-				<stacked_container uid="801" x="6340.17" y="1062.36" width="361" height="250">
-					<graph grid_color="#26A269" width="361" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" isee:fill_intensity="0.1" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
-						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
-							<entity name="Food_Demand.crops_for_energy[*]"/>
-							<isee:data name="50BECCS+240taxes"/>
 						</plot>
 					</graph>
 				</stacked_container>
@@ -3538,59 +3167,35 @@ ELSE
 				<alias background="#FFAAFF" font_style="italic" uid="247" x="3076.63" y="382.473" width="45" height="35">
 					<of>end_of_pipe_Carbon_Capture_Capacity</of>
 				</alias>
-				<alias background="#AA00FF" font_style="italic" uid="256" x="1184.86" y="720.243" width="18" height="18">
+				<alias background="white" font_style="italic" uid="256" x="1184.86" y="720.243" width="18" height="18">
 					<of>Initial_direct_air_carbon_capture_Capacity</of>
 				</alias>
-				<alias background="#AA55FF" font_style="italic" uid="268" x="1222.16" y="1742.3" width="18" height="18">
+				<alias background="white" font_style="italic" uid="268" x="1222.16" y="1742.3" width="18" height="18">
 					<of>Initial_end_of_pipe_Carbon_Capture_Capacity</of>
 				</alias>
-				<alias color="blue" background="white" font_style="italic" uid="275" x="3606.46" y="975.113" width="18" height="18">
+				<alias color="blue" background="white" font_style="italic" uid="275" x="3086.46" y="983.863" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>cost_of_storing_CO2_per_unit</of>
 				</alias>
-				<alias background="white" font_style="italic" uid="276" x="4108.55" y="858.343" width="18" height="18">
+				<alias background="white" font_style="italic" uid="276" x="3453.55" y="839.593" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_end_of_pipe_carbon_capture</of>
 				</alias>
-				<alias background="white" font_style="italic" uid="277" x="3759.46" y="800.033" width="18" height="18">
-					<of>cost_of_capturing_CO2_per_unit_with_direct_air_carbon_capture</of>
-				</alias>
-				<alias background="white" font_style="italic" uid="279" x="4223.63" y="818.033" width="18" height="18">
+				<alias background="white" font_style="italic" uid="279" x="3568.63" y="799.283" width="18" height="18">
 					<of>end_of_pipe_CO2_Captured</of>
 				</alias>
-				<alias background="white" font_style="italic" uid="280" x="3848.2" y="846.113" width="18" height="18">
-					<of>direct_air_capture_CO2_Captured</of>
-				</alias>
-				<alias font_style="italic" uid="290" x="3723.01" y="939.393" width="18" height="18">
+				<alias font_style="italic" uid="290" x="3193.2" y="901.893" width="18" height="18">
 					<of>Captured_CO2_to_store</of>
 				</alias>
-				<alias font_style="italic" uid="338" x="4634.33" y="2701.66" width="18" height="18">
-					<of>storing_carbon_from_biofuel_emissions</of>
-				</alias>
-				<alias font_style="italic" uid="336" x="4626" y="2641.66" width="18" height="18">
-					<of>storing_carbon_from_gas_emissions</of>
-				</alias>
-				<alias font_style="italic" uid="334" x="4657.66" y="2608.33" width="18" height="18">
-					<of>storing_carbon_from_oil_emissions</of>
-				</alias>
-				<alias font_style="italic" uid="332" x="4726" y="2553.33" width="18" height="18">
-					<of>storing_carbon_from_coal_emissions</of>
-				</alias>
-				<alias font_style="italic" font_weight="bold" uid="340" x="4988.17" y="2837.33" width="18" height="18">
-					<of>GtC_to_MtCO2</of>
-				</alias>
-				<alias font_style="italic" uid="347" x="3900.99" y="1155.69" width="18" height="18">
-					<of>cost_of_storing_CO2_per_unit_1</of>
-				</alias>
-				<alias background="#AA55FF" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
+				<alias background="white" font_style="italic" uid="471" x="1254.66" y="2687.8" width="18" height="18">
 					<of>Initial_BECC</of>
 				</alias>
 				<alias background="#FFAAFF" font_style="italic" uid="506" x="3184.38" y="395.375" width="45" height="35">
 					<of>BECC_Capacity</of>
 				</alias>
-				<alias background="white" font_style="italic" uid="549" x="3973.99" y="846.833" width="18" height="18">
+				<alias background="white" font_style="italic" uid="549" x="3318.99" y="828.083" width="18" height="18">
 					<of>cost_of_capturing_CO2_per_unit_with_BECC</of>
 				</alias>
-				<alias background="white" font_style="italic" uid="551" x="4057.33" y="800.833" width="18" height="18">
+				<alias background="white" font_style="italic" uid="551" x="3402.33" y="782.083" width="18" height="18">
 					<of>BECC_CO2_Captured</of>
 				</alias>
 				<alias font_style="italic" label_side="bottom" uid="556" x="3484.76" y="360.25" width="18" height="18">
@@ -3614,32 +3219,32 @@ ELSE
 				<alias background="white" font_style="italic" uid="673" x="4214.06" y="519.875" width="18" height="18">
 					<of>total_cost_of_storing_CO2</of>
 				</alias>
-				<alias background="red" font_style="italic" uid="448" x="1167.61" y="2436.39" width="18" height="18">
+				<alias background="white" font_style="italic" uid="448" x="1167.61" y="2436.39" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
-				<alias background="red" font_style="italic" uid="368" x="1135.11" y="1490.89" width="18" height="18">
+				<alias background="white" font_style="italic" uid="368" x="1135.11" y="1490.89" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
-				<alias background="red" font_style="italic" uid="266" x="4325.8" y="576.375" width="18" height="18">
+				<alias background="white" font_style="italic" uid="266" x="4325.8" y="576.375" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
-				<alias background="red" font_style="italic" uid="202" x="1107.36" y="484.42" width="18" height="18">
+				<alias background="white" font_style="italic" uid="202" x="1107.36" y="484.42" width="18" height="18">
 					<of>UNIT_to_per_year</of>
 				</alias>
 				<alias font_style="italic" font_weight="bold" uid="710" x="693.989" y="2066.21" width="18" height="18">
 					<of>start_year</of>
 				</alias>
-				<alias color="blue" background="white" font_style="italic" uid="478" x="4583.83" y="376.973" width="18" height="18">
+				<alias color="blue" background="white" font_style="italic" uid="478" x="3653.83" y="915.723" width="18" height="18">
 					<shape type="circle" radius="18"/>
 					<of>Emissions_from_fossil_fuels</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="485" x="5033.83" y="381.75" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="485" x="4103.83" y="920.5" width="18" height="18">
 					<of>BECC_CO2_Captured</of>
 				</alias>
-				<alias background="#FFAAFF" font_style="italic" uid="482" x="4883.83" y="381.75" width="18" height="18">
+				<alias background="#FFAAFF" font_style="italic" uid="482" x="3953.83" y="920.5" width="18" height="18">
 					<of>end_of_pipe_CO2_Captured</of>
 				</alias>
-				<alias font_style="italic" font_weight="bold" uid="481" x="4727.17" y="376.556" width="18.8333" height="18.8333">
+				<alias font_style="italic" font_weight="bold" uid="481" x="3797.17" y="915.306" width="18.8333" height="18.8333">
 					<of>CO2_emissions_from_biofuels</of>
 				</alias>
 				<alias font_style="italic" font_weight="bold" uid="761" x="712.667" y="204.333" width="18" height="18">

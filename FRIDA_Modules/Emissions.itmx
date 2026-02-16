@@ -280,11 +280,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Realized_CO2_emissions_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use +
-(IF SWITCH_For_new_CCS_structure = 1 THEN
-Leakage
-ELSE
-CO2_Emissions_from_Leakage_1)</eqn>
+				<eqn>Realized_CO2_emissions_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use +Leakage</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="CH4 Baseline Emissions" access="output">
@@ -1111,42 +1107,6 @@ GtC_to_MtCO2</eqn>
 				<eqn>GtC_to_MtCO2 * bio_fuel_carbon_content</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="share of coal emissions stored" access="output" throughput="true" isee:autocreated="true">
-				<eqn>0</eqn>
-				<gf>
-					<xscale min="0" max="2"/>
-					<yscale min="0" max="2"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
-			<aux name="share of gas\nemissions stored" access="output" throughput="true" isee:autocreated="true">
-				<eqn>0</eqn>
-				<gf>
-					<xscale min="0" max="2"/>
-					<yscale min="0" max="2"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
-			<aux name="share of oil\nemissions stored" access="output" throughput="true" isee:autocreated="true">
-				<eqn>0</eqn>
-				<gf>
-					<xscale min="0" max="2"/>
-					<yscale min="0" max="2"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
-			<aux name="share of biofuel\nemissions stored" access="output" throughput="true" isee:autocreated="true">
-				<eqn>0</eqn>
-				<gf>
-					<xscale min="0" max="2"/>
-					<yscale min="0" max="2"/>
-					<ypts>0,0,0,0,0,0,0,0,0,0,0</ypts>
-				</gf>
-				<units>dmnl</units>
-			</aux>
 			<aux name="Leakage" access="input">
 				<dimensions>
 					<dim name="Run"/>
@@ -1154,44 +1114,12 @@ GtC_to_MtCO2</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="start year" access="input">
-				<eqn>2024</eqn>
-				<units>Year</units>
-			</aux>
 			<aux name="real GDP per person" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>bc$/Mp/year</units>
-			</aux>
-			<aux name="Captured CO2\nemissions from Energy" access="output" isee:autocreated="true">
-				<doc>Repeated variable that is already in CCS.
-Basically this is End of Pipe emissions + BECCS</doc>
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>((IF TIME &gt; start_year THEN
-share_of_coal_emissions_stored
-ELSE
-0) * CO2_emissions_from_coal
-+
-(IF TIME &gt; start_year THEN
-share_of_oil_emissions_stored
-ELSE
-0) * CO2_emissions_from_oil
-+
-(IF TIME &gt; start_year THEN
-share_of_gas_emissions_stored
-ELSE
-0) * CO2_emissions_from_gas
-+
-(IF TIME &gt; start_year THEN
-share_of_biofuel_emissions_stored
-ELSE
-0) * CO2_emissions_from_biofuels
-)</eqn>
-				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="CO2 emissions from Energy">
 				<doc>${Calibrated Output}
@@ -1206,10 +1134,7 @@ ELSE
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>IF SWITCH_For_new_CCS_structure = 0 THEN
-CO2_emissions_from_Energy-Captured_CO2_emissions_from_Energy
-ELSE
-Realized_CO2_emissions_from_coal
+				<eqn>Realized_CO2_emissions_from_coal
 +
 Realized_CO2_emissions_from_oil
 +
@@ -1325,17 +1250,6 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="SWITCH For new CCS structure" access="input">
-				<eqn>1</eqn>
-				<units>dmnl</units>
-			</aux>
-			<aux name="CO2 Emissions from Leakage 1" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>MtCO2/Year</units>
-			</aux>
 			<aux name="BECCS CO2 Captured" access="input">
 				<dimensions>
 					<dim name="Run"/>
@@ -1420,7 +1334,7 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_y="209" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_y="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2051,28 +1965,11 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>GtC_to_MtCO2</from>
 					<to>CO2_emissions_from_biofuels</to>
 				</connector>
-				<aux background="red" font_style="italic" font_weight="bold" label_side="bottom" x="1306.49" y="795.929" name="share of coal emissions stored"/>
-				<aux background="red" font_style="italic" font_weight="bold" x="1293.71" y="712.448" name="share of gas\nemissions stored"/>
-				<aux background="red" font_style="italic" font_weight="bold" x="1168.32" y="705.679" name="share of oil\nemissions stored"/>
-				<aux background="red" font_style="italic" font_weight="bold" label_side="bottom" x="1024.71" y="694.448" name="share of biofuel\nemissions stored"/>
-				<connector uid="156" angle="239.175">
-					<from>share_of_oil_emissions_stored</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="158" angle="200.744">
-					<from>share_of_gas_emissions_stored</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="159" angle="160.437">
-					<from>share_of_coal_emissions_stored</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" x="143.31" y="215.292" name="Leakage"/>
 				<connector uid="160" angle="349.952">
 					<from>Leakage</from>
 					<to>Total_CO2_Emissions</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="1067.74" y="616.179" name="start year"/>
 				<aux font_style="italic" font_weight="bold" x="1481" y="1152" name="real GDP per person"/>
 				<connector uid="162" angle="303.69">
 					<from>real_GDP_per_person</from>
@@ -2086,37 +1983,8 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>bio_fuel_carbon_content</from>
 					<to>CO2_emissions_from_biofuels</to>
 				</connector>
-				<aux background="red" x="1062.74" y="799.929" name="Captured CO2\nemissions from Energy"/>
-				<connector uid="174" angle="268.441">
-					<from>start_year</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="176" angle="332.719">
-					<from>CO2_emissions_from_gas</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="177" angle="328.908">
-					<from>CO2_emissions_from_oil</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
 				<aux x="632" y="777.929" name="CO2 emissions from Energy"/>
-				<connector uid="179" angle="326.497">
-					<from>CO2_emissions_from_biofuels</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="180" angle="289.827">
-					<from>share_of_biofuel_emissions_stored</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
 				<aux background="#FFAA00" x="783.594" y="878.967" name="Realized CO2\nemissions from Energy"/>
-				<connector uid="183" angle="339.709">
-					<from>CO2_emissions_from_Energy</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="184" angle="208.683">
-					<from>Captured_CO2_emissions_from_Energy</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
-				</connector>
 				<aux label_side="bottom" x="645.25" y="199.167" name="land carbon sink"/>
 				<aux label_side="bottom" x="831.714" y="85.167" name="Terrestrial carbon balance"/>
 				<connector uid="189" angle="109.902">
@@ -2250,18 +2118,6 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<to>CO2_Emissions_from_Food_and_Land_Use</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="374.39" y="770.929" name="Captured CO2 to store"/>
-				<aux font_style="italic" font_weight="bold" x="989.99" y="870.75" name="SWITCH For new CCS structure"/>
-				<aux font_style="italic" font_weight="bold" x="230.5" y="82.5" name="CO2 Emissions from Leakage 1"/>
-				<connector uid="233" angle="296.588">
-					<from>CO2_Emissions_from_Leakage_1</from>
-					<to>Total_CO2_Emissions</to>
-				</connector>
-				<connector uid="234" angle="244.682">
-					<from>
-						<alias uid="235"/>
-					</from>
-					<to>Total_CO2_Emissions</to>
-				</connector>
 				<aux font_style="italic" font_weight="bold" x="852.321" y="791.967" name="BECCS CO2 Captured"/>
 				<connector uid="239" angle="180.244">
 					<from>
@@ -2314,10 +2170,6 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>Captured_CO2_to_store</from>
 					<to>Realized_CO2_emissions_from_gas</to>
 				</connector>
-				<connector uid="175" angle="335.697">
-					<from>CO2_emissions_from_coal</from>
-					<to>Captured_CO2_emissions_from_Energy</to>
-				</connector>
 				<aux label_side="bottom" x="756.42" y="817.929" name="Realized CO2\nemissions from biofuel"/>
 				<connector uid="251" angle="316.241">
 					<from>Realized_CO2_emissions_from_biofuel</from>
@@ -2330,10 +2182,6 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<connector uid="253" angle="195.148">
 					<from>BECCS_CO2_Captured</from>
 					<to>Realized_CO2_emissions_from_biofuel</to>
-				</connector>
-				<connector uid="254" angle="175.374">
-					<from>SWITCH_For_new_CCS_structure</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
 				</connector>
 				<connector uid="255" angle="348.888">
 					<from>Realized_CO2_emissions_from_gas</from>
@@ -2403,9 +2251,6 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				</alias>
 				<alias color="black" font_style="italic" font_color="black" uid="220" x="63.8571" y="448.143" width="18" height="18">
 					<of>GtC_to_MtCO2</of>
-				</alias>
-				<alias font_style="italic" font_weight="bold" uid="235" x="382" y="69" width="18" height="18">
-					<of>SWITCH_For_new_CCS_structure</of>
 				</alias>
 			</view>
 		</views>
