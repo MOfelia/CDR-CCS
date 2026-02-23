@@ -3,7 +3,7 @@
 	<header>
 		<smile version="1.0" namespace="std, isee" uses_arrays="2" uses_conveyor="" uses_submodels=""/>
 		<name>Economy</name>
-		<uuid>c3cae38c-74c3-4261-9835-6939ec01bbf1</uuid>
+		<uuid>656dacef-005e-41a3-aedc-d19f6fd6e9f6</uuid>
 		<vendor>isee systems, inc.</vendor>
 		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
@@ -27,7 +27,7 @@
 		</dim>
 		<dim name="Run" size="1"/>
 	</dimensions>
-	<isee:prefs saved_runs="5" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_secure_mode="true" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rifp="true">
+	<isee:prefs saved_runs="10" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_secure_mode="true" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rifp="true">
 		<isee:tag_styles>
 			<isee:tag_style tag="Assumption"/>
 			<isee:tag_style tag="Calibrated Output"/>
@@ -278,8 +278,10 @@
 				<connect2 to="Finance.real_GDP_growth_rate_2" from="GDP.real_GDP_growth_rate"/>
 				<connect to='Demographics."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Demographics."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
-				<connect to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
-				<connect2 to='energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to="Energy_demand.Converter_1" from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to="Energy_demand.Converter_1" from='GDP."Real_GDP_in_2021c$"'/>
+				<connect to='Energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
+				<connect2 to='Energy_investments."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect2 to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to='Sea_level_rise_adaptation."Real_GDP_in_2021c$"' from='GDP."Real_GDP_in_2021c$"'/>
@@ -309,28 +311,28 @@
 				<format scale_by="auto"/>
 				<connect to="Inflation.bailouts" from="Government.bailouts"/>
 				<connect2 to="Inflation.bailouts" from="Government.bailouts"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_extraction" from="Government.expenditure_on_subsidies_for_investments_in_coal_extraction"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_coal_extraction" from="Government.expenditure_on_subsidies_for_investments_in_coal_extraction"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_gas_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_gas_energy_conversion"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_gas_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_gas_energy_conversion"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_gas_extraction" from="Government.expenditure_on_subsidies_for_investments_in_gas_extraction"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_gas_extraction" from="Government.expenditure_on_subsidies_for_investments_in_gas_extraction"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_oil_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_oil_energy_conversion"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_oil_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_oil_energy_conversion"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_oil_extraction" from="Government.expenditure_on_subsidies_for_investments_in_oil_extraction"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_oil_extraction" from="Government.expenditure_on_subsidies_for_investments_in_oil_extraction"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_Solar_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_solar_energy_capacity"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_Solar_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_solar_energy_capacity"/>
-				<connect to="energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
-				<connect2 to="energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_coal_energy_conversion"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_extraction" from="Government.expenditure_on_subsidies_for_investments_in_coal_extraction"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_coal_extraction" from="Government.expenditure_on_subsidies_for_investments_in_coal_extraction"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_gas_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_gas_energy_conversion"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_gas_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_gas_energy_conversion"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_gas_extraction" from="Government.expenditure_on_subsidies_for_investments_in_gas_extraction"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_gas_extraction" from="Government.expenditure_on_subsidies_for_investments_in_gas_extraction"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_oil_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_oil_energy_conversion"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_oil_energy_conversion" from="Government.expenditure_on_subsidies_for_investments_in_oil_energy_conversion"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_oil_extraction" from="Government.expenditure_on_subsidies_for_investments_in_oil_extraction"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_oil_extraction" from="Government.expenditure_on_subsidies_for_investments_in_oil_extraction"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_Solar_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_solar_energy_capacity"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_Solar_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_solar_energy_capacity"/>
+				<connect to="Energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
+				<connect2 to="Energy_investments.expenditure_on_subsidies_for_investments_in_wind_energy_capacity" from="Government.expenditure_on_subsidies_for_investments_in_wind_energy_capacity"/>
 				<connect to="Circular_Flow.government_consumption" from="Government.government_consumption"/>
 				<connect2 to="Circular_Flow.government_consumption" from="Government.government_consumption"/>
 				<connect to="GDP.Government_Spending_1" from="Government.government_consumption"/>
@@ -363,72 +365,58 @@
 				<connect2 to="Circular_Flow.sum_of_energy_taxes" from="Government.sum_of_energy_taxes_in_nominal_terms"/>
 				<connect to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
 				<connect2 to="Circular_Flow.sum_of_subsidies_spent" from="Government.sum_of_subsidies_spent"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_gas_energy_conversion" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_gas_energy_conversion" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_gas_energy_conversion_1" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_gas_energy_conversion_1" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_gas_extraction" from="Government.tax_revenue_on_investments_in_gas_extraction"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_gas_extraction" from="Government.tax_revenue_on_investments_in_gas_extraction"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_hydropower_energy_capacity" from="Government.tax_revenue_on_investments_in_hydropower_energy_capacity"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_hydropower_energy_capacity" from="Government.tax_revenue_on_investments_in_hydropower_energy_capacity"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_nuclear_energy_capacity" from="Government.tax_revenue_on_investments_in_nuclear_energy_capacity"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_nuclear_energy_capacity" from="Government.tax_revenue_on_investments_in_nuclear_energy_capacity"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_oil_energy_conversion" from="Government.tax_revenue_on_investments_in_oil_energy_conversion"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_oil_energy_conversion" from="Government.tax_revenue_on_investments_in_oil_energy_conversion"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_oil_extraction" from="Government.tax_revenue_on_investments_in_oil_extraction"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_oil_extraction" from="Government.tax_revenue_on_investments_in_oil_extraction"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
-				<connect to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
-				<connect2 to="energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_bio_fuel_energy_capacity" from="Government.tax_revenue_on_investments_in_bio_fuel_energy_capacity"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_coal_extraction" from="Government.tax_revenue_on_investments_in_coal_extraction"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_gas_energy_conversion" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_gas_energy_conversion" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_gas_energy_conversion_1" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_gas_energy_conversion_1" from="Government.tax_revenue_on_investments_in_gas_energy_conversion"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_gas_extraction" from="Government.tax_revenue_on_investments_in_gas_extraction"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_gas_extraction" from="Government.tax_revenue_on_investments_in_gas_extraction"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_hydropower_energy_capacity" from="Government.tax_revenue_on_investments_in_hydropower_energy_capacity"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_hydropower_energy_capacity" from="Government.tax_revenue_on_investments_in_hydropower_energy_capacity"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_nuclear_energy_capacity" from="Government.tax_revenue_on_investments_in_nuclear_energy_capacity"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_nuclear_energy_capacity" from="Government.tax_revenue_on_investments_in_nuclear_energy_capacity"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_oil_energy_conversion" from="Government.tax_revenue_on_investments_in_oil_energy_conversion"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_oil_energy_conversion" from="Government.tax_revenue_on_investments_in_oil_energy_conversion"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_oil_extraction" from="Government.tax_revenue_on_investments_in_oil_extraction"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_oil_extraction" from="Government.tax_revenue_on_investments_in_oil_extraction"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_Solar_energy_capacity" from="Government.tax_revenue_on_investments_in_solar_energy_capacity"/>
+				<connect to="Energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
+				<connect2 to="Energy_investments.tax_revenue_on_investments_in_wind_energy_capacity" from="Government.tax_revenue_on_investments_in_wind_energy_capacity"/>
 				<connect to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
 				<connect2 to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
-				<connect to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='bio_fuel_energy."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='CCS."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='CCS."UNIT_Million_c$_to_c$_1"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='CCS."UNIT_Million_c$_to_c$_1"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='energy_investments."UNIT_Million_c$_to_billion_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='fossil_energy_coal."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='fossil_energy_gas."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
-				<connect2 to='fossil_energy_oil."UNIT_Million_c$_to_c$"' from='Government."UNIT_Million_c$_to_c$"'/>
 				<connect to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
 				<connect2 to="Government.additional_transfers_policy" from="Government_Regulations.additional_transfers_policy"/>
 				<connect to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
 				<connect2 to="Government.child_age_dependents" from="Demographics.child_age_dependents"/>
-				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect2 to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
-				<connect2 to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Coal_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
+				<connect2 to="Government.Coal_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Energy_Capital"/>
+				<connect to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect2 to="Government.Coal_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Coal_Investments_Allocated_to_Capacity_Construction_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect2 to="Government.computed_government_debt_to_GDP_ratio_target" from="Government_Regulations.computed_government_debt_to_GDP_ratio_target"/>
 				<connect to="Government.Employed" from="Employment.Employed"/>
 				<connect2 to="Government.Employed" from="Employment.Employed"/>
-				<connect to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
-				<connect2 to="Government.energy_conversion_tax_rate" from="fossil_energy_coal.energy_conversion_effective_tax_rate"/>
-				<connect to="Government.energy_conversion_tax_rate_1" from="fossil_energy_oil.energy_conversion_effective_tax_rate"/>
-				<connect2 to="Government.energy_conversion_tax_rate_1" from="fossil_energy_oil.energy_conversion_effective_tax_rate"/>
-				<connect to="Government.energy_conversion_tax_rate_2" from="fossil_energy_gas.energy_conversion_effective_tax_rate"/>
-				<connect2 to="Government.energy_conversion_tax_rate_2" from="fossil_energy_gas.energy_conversion_effective_tax_rate"/>
-				<connect to="Government.fuel_extraction_tax_rate" from="fossil_energy_coal.fuel_extraction_effective_tax_rate"/>
-				<connect2 to="Government.fuel_extraction_tax_rate" from="fossil_energy_coal.fuel_extraction_effective_tax_rate"/>
-				<connect to="Government.fuel_extraction_tax_rate_1" from="fossil_energy_oil.fuel_extraction_effective_tax_rate"/>
-				<connect2 to="Government.fuel_extraction_tax_rate_1" from="fossil_energy_oil.fuel_extraction_effective_tax_rate"/>
-				<connect to="Government.fuel_extraction_tax_rate_2" from="fossil_energy_gas.fuel_extraction_effective_tax_rate"/>
-				<connect2 to="Government.fuel_extraction_tax_rate_2" from="fossil_energy_gas.fuel_extraction_effective_tax_rate"/>
-				<connect to="Government.Gas_Investments_in_Fossil_Energy_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect2 to="Government.Gas_Investments_in_Fossil_Energy_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
-				<connect2 to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect to="Government.energy_conversion_tax_rate" from="Fossil_energy_coal.energy_conversion_effective_tax_rate"/>
+				<connect2 to="Government.energy_conversion_tax_rate" from="Fossil_energy_coal.energy_conversion_effective_tax_rate"/>
+				<connect to="Government.energy_conversion_tax_rate_1" from="Fossil_energy_oil.energy_conversion_effective_tax_rate"/>
+				<connect2 to="Government.energy_conversion_tax_rate_1" from="Fossil_energy_oil.energy_conversion_effective_tax_rate"/>
+				<connect to="Government.energy_conversion_tax_rate_2" from="Fossil_energy_gas.energy_conversion_effective_tax_rate"/>
+				<connect2 to="Government.energy_conversion_tax_rate_2" from="Fossil_energy_gas.energy_conversion_effective_tax_rate"/>
+				<connect to="Government.fuel_extraction_tax_rate" from="Fossil_energy_coal.fuel_extraction_effective_tax_rate"/>
+				<connect2 to="Government.fuel_extraction_tax_rate" from="Fossil_energy_coal.fuel_extraction_effective_tax_rate"/>
+				<connect to="Government.fuel_extraction_tax_rate_1" from="Fossil_energy_oil.fuel_extraction_effective_tax_rate"/>
+				<connect2 to="Government.fuel_extraction_tax_rate_1" from="Fossil_energy_oil.fuel_extraction_effective_tax_rate"/>
+				<connect to="Government.fuel_extraction_tax_rate_2" from="Fossil_energy_gas.fuel_extraction_effective_tax_rate"/>
+				<connect2 to="Government.fuel_extraction_tax_rate_2" from="Fossil_energy_gas.fuel_extraction_effective_tax_rate"/>
+				<connect to="Government.Gas_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital"/>
+				<connect2 to="Government.Gas_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Gas_Gross_Investments_in_Fossil_Energy_Capital"/>
+				<connect to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect2 to="Government.Gas_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Gas_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.GDP" from="GDP.Nominal_GDP"/>
 				<connect2 to="Government.GDP" from="GDP.Nominal_GDP"/>
 				<connect to="Government.inflation" from="Inflation.Inflation_Rate"/>
@@ -441,22 +429,22 @@
 				<connect2 to='Government."inflation_adjustment_b$_per_bc$_2"' from='Inflation."inflation_adjustment_b$_per_bc$"'/>
 				<connect to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
 				<connect2 to="Government.inflation_goal_policy" from="Government_Regulations.actual_inflation_goal"/>
-				<connect to="Government.Investments_in_Biofuel_Capacity" from="energy_investments.Gross_Investments_in_Biofuel_Capacity"/>
-				<connect2 to="Government.Investments_in_Biofuel_Capacity" from="energy_investments.Gross_Investments_in_Biofuel_Capacity"/>
-				<connect to="Government.Investments_in_Hydropower_Energy_capacity" from="energy_investments.Gross_Investments_in_Hydropower_Energy_capacity"/>
-				<connect2 to="Government.Investments_in_Hydropower_Energy_capacity" from="energy_investments.Gross_Investments_in_Hydropower_Energy_capacity"/>
-				<connect to="Government.Investments_in_Nuclear_Capacity" from="energy_investments.Investments_in_Nuclear_Capacity"/>
-				<connect2 to="Government.Investments_in_Nuclear_Capacity" from="energy_investments.Investments_in_Nuclear_Capacity"/>
-				<connect to="Government.Investments_in_solar_Energy_Capacity" from="energy_investments.Gross_Investments_in_Solar_Energy_Capacity"/>
-				<connect2 to="Government.Investments_in_solar_Energy_Capacity" from="energy_investments.Gross_Investments_in_Solar_Energy_Capacity"/>
-				<connect to="Government.Investments_in_wind_Energy_Capacity" from="energy_investments.Gross_Investments_in_wind_Energy_Capacity"/>
-				<connect2 to="Government.Investments_in_wind_Energy_Capacity" from="energy_investments.Gross_Investments_in_wind_Energy_Capacity"/>
+				<connect to="Government.Investments_in_Biofuel_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Biofuel_Capacity"/>
+				<connect2 to="Government.Investments_in_Biofuel_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Biofuel_Capacity"/>
+				<connect to="Government.Investments_in_Hydropower_Energy_capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Hydropower_Energy_capacity"/>
+				<connect2 to="Government.Investments_in_Hydropower_Energy_capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Hydropower_Energy_capacity"/>
+				<connect to="Government.Investments_in_Nuclear_Capacity" from="Energy_investments.Investments_in_Nuclear_Capacity"/>
+				<connect2 to="Government.Investments_in_Nuclear_Capacity" from="Energy_investments.Investments_in_Nuclear_Capacity"/>
+				<connect to="Government.Investments_in_solar_Energy_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Solar_Energy_Capacity"/>
+				<connect2 to="Government.Investments_in_solar_Energy_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_Solar_Energy_Capacity"/>
+				<connect to="Government.Investments_in_wind_Energy_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_wind_Energy_Capacity"/>
+				<connect2 to="Government.Investments_in_wind_Energy_Capacity" from="Energy_investments.Investments_Allocated_to_Capacity_Construction_in_wind_Energy_Capacity"/>
 				<connect to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
 				<connect2 to="Government.minimum_percentage_of_taxes_spent_by_government" from="Government_Regulations.minimum_percentage_of_taxes_spent_by_government"/>
-				<connect to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect2 to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
-				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
-				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
+				<connect2 to="Government.Oil_Investments_in_Fossil_Energy_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Energy_Capital"/>
+				<connect to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
+				<connect2 to="Government.Oil_Investments_in_Fossil_Fuel_Extraction_Capital" from="Energy_investments.Oil_Gross_Investments_in_Fossil_Fuel_Extraction_Capital"/>
 				<connect to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect2 to="Government.old_age_dependents" from="Demographics.old_age_dependents"/>
 				<connect to="Government.Population" from="Demographics.Population"/>
@@ -475,16 +463,16 @@
 				<connect2 to="Government.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
 				<connect2 to="Government.switch_government_damage" from="Climate.switch_government_damage"/>
-				<connect to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
-				<connect2 to="Government.tax_rate_1" from="hydropower_energy.tax_rate"/>
-				<connect to="Government.tax_rate_2" from="bio_fuel_energy.tax_rate"/>
-				<connect2 to="Government.tax_rate_2" from="bio_fuel_energy.tax_rate"/>
-				<connect to="Government.tax_rate_4" from="nuclear_energy.tax_rate"/>
-				<connect2 to="Government.tax_rate_4" from="nuclear_energy.tax_rate"/>
-				<connect to="Government.tax_rate_5" from="solar_energy.tax_rate"/>
-				<connect2 to="Government.tax_rate_5" from="solar_energy.tax_rate"/>
-				<connect to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
-				<connect2 to="Government.tax_rate_6" from="wind_energy.tax_rate"/>
+				<connect to="Government.tax_rate_1" from="Hydropower_energy.tax_rate"/>
+				<connect2 to="Government.tax_rate_1" from="Hydropower_energy.tax_rate"/>
+				<connect to="Government.tax_rate_2" from="Bio_fuel_energy.tax_rate"/>
+				<connect2 to="Government.tax_rate_2" from="Bio_fuel_energy.tax_rate"/>
+				<connect to="Government.tax_rate_4" from="Nuclear_energy.tax_rate"/>
+				<connect2 to="Government.tax_rate_4" from="Nuclear_energy.tax_rate"/>
+				<connect to="Government.tax_rate_5" from="Solar_energy.tax_rate"/>
+				<connect2 to="Government.tax_rate_5" from="Solar_energy.tax_rate"/>
+				<connect to="Government.tax_rate_6" from="Wind_energy.tax_rate"/>
+				<connect2 to="Government.tax_rate_6" from="Wind_energy.tax_rate"/>
 				<connect to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Government.today" from="Climate.climate_impact_stoptime"/>
 				<connect to="Government.today_1" from="Climate.climate_impact_stoptime"/>
@@ -499,6 +487,8 @@
 				<connect2 to="Government.unemployment_goal_policy" from="Government_Regulations.actual_unemployment_goal"/>
 				<connect to="Government.unemployment_rate_1" from="Employment.unemployment_rate"/>
 				<connect2 to="Government.unemployment_rate_1" from="Employment.unemployment_rate"/>
+				<connect to='Government."UNIT_Million_c$_to_c$"' from='CCS."UNIT_Mc$_to_c$"'/>
+				<connect2 to='Government."UNIT_Million_c$_to_c$"' from='CCS."UNIT_Mc$_to_c$"'/>
 				<connect to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
 				<connect2 to="Government.Wage_Rate" from="Employment.Wage_Rate"/>
 				<connect to="Government.wage_tax_1" from="Circular_Flow.wage_tax"/>
@@ -651,6 +641,8 @@
 				<connect2 to="Employment.private_safe_bank_assets" from="Finance.private_safe_bank_assets"/>
 				<connect to="Circular_Flow.private_investment_1" from="Finance.private_investment"/>
 				<connect2 to="Circular_Flow.private_investment_1" from="Finance.private_investment"/>
+				<connect to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>
+				<connect2 to="CCS.real_private_investment_1" from="Finance.real_private_investment"/>
 				<connect to="Government.required_last_resort_lending" from="Finance.required_government_solvency_support_lending"/>
 				<connect2 to="Government.required_last_resort_lending" from="Finance.required_government_solvency_support_lending"/>
 				<connect to="Circular_Flow.risky_interest_1" from="Finance.risky_interest"/>
@@ -671,8 +663,8 @@
 				<connect2 to="Circular_Flow.total_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
 				<connect2 to="Employment.total_non_exploratory_defaults" from="Finance.total_risky_asset_defaults"/>
-				<connect to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
-				<connect2 to="Finance.All_Energy_Investments" from="energy_investments.All_Gross_Energy_Investments_without_CCS_costs"/>
+				<connect to="Finance.Energy_Investments_with_Taxes_and_Subsidies" from="Energy_investments.Energy_Investments_with_Taxes_and_Subsidies"/>
+				<connect2 to="Finance.Energy_Investments_with_Taxes_and_Subsidies" from="Energy_investments.Energy_Investments_with_Taxes_and_Subsidies"/>
 				<connect to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect2 to="Finance.Firms_Checking_Accounts" from="Circular_Flow.Firms_Checking_Accounts"/>
 				<connect to="Finance.Firms_Innovation_Orientation_2" from="Innovation.Firms_Innovation_Orientation"/>
@@ -715,18 +707,22 @@
 				<connect2 to='Finance."Real_GDP_in_2021c$_1"' from='GDP."Real_GDP_in_2021c$"'/>
 				<connect to="Finance.safe_interest" from="Government.safe_interest"/>
 				<connect2 to="Finance.safe_interest" from="Government.safe_interest"/>
-				<connect to="Finance.stranded_capital" from="fossil_energy.stranded_capital"/>
-				<connect2 to="Finance.stranded_capital" from="fossil_energy.stranded_capital"/>
+				<connect to="Finance.stranded_capital" from="Fossil_energy.stranded_capital"/>
+				<connect2 to="Finance.stranded_capital" from="Fossil_energy.stranded_capital"/>
 				<connect to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect2 to="Finance.Surface_Temperature_Anomaly" from="Energy_Balance_Model.Surface_Temperature_Anomaly"/>
 				<connect to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect2 to="Finance.switch_economy_damage" from="Climate.switch_finance_damage"/>
 				<connect to="Finance.today" from="Climate.climate_impact_stoptime"/>
 				<connect2 to="Finance.today" from="Climate.climate_impact_stoptime"/>
+				<connect to="Finance.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
+				<connect2 to="Finance.Total_investment_in_CCS_from_the_private_sector" from="CCS.Total_investment_in_CCS_from_the_private_sector"/>
 				<connect to="Finance.Total_nominal_loss_of_assets_from_SLR" from="Sea_level_rise_costs_and_impacts.Total_nominal_loss_of_assets_from_SLR"/>
 				<connect2 to="Finance.Total_nominal_loss_of_assets_from_SLR" from="Sea_level_rise_costs_and_impacts.Total_nominal_loss_of_assets_from_SLR"/>
 				<connect to="Finance.unemployment_rate" from="Employment.unemployment_rate"/>
 				<connect2 to="Finance.unemployment_rate" from="Employment.unemployment_rate"/>
+				<connect to='Finance."UNIT_Mc$_to_c$"' from='CCS."UNIT_Mc$_to_c$"'/>
+				<connect2 to='Finance."UNIT_Mc$_to_c$"' from='CCS."UNIT_Mc$_to_c$"'/>
 				<connect to="Finance.Wage_Rate_1" from="Employment.Wage_Rate"/>
 				<connect2 to="Finance.Wage_Rate_1" from="Employment.Wage_Rate"/>
 				<connect to="Finance.Worker_Savings_1" from="Circular_Flow.Worker_Savings"/>
@@ -871,8 +867,8 @@
 				<connect2 to="Inflation.crop_production" from="Crop.crop_production"/>
 				<connect to="Inflation.Cropland" from="Crop.Cropland"/>
 				<connect2 to="Inflation.Cropland" from="Crop.Cropland"/>
-				<connect to="Inflation.demand_for_energy" from="energy_demand.demand_for_energy"/>
-				<connect2 to="Inflation.demand_for_energy" from="energy_demand.demand_for_energy"/>
+				<connect to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
+				<connect2 to="Inflation.demand_for_energy" from="Energy_demand.demand_for_energy"/>
 				<connect to="Inflation.Employed" from="Employment.Employed"/>
 				<connect2 to="Inflation.Employed" from="Employment.Employed"/>
 				<connect to="Inflation.fertilizer_used_per_unit_of_crop_production" from="Crop.fertilizer_used_per_unit_of_crop_production"/>
@@ -899,8 +895,8 @@
 				<connect2 to="Inflation.realised_productivity" from="Employment.realised_productivity"/>
 				<connect to="Inflation.rent" from="Circular_Flow.rent"/>
 				<connect2 to="Inflation.rent" from="Circular_Flow.rent"/>
-				<connect to="Inflation.Total_Energy_Output" from="energy_supply.Total_Energy_Output"/>
-				<connect2 to="Inflation.Total_Energy_Output" from="energy_supply.Total_Energy_Output"/>
+				<connect to="Inflation.Total_Energy_Output" from="Energy_supply.Total_Energy_Output"/>
+				<connect2 to="Inflation.Total_Energy_Output" from="Energy_supply.Total_Energy_Output"/>
 				<connect to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
 				<connect2 to="Inflation.total_public_tax_income_1" from="Government.total_public_tax_income"/>
 				<connect to="Inflation.wages_1" from="Circular_Flow.wages"/>
@@ -916,7 +912,7 @@
 			<isee:placeholder name="Economy 2 Outputs">
 				<eqn>GDP.Nominal_GDP[1] + GDP.&quot;Real_GDP_in_2021c$&quot;[1] + Circular_Flow.private_consumption[1] + Government.government_consumption[1] + Finance.total_investment[1] + Employment.annual_aggregate_wages[1] + Circular_Flow.Labour_share_of_GDP[1] + Employment.Employed[1] + Employment.Unemployed[1] + Employment.unemployment_rate[1] + Government.debt_to_GDP_ratio[1] + GDP.nominal_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + GDP.real_gdp_growth_rate_deviation_from_average_in_calibration_period_summed[1] + Inflation.gdp_difference[1] + Circular_Flow.bottom_40_share_of_real_income[1]</eqn>
 			</isee:placeholder>
-			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="C:/Users/xicom/Documents/GitHub/WorldtransFRIDA-CDR-CCS/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
+			<module name="Sea level rise Impacts\nand Adaptation" isee:label="" url="/Users/bschoenberg/code/WorldTrans/clones/francisco/WorldTransFRIDA/FRIDA_Modules/Sea level rise Impacts and Adaptation.itmx">
 				<format scale_by="auto"/>
 				<connect to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
 				<connect2 to="Sea_level_rise_Impacts_and_Adaptation.No_SLR_adaptation_strategy" from="Government_Regulations.No_SLR_adaptation_strategy"/>
@@ -1044,7 +1040,7 @@
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1056" page_height="816" isee:page_cols="2" isee:page_rows="2" isee:scroll_x="1" isee:scroll_y="109" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="2" isee:page_rows="2" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="12.51pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2482,7 +2478,7 @@ Assuming no one is migrating in 1980 b/c of SLR</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="2166.67" isee:scroll_y="1095" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="608.333" isee:scroll_y="300" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -5423,7 +5419,7 @@ Interface explosion stopper</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="6" isee:page_rows="6" isee:scroll_y="1074.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="6" isee:scroll_x="135" isee:scroll_y="1434.17" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -8092,11 +8088,11 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<range min="0.005" max="0.015"/>
 				<units>1/year</units>
 			</aux>
-			<aux name="Nominal Gross Energy Investment">
+			<aux name="Nominal Energy Investment with Taxes and Subsidies and CCS">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>All_Energy_Investments*&quot;inflation_adjustment_b$_per_bc$_2&quot;/&quot;UNIT_c$_per_Bc$&quot;</eqn>
+				<eqn>(Energy_Investments_with_Taxes_and_Subsidies+CCS_Investments)*&quot;inflation_adjustment_b$_per_bc$_2&quot;/&quot;UNIT_c$_per_Bc$&quot;</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="inflation adjustment b$ per bc$ 2" access="input">
@@ -8116,7 +8112,7 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Nominal_Gross_Energy_Investment+Non_Energy_Bank_Investment</eqn>
+				<eqn>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS+Non_Energy_Bank_Investment</eqn>
 				<units>b$/year</units>
 			</aux>
 			<aux name="private investment" access="output" isee:autocreated="true">
@@ -8128,13 +8124,6 @@ MAX(0,-1*extra_risky_interest_above_interest_at_origination*time_to_measure_chan
 				<units>b$/year</units>
 			</aux>
 			<aux name="stranded capital" access="input">
-				<dimensions>
-					<dim name="Run"/>
-				</dimensions>
-				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>c$/Year</units>
-			</aux>
-			<aux name="All Energy Investments" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -8592,6 +8581,45 @@ To control extreme policy only</doc>
 				<non_negative/>
 				<units>b$/year</units>
 			</flow>
+			<aux name="Total investment in\nCCS from the private sector" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>Mc$/Year</units>
+			</aux>
+			<aux name="UNIT Mc$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
+			</aux>
+			<aux name="CCS Investments">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Total_investment_in_CCS_from_the_private_sector/&quot;UNIT_Mc$_to_c$&quot;</eqn>
+				<units>c$/Year</units>
+			</aux>
+			<aux name="Energy Investments with\nTaxes and Subsidies" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>c$/Year</units>
+			</aux>
+			<aux name="real private investment" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>private_investment/&quot;inflation_adjustment_b$_per_bc$_2&quot;</eqn>
+				<units>bc$/year</units>
+			</aux>
+			<aux name="nominal CCS investments">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>CCS_Investments*&quot;inflation_adjustment_b$_per_bc$_2&quot;/&quot;UNIT_c$_per_Bc$&quot;</eqn>
+				<units>b$/year</units>
+			</aux>
 		</variables>
 		<views>
 			<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
@@ -8641,7 +8669,7 @@ To control extreme policy only</doc>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="472" isee:scroll_y="1020" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="6" isee:page_rows="9" isee:scroll_x="477" isee:scroll_y="1192" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -9200,7 +9228,7 @@ To control extreme policy only</doc>
 					<from>effect_profit_decline_on_bank_exploration</from>
 					<to>decline_in_bank_exploration_orientation</to>
 				</connector>
-				<aux label_side="right" x="1523.29" y="1520" name="investment fraction to\nexploration"/>
+				<aux label_side="right" label_angle="315" x="1523.29" y="1520" name="investment fraction to\nexploration"/>
 				<aux label_side="right" x="1529.07" y="1222.75" name="normal exploration rate"/>
 				<aux label_side="left" label_angle="225" x="1310.96" y="1438.25" name="effect of bank\nexploration orientation\nexploratory investment\nfraction"/>
 				<connector uid="162" angle="241.826">
@@ -9591,20 +9619,20 @@ To control extreme policy only</doc>
 					<from>tolerance_of_the_cap_on_indicated_risk_premium</from>
 					<to>indicated_risk_premium</to>
 				</connector>
-				<aux x="1195.33" y="1724.14" name="Nominal Gross Energy Investment"/>
-				<aux font_style="italic" font_weight="bold" x="1116.33" y="1623" name="inflation adjustment b$ per bc$ 2"/>
-				<connector uid="383" angle="307.994">
+				<aux x="1195.33" y="1724.14" name="Nominal Energy Investment with Taxes and Subsidies and CCS"/>
+				<aux font_style="italic" font_weight="bold" x="1233.73" y="1641" name="inflation adjustment b$ per bc$ 2"/>
+				<connector uid="383" angle="245.21">
 					<from>&quot;inflation_adjustment_b$_per_bc$_2&quot;</from>
-					<to>Nominal_Gross_Energy_Investment</to>
+					<to>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS</to>
 				</connector>
-				<aux x="1050.83" y="1715.18" name="UNIT c$ per Bc$"/>
-				<connector uid="384" angle="356.453">
+				<aux x="1026.95" y="1721.01" name="UNIT c$ per Bc$"/>
+				<connector uid="384" angle="358.935">
 					<from>&quot;UNIT_c$_per_Bc$&quot;</from>
-					<to>Nominal_Gross_Energy_Investment</to>
+					<to>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS</to>
 				</connector>
 				<aux x="1424.91" y="1724.14" name="Bank Investment"/>
 				<connector uid="411" angle="0">
-					<from>Nominal_Gross_Energy_Investment</from>
+					<from>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS</from>
 					<to>Bank_Investment</to>
 				</connector>
 				<connector uid="413" angle="118.992">
@@ -9633,11 +9661,6 @@ To control extreme policy only</doc>
 					<to>private_investment</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="2935.67" y="2304" name="stranded capital"/>
-				<aux font_style="italic" font_weight="bold" label_side="bottom" x="1116.33" y="1830.67" name="All Energy Investments"/>
-				<connector uid="385" angle="53.4403">
-					<from>All_Energy_Investments</from>
-					<to>Nominal_Gross_Energy_Investment</to>
-				</connector>
 				<aux x="2793.57" y="2344.55" name="stranded energy\ncapital"/>
 				<connector uid="422" angle="177.244">
 					<from>
@@ -10108,6 +10131,48 @@ SDG 10.5.1</text_box>
 				<connector uid="628" angle="299.307">
 					<from>safe_loan_defaults</from>
 					<to>perceived_defaults_of_safe_assets_not_caused_by_energy_transition</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="912.939" y="1512.37" name="Total investment in\nCCS from the private sector"/>
+				<aux font_style="italic" font_weight="bold" x="1020.92" y="1464.63" name="UNIT Mc$ to c$"/>
+				<aux x="1038.92" y="1585.2" name="CCS Investments"/>
+				<connector uid="632" angle="278.491">
+					<from>&quot;UNIT_Mc$_to_c$&quot;</from>
+					<to>CCS_Investments</to>
+				</connector>
+				<connector uid="633" angle="329.969">
+					<from>Total_investment_in_CCS_from_the_private_sector</from>
+					<to>CCS_Investments</to>
+				</connector>
+				<connector uid="634" angle="318.385">
+					<from>CCS_Investments</from>
+					<to>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS</to>
+				</connector>
+				<aux font_style="italic" font_weight="bold" x="1029.38" y="1848.75" name="Energy Investments with\nTaxes and Subsidies"/>
+				<connector uid="635" angle="36.9025">
+					<from>Energy_Investments_with_Taxes_and_Subsidies</from>
+					<to>Nominal_Energy_Investment_with_Taxes_and_Subsidies_and_CCS</to>
+				</connector>
+				<aux x="1283.39" y="1538" name="real private investment"/>
+				<connector uid="641" angle="116.147">
+					<from>private_investment</from>
+					<to>real_private_investment</to>
+				</connector>
+				<connector uid="642" angle="64.2583">
+					<from>&quot;inflation_adjustment_b$_per_bc$_2&quot;</from>
+					<to>real_private_investment</to>
+				</connector>
+				<aux x="1185.08" y="1569.36" name="nominal CCS investments"/>
+				<connector uid="643" angle="6.18195">
+					<from>CCS_Investments</from>
+					<to>nominal_CCS_investments</to>
+				</connector>
+				<connector uid="644" angle="126.266">
+					<from>&quot;inflation_adjustment_b$_per_bc$_2&quot;</from>
+					<to>nominal_CCS_investments</to>
+				</connector>
+				<connector uid="645" angle="34.1217">
+					<from>&quot;UNIT_c$_per_Bc$&quot;</from>
+					<to>nominal_CCS_investments</to>
 				</connector>
 				<alias label_side="right" uid="27" x="2212.67" y="2150.55" width="18" height="18">
 					<of>loan_maturation_time</of>
@@ -10602,7 +10667,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1122" page_height="793" isee:page_cols="3" isee:page_rows="3" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="3" isee:page_rows="3" isee:scroll_y="65" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12340,18 +12405,12 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<eqn>.8</eqn>
 				<units>dmnl</units>
 			</aux>
-			<aux name="CCS cost covered by gov" access="output" isee:autocreated="true">
+			<aux name="CCS cost covered by gov">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>(Total_investment_in_CCS_from_the_government)/&quot;UNIT_Million_c$_to_c$&quot;</eqn>
 				<units>c$/Year</units>
-			</aux>
-			<aux name="UNIT Million c$ to c$" access="output" isee:autocreated="true">
-				<doc>${Unit}
-</doc>
-				<eqn>0.0000001</eqn>
-				<units>Mc$/c$</units>
 			</aux>
 			<aux name="Total investment in\nCCS from the government" access="input">
 				<dimensions>
@@ -12359,6 +12418,10 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>Mc$/Year</units>
+			</aux>
+			<aux name="UNIT Million c$ to c$" access="input">
+				<eqn>0.0000001</eqn>
+				<units>Mc$/c$</units>
 			</aux>
 		</variables>
 		<views>
@@ -12409,7 +12472,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1761" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="7" isee:page_rows="7" isee:scroll_x="1112.5" isee:scroll_y="324.167" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -12641,9 +12704,9 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<aux font_style="italic" font_weight="bold" x="2739" y="1039.67" name="Oil\nInvestments in\nFossil Energy Capital"/>
 				<aux font_style="italic" font_weight="bold" x="2739" y="1153.3" name="Gas\nInvestments in Fossil\nFuel Extraction Capital"/>
 				<aux font_style="italic" font_weight="bold" x="2739" y="1276.75" name="Gas\nInvestments in\nFossil Energy Capital"/>
-				<aux font_style="italic" font_weight="bold" x="2748.93" y="1712.89" name="Investments in\nHydropower\nEnergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2748.93" y="1831.22" name="Investments in\nBiofuel Capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2748.93" y="1963.71" name="Investments in\nNuclear Capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2752.5" y="1875.75" name="Investments in\nHydropower\nEnergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2752.5" y="1994.08" name="Investments in\nBiofuel Capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2752.5" y="2214.42" name="Investments in\nNuclear Capacity"/>
 				<aux font_style="italic" font_weight="bold" x="2353" y="721.75" name="fuel extraction tax rate"/>
 				<aux font_style="italic" font_weight="bold" x="2353" y="823.75" name="energy conversion tax rate"/>
 				<aux x="2520.28" y="721.75" name="tax revenue on investments in\ncoal extraction"/>
@@ -12704,12 +12767,12 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>Gas_Investments_in_Fossil_Energy_Capital</from>
 					<to>tax_revenue_on_investments_in_gas_energy_conversion</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2361.93" y="1712.89" name="tax rate 1"/>
-				<aux font_style="italic" font_weight="bold" x="2361.93" y="1831.22" name="tax rate 2"/>
-				<aux font_style="italic" font_weight="bold" x="2361.93" y="1963.71" name="tax rate 4"/>
-				<aux x="2529.21" y="1712.89" name="tax revenue on investments in\nhydropower energy capacity"/>
-				<aux x="2529.21" y="1831.22" name="tax revenue on investments in\nbio fuel energy capacity"/>
-				<aux x="2529.21" y="1963.71" name="tax revenue on investments in\nnuclear energy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2365.5" y="1875.75" name="tax rate 1"/>
+				<aux font_style="italic" font_weight="bold" x="2365.5" y="1994.08" name="tax rate 2"/>
+				<aux font_style="italic" font_weight="bold" x="2365.5" y="2214.42" name="tax rate 4"/>
+				<aux x="2532.78" y="1875.75" name="tax revenue on investments in\nhydropower energy capacity"/>
+				<aux x="2532.78" y="1994.08" name="tax revenue on investments in\nbio fuel energy capacity"/>
+				<aux x="2532.78" y="2214.42" name="tax revenue on investments in\nnuclear energy capacity"/>
 				<connector uid="96" angle="354.806">
 					<from>tax_rate_1</from>
 					<to>tax_revenue_on_investments_in_hydropower_energy_capacity</to>
@@ -12740,9 +12803,9 @@ In massive inflation spikes prevents the government from not doing any consumpti
 				<aux x="2568.28" y="988.67" name="expenditure on subsidies for investments in\noil energy conversion"/>
 				<aux x="2568.28" y="1102.3" name="expenditure on subsidies for investments in\ngas extraction"/>
 				<aux x="2568.28" y="1225.75" name="expenditure on subsidies for investments in\ngas energy conversion"/>
-				<aux x="2577.21" y="1661.89" name="expenditure on subsidies for investments in\nhydropower energy capacity"/>
-				<aux x="2577.21" y="1783.06" name="expenditure on subsidies for investments in\nbio fuel energy capacity"/>
-				<aux x="2577.21" y="1912.71" name="expenditure on subsidies for investments in\nnuclear energy capacity"/>
+				<aux x="2580.78" y="1824.75" name="expenditure on subsidies for investments in\nhydropower energy capacity"/>
+				<aux x="2580.78" y="1945.92" name="expenditure on subsidies for investments in\nbio fuel energy capacity"/>
+				<aux x="2580.78" y="2163.42" name="expenditure on subsidies for investments in\nnuclear energy capacity"/>
 				<connector uid="104" angle="10.6197">
 					<from>fuel_extraction_tax_rate</from>
 					<to>expenditure_on_subsidies_for_investments_in_coal_extraction</to>
@@ -12844,11 +12907,11 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<to>public_expenditure_before_subsidies_and_interest_payments</to>
 				</connector>
 				<aux x="2520.28" y="588.923" name="sum of energy taxes in real terms"/>
-				<connector uid="169" angle="90.3721">
+				<connector uid="169" angle="90.4406">
 					<from>tax_revenue_on_investments_in_nuclear_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="171" angle="90.4118">
+				<connector uid="171" angle="90.5097">
 					<from>tax_revenue_on_investments_in_bio_fuel_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -12876,7 +12939,7 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>tax_revenue_on_investments_in_gas_energy_conversion</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="179" angle="90.4551">
+				<connector uid="179" angle="90.5565">
 					<from>tax_revenue_on_investments_in_hydropower_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -12889,15 +12952,15 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<to>sum_of_energy_taxes_in_nominal_terms</to>
 				</connector>
 				<aux x="2568.28" y="545.739" name="sum of energy subsidies\nin real terms"/>
-				<connector uid="183" angle="90.3742">
+				<connector uid="183" angle="90.4427">
 					<from>expenditure_on_subsidies_for_investments_in_nuclear_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="185" angle="90.4134">
+				<connector uid="185" angle="90.5115">
 					<from>expenditure_on_subsidies_for_investments_in_bio_fuel_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="186" angle="90.4583">
+				<connector uid="186" angle="90.5599">
 					<from>expenditure_on_subsidies_for_investments_in_hydropower_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
@@ -13396,18 +13459,18 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>time_for_government_spending_to_change</from>
 					<to>proportion_of_taxes_to_public_spending</to>
 				</connector>
-				<aux x="2576.1" y="1377.44" name="expenditure on subsidies for investments in\nsolar\nenergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2747.82" y="1428.44" name="Investments in\nsolar\nEnergy Capacity"/>
+				<aux x="2577.53" y="1504.58" name="expenditure on subsidies for investments in\nsolar\nenergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2749.25" y="1555.58" name="Investments in\nsolar\nEnergy Capacity"/>
 				<connector uid="377" angle="159.332">
 					<from>Investments_in_solar_Energy_Capacity</from>
 					<to>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux x="2528.1" y="1428.44" name="tax revenue on investments in\nsolar energy capacity"/>
+				<aux x="2529.53" y="1555.58" name="tax revenue on investments in\nsolar energy capacity"/>
 				<connector uid="374" angle="180">
 					<from>Investments_in_solar_Energy_Capacity</from>
 					<to>tax_revenue_on_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2360.82" y="1428.44" name="tax rate 5"/>
+				<aux font_style="italic" font_weight="bold" x="2362.25" y="1555.58" name="tax rate 5"/>
 				<connector uid="376" angle="17.71">
 					<from>tax_rate_5</from>
 					<to>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</to>
@@ -13416,18 +13479,18 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>tax_rate_5</from>
 					<to>tax_revenue_on_investments_in_solar_energy_capacity</to>
 				</connector>
-				<aux x="2576.1" y="1522.44" name="expenditure on subsidies for investments in\nwind\nenergy capacity"/>
-				<aux font_style="italic" font_weight="bold" x="2747.82" y="1573.44" name="Investments in\nwind\nEnergy Capacity"/>
+				<aux x="2577.53" y="1649.58" name="expenditure on subsidies for investments in\nwind\nenergy capacity"/>
+				<aux font_style="italic" font_weight="bold" x="2749.25" y="1700.58" name="Investments in\nwind\nEnergy Capacity"/>
 				<connector uid="378" angle="159.332">
 					<from>Investments_in_wind_Energy_Capacity</from>
 					<to>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</to>
 				</connector>
-				<aux x="2528.1" y="1573.44" name="tax revenue on investments in\nwind energy capacity"/>
+				<aux x="2529.53" y="1700.58" name="tax revenue on investments in\nwind energy capacity"/>
 				<connector uid="379" angle="180">
 					<from>Investments_in_wind_Energy_Capacity</from>
 					<to>tax_revenue_on_investments_in_wind_energy_capacity</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2360.82" y="1573.44" name="tax rate 6"/>
+				<aux font_style="italic" font_weight="bold" x="2362.25" y="1700.58" name="tax rate 6"/>
 				<connector uid="380" angle="17.71">
 					<from>tax_rate_6</from>
 					<to>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</to>
@@ -13436,19 +13499,19 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>tax_rate_6</from>
 					<to>tax_revenue_on_investments_in_wind_energy_capacity</to>
 				</connector>
-				<connector uid="382" angle="90.5388">
+				<connector uid="382" angle="93.1666">
 					<from>expenditure_on_subsidies_for_investments_in_solar_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="383" angle="90.4588">
+				<connector uid="383" angle="86.8646">
 					<from>expenditure_on_subsidies_for_investments_in_wind_energy_capacity</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<connector uid="384" angle="90.4552">
+				<connector uid="384" angle="97.5266">
 					<from>tax_revenue_on_investments_in_wind_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
-				<connector uid="385" angle="90.5338">
+				<connector uid="385" angle="87.4564">
 					<from>tax_revenue_on_investments_in_solar_energy_capacity</from>
 					<to>sum_of_energy_taxes_in_real_terms</to>
 				</connector>
@@ -13527,18 +13590,18 @@ In massive inflation spikes prevents the government from not doing any consumpti
 					<from>maximum_percentage_of_government_budget_to_transfer_payments</from>
 					<to>government_transfers</to>
 				</connector>
-				<aux x="2550.28" y="315.55" name="CCS cost covered by gov"/>
-				<connector uid="416" angle="307.863">
+				<aux x="2568.28" y="351.383" name="CCS cost covered by gov"/>
+				<connector uid="408" angle="319.176">
 					<from>CCS_cost_covered_by_gov</from>
 					<to>sum_of_energy_subsidies_in_real_terms</to>
 				</connector>
-				<aux x="2444.62" y="384.889" name="UNIT Million c$ to c$"/>
-				<connector uid="420" angle="16.2083">
+				<aux font_style="italic" font_weight="bold" x="2731.67" y="351.383" name="Total investment in\nCCS from the government"/>
+				<aux font_style="italic" font_weight="bold" x="2410" y="351.383" name="UNIT Million c$ to c$"/>
+				<connector uid="409" angle="0.20664">
 					<from>&quot;UNIT_Million_c$_to_c$&quot;</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="2642.14" y="251.429" name="Total investment in\nCCS from the government"/>
-				<connector uid="424" angle="174.56">
+				<connector uid="410" angle="175.392">
 					<from>Total_investment_in_CCS_from_the_government</from>
 					<to>CCS_cost_covered_by_gov</to>
 				</connector>
@@ -14232,7 +14295,7 @@ agriculture_share_of_GDP_starting_point_determinant*EXP(agriculture_share_of_GDP
 				<eqn>Inflation_Index*&quot;unit_b$_per_bc$&quot;</eqn>
 				<units>b$/bc$</units>
 			</aux>
-			<aux name="unit b$ per bc$">
+			<aux name="unit b$ per bc$" access="output" isee:autocreated="true">
 				<doc>${Unit}
 </doc>
 				<eqn>1</eqn>
@@ -14400,7 +14463,7 @@ ELSE
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="437.5" isee:scroll_y="225" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="818" page_height="571" isee:page_cols="3" isee:page_rows="3" isee:scroll_x="629.167" isee:scroll_y="400" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>

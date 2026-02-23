@@ -3,7 +3,7 @@
 	<header>
 		<smile version="1.0" namespace="std, isee" uses_arrays="2"/>
 		<name>Emissions</name>
-		<uuid>c1d3b855-4d5a-4f55-b9fb-f7f0ee09a9e2</uuid>
+		<uuid>961b79de-8a2f-4046-9ed5-5d5ae337e22f</uuid>
 		<vendor>isee systems, inc.</vendor>
 		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
 	</header>
@@ -23,7 +23,7 @@
 		</dim>
 		<dim name="Run" size="1"/>
 	</dimensions>
-	<isee:prefs saved_runs="5" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_secure_mode="true" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rifp="true">
+	<isee:prefs saved_runs="10" keep="false" show_module_prefix="true" live_update_on_drag="true" show_restore_buttons="false" layer="model" isee:design="Deluxe Prev-Next Blue Green Pastel" isee:design_custom="false" interface_secure_mode="true" interface_scale_ui="true" interface_max_page_width="10000" interface_max_page_height="10000" interface_min_page_width="0" interface_min_page_height="0" rifp="true">
 		<isee:tag_styles>
 			<isee:tag_style tag="Assumption"/>
 			<isee:tag_style tag="Calibrated Output"/>
@@ -280,7 +280,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Realized_CO2_emissions_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use +Leakage</eqn>
+				<eqn>Realized_CO2_emissions_from_Energy + CO2_emissions + CO2_Emissions_from_Food_and_Land_Use + Leakage - CO2_emissions_from_biofuels</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="CH4 Baseline Emissions" access="output">
@@ -467,7 +467,7 @@
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>2.043314366</eqn>
+				<eqn>2.04331</eqn>
 				<units>MtSO2/Year</units>
 			</aux>
 			<aux name="man made fertilizer use" access="input">
@@ -1121,7 +1121,7 @@ GtC_to_MtCO2</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>bc$/Mp/year</units>
 			</aux>
-			<aux name="CO2 emissions from Energy">
+			<aux name="CO2 emissions from Energy" access="output" isee:autocreated="true">
 				<doc>${Calibrated Output}
 </doc>
 				<dimensions>
@@ -1130,17 +1130,11 @@ GtC_to_MtCO2</eqn>
 				<eqn>CO2_emissions_from_coal+CO2_emissions_from_gas+CO2_emissions_from_oil+CO2_emissions_from_biofuels</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
-			<aux name="Realized CO2\nemissions from Energy">
+			<aux name="Realized CO2\nemissions from Energy" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Realized_CO2_emissions_from_coal
-+
-Realized_CO2_emissions_from_oil
-+
-Realized_CO2_emissions_from_gas
-+
-Realized_CO2_emissions_from_biofuel</eqn>
+				<eqn>CO2_emissions_from_Energy-CO2_Energy_emissions_captured</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="land carbon sink" access="output">
@@ -1149,7 +1143,7 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>Terrestrial_carbon_balance+(CO2_emissions_from_biofuels+CO2_Emissions_from_Food_and_Land_Use)/GtC_to_MtCO2</eqn>
+				<eqn>Terrestrial_carbon_balance+(CO2_Emissions_from_Food_and_Land_Use)/GtC_to_MtCO2</eqn>
 				<units>GtC/Year</units>
 			</aux>
 			<aux name="Terrestrial carbon balance" access="input">
@@ -1222,7 +1216,7 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<eqn>CO2_emissions/GtC_to_MtCO2</eqn>
 				<units>GtC/Year</units>
 			</aux>
-			<aux name="CO2 Emissions from Food and Land Use GtC">
+			<aux name="CO2 Emissions from Food and Land Use GtC" access="output" isee:autocreated="true">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
@@ -1243,46 +1237,67 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>GtC/year</units>
 			</aux>
-			<aux name="Captured CO2 to store" access="input">
+			<aux name="pm25 emissions" access="output" isee:autocreated="true">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>pm25_emissions_from_energy</eqn>
+				<units>MtPM25</units>
+			</aux>
+			<aux name="Emissions from fossil energy coal" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>MtCO2/Year</units>
+				<units>MtPM25</units>
 			</aux>
-			<aux name="BECCS CO2 Captured" access="input">
+			<aux name="pm25 emissions from energy">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>Emissions_from_fossil_energy_coal+Emissions_from_fossil_energy_oil+Emissions_from_fossil_energy_coal_1</eqn>
+				<units>MtPM25</units>
+			</aux>
+			<aux name="Emissions from\nfossil energy oil" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
 				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
-				<units>MtCO2/Year</units>
+				<units>MtPM25</units>
 			</aux>
-			<aux name="Realized CO2 emissions from coal" access="output" isee:autocreated="true">
+			<aux name="Emissions from fossil energy coal 1" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(CO2_emissions_from_coal-(CO2_emissions_from_coal/CO2_emissions_from_Energy)*Captured_CO2_to_store, 0)</eqn>
-				<units>MtCO2/Year</units>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
+				<units>MtPM25</units>
 			</aux>
-			<aux name="Realized CO2\nemissions from oil" access="output" isee:autocreated="true">
+			<aux name="PM per fuel extracted" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(CO2_emissions_from_oil-(CO2_emissions_from_oil/CO2_emissions_from_Energy)*Captured_CO2_to_store, 0)</eqn>
-				<units>MtCO2/Year</units>
+				<eqn>94861822.7138707</eqn>
+				<units>MtPM25*Year/ZJ</units>
 			</aux>
-			<aux name="Realized CO2\nemissions from gas" access="output" isee:autocreated="true">
+			<aux name="PM per fuel extracted 1" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(CO2_emissions_from_gas-(CO2_emissions_from_gas/CO2_emissions_from_Energy)*Captured_CO2_to_store, 0)</eqn>
-				<units>MtCO2/Year</units>
+				<eqn>94854648.4842571</eqn>
+				<units>MtPM25*Year/ZJ</units>
 			</aux>
-			<aux name="Realized CO2\nemissions from biofuel" access="output" isee:autocreated="true">
+			<aux name="PM per fuel extracted 2" access="input">
 				<dimensions>
 					<dim name="Run"/>
 				</dimensions>
-				<eqn>MAX(CO2_emissions_from_biofuels-BECCS_CO2_Captured, 0)</eqn>
+				<eqn>94863617.3153269</eqn>
+				<units>MtPM25*Year/ZJ</units>
+			</aux>
+			<aux name="CO2 Energy emissions captured" access="input">
+				<dimensions>
+					<dim name="Run"/>
+				</dimensions>
+				<eqn>{Enter equation for use when not hooked up to other models}</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 		</variables>
@@ -1334,7 +1349,7 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
-			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="4" isee:page_rows="4" isee:scroll_y="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+			<view isee:show_pages="false" background="white" page_width="768" page_height="588" isee:page_cols="4" isee:page_rows="4" isee:scroll_x="382.857" isee:scroll_y="522.143" zoom="140" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -1983,15 +1998,25 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>bio_fuel_carbon_content</from>
 					<to>CO2_emissions_from_biofuels</to>
 				</connector>
-				<aux x="632" y="777.929" name="CO2 emissions from Energy"/>
-				<aux background="#FFAA00" x="783.594" y="878.967" name="Realized CO2\nemissions from Energy"/>
+				<aux x="494.96" y="813.929" name="CO2 emissions from Energy"/>
+				<aux background="#FFAA00" x="646.738" y="813.929" name="Realized CO2\nemissions from Energy"/>
+				<connector uid="183" angle="13.3925">
+					<from>CO2_emissions_from_Energy</from>
+					<to>Realized_CO2_emissions_from_Energy</to>
+				</connector>
 				<aux label_side="bottom" x="645.25" y="199.167" name="land carbon sink"/>
 				<aux label_side="bottom" x="831.714" y="85.167" name="Terrestrial carbon balance"/>
-				<connector uid="189" angle="109.902">
+				<connector uid="189" angle="337.9">
 					<from>
 						<alias uid="190"/>
 					</from>
-					<to>land_carbon_sink</to>
+					<to>Total_CO2_Emissions</to>
+				</connector>
+				<connector uid="191" angle="152.447">
+					<from>
+						<alias uid="192"/>
+					</from>
+					<to>Total_CO2_Emissions</to>
 				</connector>
 				<connector uid="198" angle="149.1">
 					<from>
@@ -2010,7 +2035,7 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<to>bio_fuel_carbon_content</to>
 				</connector>
 				<aux font_style="italic" font_weight="bold" x="914.111" y="575.5" name="Carbon Intensity 1"/>
-				<aux font_style="italic" font_weight="bold" label_side="bottom" x="914.111" y="639.248" name="bio fuel primary energy"/>
+				<aux font_style="italic" font_weight="bold" x="914.111" y="639.248" name="bio fuel primary energy"/>
 				<connector uid="204" angle="180">
 					<from>Carbon_Intensity_1</from>
 					<to>carbon_intensity_of_biofuels</to>
@@ -2045,19 +2070,19 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>Terrestrial_carbon_balance</from>
 					<to>land_carbon_sink</to>
 				</connector>
-				<connector uid="213" angle="330.818">
+				<connector uid="213" angle="271.983">
 					<from>CO2_emissions_from_coal</from>
 					<to>CO2_emissions_from_Energy</to>
 				</connector>
-				<connector uid="214" angle="309.762">
+				<connector uid="214" angle="232.2">
 					<from>CO2_emissions_from_gas</from>
 					<to>CO2_emissions_from_Energy</to>
 				</connector>
-				<connector uid="215" angle="248.569">
+				<connector uid="215" angle="227.177">
 					<from>CO2_emissions_from_oil</from>
 					<to>CO2_emissions_from_Energy</to>
 				</connector>
-				<connector uid="216" angle="213.431">
+				<connector uid="216" angle="212.008">
 					<from>CO2_emissions_from_biofuels</from>
 					<to>CO2_emissions_from_Energy</to>
 				</connector>
@@ -2104,6 +2129,12 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					</from>
 					<to>CO2_Emissions_from_Food_and_Land_Use_GtC</to>
 				</connector>
+				<connector uid="227" angle="256.988">
+					<from>
+						<alias uid="192"/>
+					</from>
+					<to>Realized_CO2_Emissions_from_Energy_GtC</to>
+				</connector>
 				<connector uid="228" angle="80.3681">
 					<from>CO2_emissions</from>
 					<to>Total_CO2_Emissions</to>
@@ -2117,82 +2148,33 @@ Realized_CO2_emissions_from_biofuel</eqn>
 					<from>CO2_emissions_from_degraded_land_1</from>
 					<to>CO2_Emissions_from_Food_and_Land_Use</to>
 				</connector>
-				<aux font_style="italic" font_weight="bold" x="374.39" y="770.929" name="Captured CO2 to store"/>
-				<aux font_style="italic" font_weight="bold" x="852.321" y="791.967" name="BECCS CO2 Captured"/>
-				<connector uid="239" angle="180.244">
-					<from>
-						<alias uid="192"/>
-					</from>
-					<to>Total_CO2_Emissions</to>
+				<aux x="1685" y="2045" name="pm25 emissions"/>
+				<aux font_style="italic" font_weight="bold" x="1389.5" y="1900" name="Emissions from fossil energy coal"/>
+				<aux background="#FFAAFF" x="1474.5" y="1969" name="pm25 emissions from energy"/>
+				<connector uid="236" angle="293.962">
+					<from>Emissions_from_fossil_energy_coal</from>
+					<to>pm25_emissions_from_energy</to>
 				</connector>
-				<connector uid="240" angle="291.564">
-					<from>
-						<alias uid="192"/>
-					</from>
-					<to>Realized_CO2_Emissions_from_Energy_GtC</to>
+				<connector uid="237" angle="340.148">
+					<from>pm25_emissions_from_energy</from>
+					<to>pm25_emissions</to>
 				</connector>
-				<aux label_side="left" label_angle="225" x="439.811" y="852.75" name="Realized CO2 emissions from coal"/>
-				<connector uid="241" angle="251.57">
-					<from>CO2_emissions_from_coal</from>
-					<to>Realized_CO2_emissions_from_coal</to>
+				<aux font_style="italic" font_weight="bold" x="1485.5" y="1869" name="Emissions from\nfossil energy oil"/>
+				<connector uid="238" angle="284.931">
+					<from>Emissions_from_fossil_energy_oil</from>
+					<to>pm25_emissions_from_energy</to>
 				</connector>
-				<connector uid="242" angle="201.271">
-					<from>CO2_emissions_from_Energy</from>
-					<to>Realized_CO2_emissions_from_coal</to>
+				<aux font_style="italic" font_weight="bold" x="1597.5" y="1866" name="Emissions from fossil energy coal 1"/>
+				<connector uid="239" angle="261.983">
+					<from>Emissions_from_fossil_energy_coal_1</from>
+					<to>pm25_emissions_from_energy</to>
 				</connector>
-				<connector uid="243" angle="265.321">
-					<from>Captured_CO2_to_store</from>
-					<to>Realized_CO2_emissions_from_coal</to>
-				</connector>
-				<aux label_side="left" label_angle="225" x="570.083" y="852.75" name="Realized CO2\nemissions from oil"/>
-				<connector uid="245" angle="252.082">
-					<from>CO2_emissions_from_oil</from>
-					<to>Realized_CO2_emissions_from_oil</to>
-				</connector>
-				<connector uid="246" angle="246.574">
-					<from>CO2_emissions_from_Energy</from>
-					<to>Realized_CO2_emissions_from_oil</to>
-				</connector>
-				<connector uid="247" angle="340.739">
-					<from>Captured_CO2_to_store</from>
-					<to>Realized_CO2_emissions_from_oil</to>
-				</connector>
-				<aux label_side="bottom" x="650" y="844.929" name="Realized CO2\nemissions from gas"/>
-				<connector uid="248" angle="292.102">
-					<from>CO2_emissions_from_gas</from>
-					<to>Realized_CO2_emissions_from_gas</to>
-				</connector>
-				<connector uid="249" angle="301.465">
-					<from>CO2_emissions_from_Energy</from>
-					<to>Realized_CO2_emissions_from_gas</to>
-				</connector>
-				<connector uid="250" angle="356.841">
-					<from>Captured_CO2_to_store</from>
-					<to>Realized_CO2_emissions_from_gas</to>
-				</connector>
-				<aux label_side="bottom" x="756.42" y="817.929" name="Realized CO2\nemissions from biofuel"/>
-				<connector uid="251" angle="316.241">
-					<from>Realized_CO2_emissions_from_biofuel</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="252" angle="229.4">
-					<from>CO2_emissions_from_biofuels</from>
-					<to>Realized_CO2_emissions_from_biofuel</to>
-				</connector>
-				<connector uid="253" angle="195.148">
-					<from>BECCS_CO2_Captured</from>
-					<to>Realized_CO2_emissions_from_biofuel</to>
-				</connector>
-				<connector uid="255" angle="348.888">
-					<from>Realized_CO2_emissions_from_gas</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="256" angle="357.008">
-					<from>Realized_CO2_emissions_from_oil</from>
-					<to>Realized_CO2_emissions_from_Energy</to>
-				</connector>
-				<connector uid="257" angle="328.846">
-					<from>Realized_CO2_emissions_from_coal</from>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1337" y="1877.5" name="PM per fuel extracted"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1462.5" y="1830" name="PM per fuel extracted 1"/>
+				<aux font_style="italic" font_weight="bold" label_side="top" x="1585.5" y="1830" name="PM per fuel extracted 2"/>
+				<aux font_style="italic" font_weight="bold" x="1047.14" y="826.429" name="CO2 Energy emissions captured"/>
+				<connector uid="252" angle="166.229">
+					<from>CO2_Energy_emissions_captured</from>
 					<to>Realized_CO2_emissions_from_Energy</to>
 				</connector>
 				<alias font_style="italic" uid="31" x="428.917" y="155.625" width="18" height="18">
@@ -2240,10 +2222,10 @@ Realized_CO2_emissions_from_biofuel</eqn>
 				<alias color="black" font_style="italic" font_color="black" uid="188" x="808.821" y="208.167" width="18" height="18">
 					<of>GtC_to_MtCO2</of>
 				</alias>
-				<alias font_style="italic" uid="190" x="732.134" y="261" width="18" height="18">
+				<alias font_style="italic" uid="190" x="252.134" y="132.429" width="18" height="18">
 					<of>CO2_emissions_from_biofuels</of>
 				</alias>
-				<alias background="#FFAA00" font_style="italic" uid="192" x="487" y="243" width="18" height="18">
+				<alias background="#FFAA00" font_style="italic" uid="192" x="421" y="237" width="18" height="18">
 					<of>Realized_CO2_emissions_from_Energy</of>
 				</alias>
 				<alias color="black" font_style="italic" font_color="black" uid="209" x="670" y="2173" width="18" height="18">
