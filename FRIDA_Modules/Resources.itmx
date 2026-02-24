@@ -5,7 +5,7 @@
 		<name>Resources</name>
 		<uuid>9631a35c-00a9-4baa-af6a-a26fbfec7e6b</uuid>
 		<vendor>isee systems, inc.</vendor>
-		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella Architect</product>
+		<product version="4.1.2" isee:build_number="3810" isee:saved_by_v1="true" lang="en">Stella_Architect</product>
 	</header>
 	<ai_information>
 		<status verified="false"/>
@@ -1567,6 +1567,21 @@ Captured_CO2_to_store</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="share of gas emissions\ncapturable">
+<<<<<<< HEAD
+				<doc>40–60% das emissões de gás são tecnicamente capturáveis</doc>
+				<eqn>.5</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="share of oil emissions capturable">
+				<doc>5–15% das emissões de petróleo são tecnicamente capturáveis.</doc>
+				<eqn>.1</eqn>
+				<units>dmnl</units>
+			</aux>
+			<aux name="share of coal\nemissions capturable">
+				<doc>70–90% das emissões de carvão são tecnicamente capturáveis.
+</doc>
+				<eqn>.80</eqn>
+=======
 				<eqn>.4</eqn>
 				<units>dmnl</units>
 			</aux>
@@ -1576,6 +1591,7 @@ Captured_CO2_to_store</eqn>
 			</aux>
 			<aux name="share of coal emissions capturable">
 				<eqn>.70</eqn>
+>>>>>>> 08c21c9f513e16502a8878d61f6b04adae22e410
 				<units>dmnl</units>
 			</aux>
 			<aux name="biofuel capturable\nemissions">
@@ -1586,7 +1602,14 @@ Captured_CO2_to_store</eqn>
 				<units>MtCO2/Year</units>
 			</aux>
 			<aux name="share of biofuel emissions\ncapturable">
+<<<<<<< HEAD
+				<doc>60–80% tecnicamente capturável
+50.3% biomass to power
+24.8% biomass to fuel</doc>
+				<eqn>.5</eqn>
+=======
 				<eqn>.6</eqn>
+>>>>>>> 08c21c9f513e16502a8878d61f6b04adae22e410
 				<units>dmnl</units>
 			</aux>
 			<aux name="Available total budget for\nCarbon Capture">
@@ -1673,7 +1696,11 @@ Captured_CO2_to_store</eqn>
 				<isee:iframe color="black" background="white" text_align="left" vertical_text_align="top" font_size="12pt" border_width="thin" border_style="solid"/>
 				<isee:financial_table color="black" background="#E0E0E0" text_align="right" font_size="12pt" hide_border="false" auto_fit="true" first_column_width="250" other_column_width="100" header_font_style="normal" header_font_weight="bold" header_text_decoration="none" header_text_align="center" header_vertical_text_align="center" header_font_color="black" header_font_family="Arial" header_font_size="14pt" header_text_padding="2" header_text_border_color="black" header_text_border_width="thin" header_text_border_style="none"/>
 			</style>
+<<<<<<< HEAD
+			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="6" isee:scroll_x="182.5" isee:scroll_y="1335" zoom="120" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+=======
 			<view isee:show_pages="false" background="white" page_width="1024" page_height="784" isee:page_cols="8" isee:page_rows="6" isee:scroll_x="970" zoom="40" isee:popup_graphs_are_comparative="true" isee:enable_non_negative_highlights="false" type="stock_flow">
+>>>>>>> 08c21c9f513e16502a8878d61f6b04adae22e410
 				<style color="black" background="white" font_style="normal" font_weight="normal" text_decoration="none" text_align="center" vertical_text_align="center" font_color="black" font_family="Arial" font_size="10pt" padding="2" border_color="black" border_width="thin" border_style="none">
 					<stock color="blue" background="white" font_color="blue" font_size="11pt" label_side="top">
 						<shape type="rectangle" width="45" height="35"/>
@@ -2276,6 +2303,7 @@ Captured_CO2_to_store</eqn>
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="CO2 captured by Category" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" right_axis="true" show_y_axis="true">
 							<entity name="direct_air_capture_CO2_Captured[*]"/>
+							<isee:data name="new values capture"/>
 						</plot>
 						<plot color="red" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="end_of_pipe_CO2_Captured[*]"/>
@@ -2289,6 +2317,7 @@ Captured_CO2_to_store</eqn>
 					<graph width="350" height="250" type="time_series" show_grid="false" isee:tick_type="none" include_units_in_legend="false" plot_numbers="false" isee:label_pie_slices="false" isee:show_pie_borders="true" num_x_grid_lines="0" num_y_grid_lines="0" num_x_labels="5" num_y_labels="3" title="Stored CO2" isee:fill_intensity="0.1" to="2150" isee:allow_zero_axis="true" left_axis_multi_scale="false" left_axis_auto_scale="true" left_include_units="true" right_axis_multi_scale="false" right_axis_auto_scale="true" right_include_units="true">
 						<plot color="blue" isee:keep_zero_visible="true" pen_width="1" index="0" show_y_axis="true">
 							<entity name="stored_CO2[MAX]"/>
+							<isee:data name="Invalid Run"/>
 						</plot>
 					</graph>
 				</stacked_container>
@@ -2759,8 +2788,13 @@ Captured_CO2_to_store</eqn>
 					<from>share_of_oil_emissions_capturable</from>
 					<to>end_of_pipe_capturable_emissions</to>
 				</connector>
+<<<<<<< HEAD
+				<aux x="583.699" y="1962.04" name="share of coal\nemissions capturable"/>
+				<connector uid="934" angle="37.6964">
+=======
 				<aux x="383.399" y="1960.04" name="share of coal emissions capturable"/>
 				<connector uid="934" angle="17.6487">
+>>>>>>> 08c21c9f513e16502a8878d61f6b04adae22e410
 					<from>share_of_coal_emissions_capturable</from>
 					<to>end_of_pipe_capturable_emissions</to>
 				</connector>
